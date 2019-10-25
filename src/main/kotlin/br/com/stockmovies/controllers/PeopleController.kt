@@ -19,4 +19,5 @@ class PeopleController(val peopleService: PeopleService) {
     fun findById(@PathVariable peopleId: Long): People {
         return peopleService.findById(peopleId)
     }
+
 }

@@ -2,7 +2,7 @@ package br.com.stockmovies.services
 
 import br.com.stockmovies.models.People
 import br.com.stockmovies.repositories.PeopleRepository
-import br.com.stockmovies.services.exceptions.ResourceNotFoundEsception
+import br.com.stockmovies.services.exceptions.ResourceNotFoundException
 import org.springframework.stereotype.Service
 
 @Service
@@ -15,6 +15,6 @@ class PeopleService(private val peopleRepository: PeopleRepository ) {
 
     fun findById(peopleId: Long): People {
         return peopleRepository.findById(peopleId).orElseThrow {
-            ResourceNotFoundEsception("People with ID: $peopleId not found") }
+            ResourceNotFoundException("People with ID: $peopleId not found") }
     }
 }
