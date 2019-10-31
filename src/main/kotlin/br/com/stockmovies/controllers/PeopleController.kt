@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*
 import javax.validation.Valid
 
 @RestController
-@RequestMapping("/people")
+@RequestMapping("/peoples")
 class PeopleController(val peopleService: PeopleService) {
 
     @PostMapping

@@ -8,13 +8,17 @@ data class Movie(
         @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
         val id: Long,
 
-        val name: String,
+        val title: String,
 
-        val description: String,
+        val overview: String,
 
         val pictureUrl: String,
 
         val budget: BigDecimal,
+
+        val revenue: BigDecimal,
+
+        val popularity: Int,
 
         val stockPrice: BigDecimal,
 
