@@ -10,26 +10,51 @@ data class Movie(
 
         val title: String,
 
+        val originalTitle: String,
+
         val overview: String,
 
         val pictureUrl: String,
 
+        val studio: String,
+
+        val country: String,
+
+        val releaseDate: String,
+
+        val status: String,
+
+        val tagLine: String,
+
+        val voteAverage: Int,
+
+        val voteCount: Int,
+
         val budget: BigDecimal,
+
+        val originalLanguage: String,
 
         val revenue: BigDecimal,
 
         val popularity: Int,
 
+        val runtime: Int,
+
         val stockPrice: BigDecimal,
 
         val quantityAvailable: Long,
 
-        @ManyToMany
-        val cast: List<People> = arrayListOf(),
+        @OneToMany(mappedBy = "movie")
+        val cast: List<Cast> = arrayListOf(),
 
         @ManyToMany
-        val director: List<People> = arrayListOf(),
+        @JoinTable(
+                name = "genre_movie",
+                joinColumns = [JoinColumn(name = "movie_id")],
+                inverseJoinColumns = [JoinColumn(name = "genre_id")]
+        )
+        val genres: List<Genre> = arrayListOf(),
 
-        @ManyToOne
-        val studio: Studio
+        @OneToMany(mappedBy = "movie")
+        val production: List<Department> = arrayListOf()
 )
