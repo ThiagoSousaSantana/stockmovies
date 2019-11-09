@@ -9,8 +9,5 @@ data class UserRequest(
         @field: Email
         val email: String,
         @field: NotBlank
-        val login: String,
-        @field: NotBlank
-        val password: String,
-        val pictureUrl: String
+        val password: String
 )

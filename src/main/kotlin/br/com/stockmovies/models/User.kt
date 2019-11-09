@@ -1,6 +1,7 @@
 package br.com.stockmovies.models
 
 import br.com.stockmovies.models.dtos.UserRequest
+import com.fasterxml.jackson.annotation.JsonIgnore
 import javax.persistence.*
 
 @Entity
@@ -9,9 +10,8 @@ data class User(
         val id: Long? = null,
         val name: String,
         val email: String,
-        val login: String,
+        @JsonIgnore
         val password: String,
-        val pictureUrl: String,
 
         @OneToMany(mappedBy = "user")
         val wallet: List<Position> = arrayListOf(),
@@ -22,8 +22,6 @@ data class User(
     constructor(user: UserRequest) : this(
             name = user.name,
             email = user.email,
-            login = user.login,
-            password = user.password,
-            pictureUrl = user.pictureUrl
+            password = user.password
     )
 }
