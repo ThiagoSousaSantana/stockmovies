@@ -13,10 +13,14 @@ class OMDBService {
     private val API_KEY = "9a56e223"
 
     fun getPoster(movieName: String): String {
-        val omdbMovie: OMDBMovie = restTemplate.getForObject(
-                "$OMDB_URL/?apikey=$API_KEY&t=${movieName.replace(' ', '+')}",
-                OMDBMovie::class
-        )
-        return omdbMovie.Poster
+        return try {
+            val omdbMovie: OMDBMovie = restTemplate.getForObject(
+                    "$OMDB_URL/?apikey=$API_KEY&t=${movieName.replace(' ', '+')}",
+                    OMDBMovie::class
+            )
+            omdbMovie.poster
+        } catch (e: Exception) {
+            ""
+        }
     }
 }

@@ -1,5 +1,6 @@
 package br.com.stockmovies.models
 
+import com.fasterxml.jackson.annotation.JsonManagedReference
 import java.math.BigDecimal
 import javax.persistence.*
 
@@ -14,7 +15,7 @@ data class Movie(
 
         val overview: String,
 
-        val pictureUrl: String,
+        var pictureUrl: String?,
 
         val studio: String,
 
@@ -44,9 +45,11 @@ data class Movie(
 
         val quantityAvailable: Long,
 
+        @JsonManagedReference
         @OneToMany(mappedBy = "movie")
         val cast: List<Cast> = arrayListOf(),
 
+        @JsonManagedReference
         @ManyToMany
         @JoinTable(
                 name = "genre_movie",
@@ -55,6 +58,7 @@ data class Movie(
         )
         val genres: List<Genre> = arrayListOf(),
 
+        @JsonManagedReference
         @OneToMany(mappedBy = "movie")
         val production: List<Department> = arrayListOf()
 )
