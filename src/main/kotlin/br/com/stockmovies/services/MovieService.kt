@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service
 @Service
 class MovieService(private val movieRepository: MovieRepository) {
 
-
     fun listAll(pageable: Pageable): Page<Movie>{
         return movieRepository.findAll(pageable)
     }
+
 }
