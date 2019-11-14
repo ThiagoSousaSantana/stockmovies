@@ -9,19 +9,23 @@ import org.springframework.stereotype.Service
 @Service
 class MovieService(private val movieRepository: MovieRepository, private val omdbService: OMDBService) {
 
-    fun listAll(pageable: Pageable): Page<Movie>{
-        val movies = movieRepository.findAll(pageable)
+    fun findAll(pageable: Pageable, title: String?): Page<Movie>{
+        val movies = if (title == null) {
+            movieRepository.findAll(pageable)
+        } else {
+            movieRepository.findAllByTitleContains(pageable, title)
+        }
 
         movies.forEach {
             if (it.pictureUrl == null) {
                 val url = omdbService.getPoster(it.originalTitle)
                 if (url.isEmpty()) {
                     movieRepository.delete(it)
+                } else {
+                    it.pictureUrl = url
+                    movieRepository.save(it)
                 }
-                it.pictureUrl = url
-                movieRepository.save(it)
             }
-
         }
         return movies
     }
