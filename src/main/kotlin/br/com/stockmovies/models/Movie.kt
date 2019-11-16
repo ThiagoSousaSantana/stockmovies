@@ -25,6 +25,7 @@ data class Movie(
 
         val status: String,
 
+        @Column(name = "tag_line")
         val tagLine: String,
 
         val voteAverage: Int,
