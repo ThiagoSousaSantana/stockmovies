@@ -2,6 +2,7 @@ package br.com.stockmovies.services
 
 import br.com.stockmovies.models.Movie
 import br.com.stockmovies.repositories.MovieRepository
+import br.com.stockmovies.services.exceptions.ResourceNotFoundException
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 import org.springframework.stereotype.Service
@@ -16,10 +17,12 @@ class MovieService(private val movieRepository: MovieRepository, private val omd
             movieRepository.findAllByTitleContains(pageable, title)
         }
 
+        var count = 0
         movies.forEach {
-            if (it.pictureUrl == null) {
+            if (it.pictureUrl == null && count < 1000) {
                 val url = omdbService.getPoster(it.originalTitle)
-                if (url.isEmpty()) {
+                count++
+                if (url.isEmpty() || url == "N/A") {
                     movieRepository.delete(it)
                 } else {
                     it.pictureUrl = url
@@ -28,6 +31,10 @@ class MovieService(private val movieRepository: MovieRepository, private val omd
             }
         }
         return movies
+    }
+
+    fun findById(id: Long): Movie {
+        return movieRepository.findById(id).orElseThrow { ResourceNotFoundException("Movie not found with id: $id") }
     }
 
 }

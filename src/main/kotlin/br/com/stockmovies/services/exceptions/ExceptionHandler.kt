@@ -10,6 +10,15 @@ import javax.naming.AuthenticationException
 @ControllerAdvice
 class ExceptionHandler {
 
+    @ExceptionHandler(value = [ResourceNotFoundException::class])
+    fun resourceNotFound(exception: ResourceNotFoundException): ResponseEntity<StandartError> {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(StandartError(
+                message = exception.message ?: "",
+                status = HttpStatus.NOT_FOUND.value(),
+                timestamp = System.currentTimeMillis()
+        ))
+    }
+
     @ExceptionHandler(value = [AuthenticationException::class])
     fun authenticationException(exception: AuthenticationException): ResponseEntity<StandartError> {
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(StandartError(
