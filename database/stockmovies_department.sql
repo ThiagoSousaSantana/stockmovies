@@ -8,6 +8,7 @@ create table department
     name       text null,
     constraint depatarment_movie__fk
         foreign key (movie_id) references movie (id)
+            on delete cascade
 );
 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2, 285, ' Camera', ' Director of Photography', ' Dariusz Wolski');
@@ -65,7 +66,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (55, 105864, ' Writing', ' Story', ' Bob Peterson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (56, 62177, ' Sound', ' Music Editor', ' Bill Abbott');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (57, 188927, ' Writing', ' Characters', ' Gene Roddenberry');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (58, 10681, ' Writing', ' Screenplay', ' Andrew Stanton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (59, 5174, ' Editing', ' Editor', ' Billy Weber');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (61, 17979, ' Writing', ' Screenplay', ' Robert Zemeckis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (62, 76757, ' Production', ' Executive Producer', ' Bruce Berman');
@@ -160,7 +160,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (154, 56292, ' Production', ' Producer', ' Tom Cruise');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (155, 81188, ' Writing', ' Screenplay', ' David Lindsay-Abaire');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (156, 7552, ' Production', ' Casting', ' Debra Zane');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (157, 616, ' Sound', ' Original Music Composer', ' Hans Zimmer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (158, 147441, ' Camera', ' Director of Photography', ' Dariusz Wolski');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (159, 13475, ' Costume & Make-Up', ' Costume Design', ' Michael Kaplan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (160, 557, ' Camera', ' Director of Photography', ' Don Burgess');
@@ -199,7 +198,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (195, 10567, ' Sound', ' Original Music Composer', ' James Newton Howard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (196, 181533, ' Sound', ' Music', ' Alan Silvestri');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (197, 38055, ' Sound', ' Original Music Composer', ' Hans Zimmer');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (198, 671, ' Sound', ' Original Music Composer', ' John Williams');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (199, 49524, ' Art', ' Supervising Art Director', ' Bruton Jones');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (200, 22, ' Editing', ' Editor', ' Arthur Schmidt');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (201, 131631, ' Production', ' Casting', ' Debra Zane');
@@ -237,7 +235,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (233, 76170, ' Production', ' Casting', ' Suzanne Smith');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (234, 1893, ' Writing', ' Screenplay', ' George Lucas');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (235, 49519, ' Sound', ' Music', ' Alan Silvestri');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (236, 2395, ' Camera', ' Director of Photography', ' Thierry Arbogast');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (237, 12100, ' Camera', ' Director of Photography', ' Jeffrey L. Kimball');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (238, 290595, ' Camera', ' Director of Photography', ' Phedon Papamichael');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (239, 98566, ' Production', ' Producer', ' Michael Bay');
@@ -281,14 +278,12 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (281, 11322, ' Production', ' Casting', ' Avy Kaufman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (282, 4982, ' Production', ' Casting', ' Avy Kaufman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (283, 36955, ' Editing', ' Editor', ' Mark Goldblatt');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (284, 18487, ' Production', ' Casting', ' Denise Chamian');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (285, 39451, ' Production', ' Producer', ' Robert De Niro');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (287, 9268, ' Sound', ' Original Music Composer', ' Alan Silvestri');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (288, 68718, ' Crew', ' Thanks', ' Robert Rodriguez');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (289, 10545, ' Production', ' Casting', ' Ruth Lambert');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (290, 11688, ' Writing', ' Screenplay', ' David Reynolds');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (291, 76163, ' Camera', ' Director of Photography', ' Shelly Johnson');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (292, 2059, ' Production', ' Casting', ' Avy Kaufman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (293, 2486, ' Editing', ' Editor', ' Chris Lebenzon');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (294, 16523, ' Production', ' Producer', ' Tom Hanks');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (295, 116711, ' Sound', ' Original Music Composer', ' Danny Elfman');
@@ -442,7 +437,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (454, 12096, ' Writing', ' Characters', ' Blake Edwards');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (455, 10200, ' Production', ' Casting', ' Heike Brandstatter');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (456, 8834, ' Camera', ' Director of Photography', ' John Schwartzman');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (458, 6068, ' Production', ' Casting', ' Bonnie Timmermann');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (459, 41515, ' Directing', ' Director', ' Eric Brevig');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (460, 9023, ' Sound', ' Original Music Composer', ' Hans Zimmer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (461, 38317, ' Writing', ' Screenplay', ' Kevin James');
@@ -473,7 +467,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (486, 9447, ' Camera', ' Director of Photography', ' Andrew Lesnie');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (487, 274854, ' Editing', ' Editor', ' Chris Lebenzon');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (488, 8870, ' Camera', ' Director of Photography', ' Peter Suschitzky');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (489, 9992, ' Directing', ' Director', ' Luc Besson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (490, 36970, ' Production', ' Executive Producer', ' Jake Eberts');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (491, 10077, ' Editing', ' Editor', ' Sylvie Landra');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (492, 76649, ' Directing', ' Director', ' Paul W.S. Anderson');
@@ -542,7 +535,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (559, 35, ' Directing', ' Director', ' David Silverman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (560, 11086, ' Sound', ' Supervising Sound Editor', ' Richard L. Anderson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (561, 10477, ' Sound', ' Original Music Composer', ' BT');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (562, 1997, ' Sound', ' Original Music Composer', ' Stephen Warbeck');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (563, 6947, ' Production', ' Producer', ' Sam Mercer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (564, 3050, ' Art', ' Production Design', ' William A. Elliott');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (565, 2675, ' Production', ' Producer', ' Sam Mercer');
@@ -556,7 +548,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (575, 9257, ' Art', ' Production Design', ' Mayne Berke');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (576, 1903, ' Production', ' Producer', ' Tom Cruise');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (577, 9697, ' Production', ' Producer', ' Sam Mercer');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (578, 395, ' Directing', ' Director', ' Paul W.S. Anderson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (579, 23398, ' Production', ' Executive Producer', ' Arnon Milchan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (580, 10590, ' Camera', ' Dolly Grip', ' John Murphy');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (583, 44943, ' Production', ' Casting', ' Debra Zane');
@@ -688,7 +679,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (716, 9334, ' Art', ' Art Direction', ' Doug J. Meerdink');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (717, 11128, ' Writing', ' Screenplay', ' Lewis Colick');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (719, 8914, ' Sound', ' Original Music Composer', ' Trevor Rabin');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (720, 13576, ' Directing', ' Director', ' Kenny Ortega');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (721, 39538, ' Art', ' Supervising Art Director', ' David Lazan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (722, 10628, ' Production', ' Producer', ' Jerry Bruckheimer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (723, 14836, ' Editing', ' Editor', ' Ronald Sanders');
@@ -733,7 +723,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (764, 17332, ' Production', ' Casting', ' Francine Maisler');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (765, 4958, ' Production', ' Casting', ' Debra Zane');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (766, 786, ' Art', ' Art Direction', ' Clay A. Griffith');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (767, 9513, ' Production', ' Producer', ' John Davis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (768, 11679, ' Editing', ' Editor', ' Mark Goldblatt');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (769, 38321, ' Camera', ' Director of Photography', ' Don Burgess');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (770, 14411, ' Sound', ' Sound Effects Editor', ' Doug Jackson');
@@ -770,7 +759,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (801, 72431, ' Production', ' Producer', ' Rick McCallum');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (802, 1813, ' Production', ' Producer', ' Arnon Milchan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (803, 87428, ' Sound', ' Original Music Composer', ' Rupert Gregson-Williams');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (804, 8840, ' Art', ' Production Design', ' Benjam\\u00edn Fern\\u00e1ndez');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (806, 71676, ' Art', ' Production Design', ' Kevin Phipps');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (807, 1722, ' Editing', ' Editor', ' Mick Audsley');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (808, 10022, ' Editing', ' Editor', ' Christopher Greenbury');
@@ -803,7 +791,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (836, 58224, ' Costume & Make-Up', ' Makeup Artist', ' Bill Corso');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (837, 1729, ' Production', ' Producer', ' Philip Lee');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (838, 175574, ' Writing', ' Screenplay', ' John J. Strauss');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (839, 8077, ' Art', ' Art Direction', ' Jim Morahan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (840, 8818, ' Camera', ' Director of Photography', ' Darius Khondji');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (841, 8195, ' Writing', ' Screenplay', ' David Mamet');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (842, 10586, ' Directing', ' Director', ' Stephen Hopkins');
@@ -818,14 +805,12 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (852, 9566, ' Production', ' Producer', ' Wendy Finerman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (853, 9833, ' Crew', ' Choreographer', ' Peter Darling');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (854, 4517, ' Writing', ' Screenplay', ' William Nicholson');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (855, 8202, ' Production', ' Executive Producer', ' Tom Rosenberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (857, 34314, ' Production', ' Producer', ' David Valdes');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (858, 19724, ' Editing', ' Editor', ' David Moritz');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (859, 145220, ' Production', ' Producer', ' David Hoberman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (860, 14623, ' Sound', ' Original Music Composer', ' Hans Zimmer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (861, 42297, ' Production', ' Casting', ' John Papsidera');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (863, 802, ' Directing', ' Director', ' Stanley Kubrick');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (864, 10375, ' Production', ' Casting', ' Mary Vernieu');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (865, 36586, ' Sound', ' Production Sound Mixer', ' Mark Holding');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (866, 11321, ' Production', ' Casting', ' Denise Chamian');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (867, 70074, ' Writing', ' Novel', ' Colin Wilson');
@@ -872,7 +857,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (908, 2022, ' Editing', ' Editor', ' Jeff Gourson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (909, 37686, ' Production', ' Producer', ' Steven Spielberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (910, 462, ' Sound', ' Original Music Composer', ' Thomas Newman');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (911, 9919, ' Camera', ' Director of Photography', ' John Bailey');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (912, 187017, ' Production', ' Casting', ' Jeanne McCarthy');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (913, 628, ' Editing', ' Editor', ' Mick Audsley');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (914, 10201, ' Production', ' Executive Producer', ' Bruce Berman');
@@ -964,7 +948,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1001, 47327, ' Sound', ' Sound Re-Recording Mixer', ' Tom Johnson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1002, 15268, ' Directing', ' Director', ' Andrzej Bartkowiak');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1003, 10796, ' Sound', ' Sound Designer', ' Harry Cohen');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1005, 18947, ' Art', ' Production Design', ' Mark Tildesley');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1006, 1900, ' Production', ' Casting', ' Debra Zane');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1007, 89, ' Production', ' Executive Producer', ' George Lucas');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1008, 96724, ' Writing', ' Screenplay', ' Tom Stoppard');
@@ -980,12 +963,10 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1018, 1636, ' Art', ' Production Design', ' Rick Heinrichs');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1019, 2148, ' Writing', ' Screenplay', ' Francis Ford Coppola');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1021, 260346, ' Production', ' Producer', ' Luc Besson');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1024, 7504, ' Camera', ' Director of Photography', ' Giles Nuttgens');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1025, 8592, ' Sound', ' Original Music Composer', ' Alan Silvestri');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1026, 913, ' Production', ' Producer', ' Pierce Brosnan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1027, 11091, ' Sound', ' Original Music Composer', ' Hans Zimmer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1028, 1368, ' Sound', ' Sound Editor', ' Bub Asman');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1029, 593, ' Directing', ' Director', ' Andrei Tarkovsky');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1030, 5393, ' Production', ' Casting', ' Ruth Lambert');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1031, 9095, ' Production', ' Co-Producer', ' Iain Smith');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1032, 8874, ' Editing', ' Editor', ' Lisa Fruchtman');
@@ -1045,7 +1026,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1092, 10858, ' Sound', ' Original Music Composer', ' John Williams');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1093, 11439, ' Crew', ' Stunt Coordinator', ' Volkhart Buff');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1094, 9457, ' Sound', ' Sound Re-Recording Mixer', ' Rick Alexander');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1096, 1494, ' Writing', ' Screenplay', ' Zhang Yimou');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1097, 13184, ' Production', ' Producer', ' Nicolas Cage');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1098, 2185, ' Sound', ' Original Music Composer', ' James Newton Howard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1099, 6639, ' Editing', ' Editor', ' Mick Audsley');
@@ -1076,7 +1056,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1128, 11560, ' Production', ' Producer', ' Arnon Milchan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1129, 25189, ' Directing', ' Director', ' Barbra Streisand');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1130, 2637, ' Production', ' Producer', ' Tom Rosenberg');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1131, 18480, ' Writing', ' Screenplay', ' Sacha Baron Cohen');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1132, 709, ' Art', ' Art Direction', ' Michael Lamont');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1133, 49730, ' Production', ' Casting', ' Ronna Kress');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1134, 2749, ' Art', ' Production Design', ' Mayne Berke');
@@ -1085,7 +1064,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1137, 79, ' Directing', ' Director', ' Zhang Yimou');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1138, 54054, ' Production', ' Producer', ' Wendy Finerman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1140, 46528, ' Production', ' Producer', ' Barrie M. Osborne');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1141, 27936, ' Directing', ' Director', ' Jean-Pierre Jeunet');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1143, 280391, ' Directing', ' Director', ' Jamel Debbouze');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1145, 10610, ' Production', ' Executive Producer', ' Jackie Chan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1146, 745, ' Production', ' Casting', ' Avy Kaufman');
@@ -1153,7 +1131,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1211, 4970, ' Production', ' Producer', ' Robert Zemeckis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1212, 11831, ' Sound', ' Original Music Composer', ' John Williams');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1214, 440, ' Production', ' Producer', ' David Giler');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1215, 11011, ' Sound', ' Original Music Composer', ' Alan Silvestri');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1216, 10641, ' Production', ' Producer', ' Tom Rosenberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1217, 11172, ' Production', ' Executive Producer', ' Bruce Berman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1218, 39513, ' Production', ' Executive Producer', ' Natascha Wharton');
@@ -1198,7 +1175,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1258, 10315, ' Writing', ' Novel', ' Roald Dahl');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1259, 16643, ' Camera', ' Director of Photography', ' Stephen H. Burum');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1260, 2687, ' Writing', ' Screenplay', ' William Goldman');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1261, 194, ' Production', ' Producer', ' Jean-Marc Deschamps');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1262, 11025, ' Production', ' Producer', ' Denise Di Novi');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1263, 8849, ' Sound', ' Original Music Composer', ' Mick Jagger');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1264, 78698, ' Crew', ' Cinematography', ' John Bailey');
@@ -1234,11 +1210,9 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1296, 8842, ' Production', ' Casting', ' Avy Kaufman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1297, 9531, ' Production', ' Casting', ' Jane Feinberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1298, 64807, ' Art', ' Production Design', ' Wynn Thomas');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1299, 12289, ' Editing', ' Editor', ' Angie Lam');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1300, 11529, ' Art', ' Production Design', ' Clay A. Griffith');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1301, 20943, ' Production', ' Producer', ' Tom Rosenberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1302, 9099, ' Sound', ' Music', ' Alan Silvestri');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1303, 9488, ' Directing', ' Director', ' Robert Rodriguez');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1304, 193, ' Art', ' Set Decoration', ' John M. Dwyer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1305, 44865, ' Directing', ' Director', ' Wong Kar-wai');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1306, 55787, ' Crew', ' Cinematography', ' Rodrigo Prieto');
@@ -1274,7 +1248,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1339, 8470, ' Production', ' Casting', ' Matthew Barry');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1340, 11001, ' Editing', ' Editor', ' Michael Tronick');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1341, 138832, ' Production', ' Producer', ' Chris Bender');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1342, 16911, ' Sound', ' Music', ' Yuriy Poteenko');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1343, 2163, ' Directing', ' Director', ' Jonathan Mostow');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1344, 36670, ' Production', ' Executive Producer', ' Kevin McClory');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1345, 23048, ' Camera', ' Director of Photography', ' Jack Green');
@@ -1349,7 +1322,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1418, 94348, ' Production', ' Casting', ' Ronna Kress');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1419, 8197, ' Directing', ' Director', ' Clint Eastwood');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1420, 336004, ' Production', ' Producer', ' Robert Jones');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1421, 35019, ' Sound', ' Original Music Composer', ' James Newton Howard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1422, 10410, ' Production', ' Casting', ' Debra Zane');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1423, 8836, ' Editing', ' Editor', ' Richard A. Harris');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1425, 321741, ' Production', ' Producer', ' Ridley Scott');
@@ -1383,7 +1355,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1458, 9311, ' Production', ' Producer', ' Bernd Eichinger');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1459, 9280, ' Production', ' Casting', ' Suzanne Smith');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1460, 26843, ' Directing', ' Director', ' Moustapha Akkad');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1461, 11876, ' Camera', ' Director of Photography', ' Thierry Arbogast');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1462, 22267, ' Production', ' Casting', ' Avy Kaufman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1463, 45958, ' Writing', ' Screenplay', ' Alejandro Gonz\\u00e1lez I\\u00f1\\u00e1rritu');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1464, 1969, ' Writing', ' Writer', ' Luc Besson');
@@ -1394,7 +1365,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1469, 1381, ' Production', ' Producer', ' Iain Smith');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1470, 2162, ' Sound', ' Original Music Composer', ' Hans Zimmer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1471, 127493, ' Editing', ' Editor', ' Glen Scantlebury');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1472, 12429, ' Directing', ' Director', ' Hayao Miyazaki');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1473, 228205, ' Production', ' Casting', ' Mary Vernieu');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1474, 2900, ' Production', ' Casting', ' Richard Pagano');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1475, 21311, ' Writing', ' Screenplay', ' Susan Shilliday');
@@ -1410,7 +1380,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1485, 326, ' Sound', ' Original Music Composer', ' Trevor Rabin');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1486, 10685, ' Camera', ' Director of Photography', ' Michael Chapman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1487, 7220, ' Production', ' Producer', ' Gale Anne Hurd');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1488, 9763, ' Production', ' Executive Producer', ' Lawrence Bender');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1489, 72387, ' Production', ' Producer', ' Lawrence Bender');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1490, 12596, ' Sound', ' Original Music Composer', ' Anne Dudley');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1491, 1892, ' Writing', ' Screenplay', ' George Lucas');
@@ -1438,7 +1407,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1516, 11141, ' Production', ' Executive Producer', ' Pierce Brosnan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1517, 8649, ' Camera', ' Director of Photography', ' Robert Richardson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1518, 31867, ' Editing', ' Editor', ' Richard Francis-Bruce');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1519, 10253, ' Sound', ' Original Music Composer', ' Steve Jablonsky');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1520, 3587, ' Editing', ' Editor', ' Stephen E. Rivkin');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1521, 124459, ' Production', ' Producer', ' Chris Bender');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1522, 24662, ' Writing', ' Screenplay', ' Cinco Paul');
@@ -1498,7 +1466,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1583, 10207, ' Production', ' Producer', ' Kevin Costner');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1584, 172, ' Art', ' Set Decoration', ' John M. Dwyer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1585, 21972, ' Editing', ' Editor', ' Peter E. Berger');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1586, 36593, ' Production', ' Producer', ' Robert K. Weiss');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1587, 707, ' Art', ' Set Decoration', ' Crispian Sallis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1588, 533, ' Directing', ' Director', ' Nick Park');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1589, 6023, ' Production', ' Producer', ' Wendy Finerman');
@@ -1507,7 +1474,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1593, 4105, ' Sound', ' Original Music Composer', ' Hans Zimmer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1594, 76489, ' Sound', ' Original Music Composer', ' John Debney');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1595, 3933, ' Directing', ' Director', ' Tim Burton');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1596, 9918, ' Production', ' Producer', ' Jerry Bruckheimer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1597, 273481, ' Camera', ' Director of Photography', ' Roger Deakins');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1599, 16871, ' Production', ' Casting', ' John Papsidera');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1600, 293863, ' Production', ' Producer', ' Tom Rosenberg');
@@ -1557,7 +1523,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1649, 58151, ' Production', ' Producer', ' Michael De Luca');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1650, 11400, ' Production', ' Casting', ' Francine Maisler');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1652, 28902, ' Camera', ' Director of Photography', ' Darius Khondji');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1653, 14164, ' Directing', ' Director', ' James Wong');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1654, 76640, ' Production', ' Casting', ' Ronna Kress');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1655, 11058, ' Editing', ' Editor', ' Niven Howie');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1656, 14844, ' Production', ' Casting', ' Lisa Beach');
@@ -1573,7 +1538,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1666, 11162, ' Production', ' Executive Producer', ' Robert Jones');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1667, 6016, ' Production', ' Casting', ' Susie Figgis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1668, 17186, ' Production', ' Producer', ' Richard Gabai');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1670, 2008, ' Sound', ' Original Music Composer', ' Klaus Badelt');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1671, 9053, ' Production', ' Producer', ' Paul W.S. Anderson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1672, 4512, ' Camera', ' Director of Photography', ' Roger Deakins');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1673, 76349, ' Directing', ' Director', ' Jackie Chan');
@@ -1665,7 +1629,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1769, 5126, ' Directing', ' Director', ' Menno Meyjes');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1770, 56288, ' Directing', ' Director', ' Robert Rodriguez');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1771, 303858, ' Directing', ' Director', ' Jodie Foster');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1772, 1613, ' Art', ' Production Design', ' Alan MacDonald');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1773, 31582, ' Production', ' Casting', ' Mali Finn');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1774, 16617, ' Production', ' Casting', ' Monika Mikkelsen');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1775, 8944, ' Production', ' Producer', ' Robert De Niro');
@@ -1695,7 +1658,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1800, 2057, ' Camera', ' Director of Photography', ' Rodrigo Prieto');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1801, 70436, ' Production', ' Casting', ' Lucinda Syson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1802, 16784, ' Sound', ' Original Music Composer', ' John Debney');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1803, 8011, ' Writing', ' Story', ' Brad Mirman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1804, 31640, ' Production', ' Casting', ' Dianne Crittenden');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1805, 9092, ' Camera', ' Camera Operator', ' Bill Coe');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1806, 2779, ' Production', ' Casting', ' Juliet Taylor');
@@ -1830,12 +1792,9 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1944, 22256, ' Crew', ' Cinematography', ' Conrad L. Hall');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1945, 12404, ' Production', ' Executive Producer', ' Steve Christian');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1946, 152742, ' Sound', ' Original Music Composer', ' Ennio Morricone');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1947, 11699, ' Production', ' Casting', ' Johanna Ray');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1948, 49953, ' Sound', ' Original Music Composer', ' Ramin Djawadi');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1949, 48034, ' Editing', ' Editor', ' Herv\\u00e9 de Luze');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1950, 39845, ' Directing', ' Director', ' Taylor Hackford');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1951, 25353, ' Directing', ' Director', ' J\\u00e9r\\u00f4me Deschamps');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1952, 36696, ' Directing', ' Director', ' Inna Evlannikova');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1953, 109091, ' Production', ' Casting', ' Avy Kaufman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1954, 38543, ' Costume & Make-Up', ' Costume Design', ' Beatrix Aruna Pasztor');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1955, 33157, ' Sound', ' Music', ' Nino Rota');
@@ -1868,12 +1827,10 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1985, 26672, ' Visual Effects', ' Animation', ' Art Babbitt');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1986, 45881, ' Camera', ' Director of Photography', ' Javier Aguirresarobe');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1987, 41283, ' Art', ' Production Design', ' David Lazan');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1988, 4935, ' Production', ' Executive Producer', ' John Lasseter');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1989, 19908, ' Writing', ' Writer', ' Rhett Reese');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1990, 10663, ' Camera', ' Director of Photography', ' Steven Bernstein');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1991, 1891, ' Editing', ' Editor', ' George Lucas');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1992, 9737, ' Production', ' Producer', ' Jerry Bruckheimer');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1993, 37137, ' Production', ' Producer', ' Robert K. Weiss');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1994, 9532, ' Production', ' Casting', ' John Papsidera');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1995, 10316, ' Camera', ' Director of Photography', ' Phedon Papamichael');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (1996, 2787, ' Sound', ' Music', ' Graeme Revell');
@@ -1890,11 +1847,9 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2007, 20024, ' Camera', ' Director of Photography', ' Roger Pratt');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2008, 2453, ' Sound', ' Original Music Composer', ' Basil Poledouris');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2009, 6973, ' Camera', ' Director of Photography', ' Roger Deakins');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2010, 11156, ' Production', ' Producer', ' Carole Scotta');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2011, 354110, ' Sound', ' Supervising Sound Editor', ' Mark Gingras');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2012, 22215, ' Camera', ' Director of Photography', ' Darius Khondji');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2013, 11632, ' Sound', ' Original Music Composer', ' Mychael Danna');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2014, 30596, ' Writing', ' Writer', ' Chun Tin-Nam');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2015, 3021, ' Production', ' Executive Producer', ' Bob Weinstein');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2016, 957, ' Sound', ' Original Music Composer', ' John Morris');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2017, 256917, ' Directing', ' Director', ' Russell Crowe');
@@ -1933,13 +1888,11 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2051, 287948, ' Writing', ' Screenplay', ' Luc Besson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2052, 7548, ' Production', ' Casting', ' Mary Selway');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2053, 9075, ' Sound', ' Music', ' Anne Dudley');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2054, 11661, ' Production', ' Casting', ' Susie Figgis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2055, 109513, ' Crew', ' Armorer', ' Clay Van Sickle');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2056, 12085, ' Sound', ' Original Music Composer', ' James Newton Howard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2057, 204922, ' Sound', ' Original Music Composer', ' Ed Shearmur');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2058, 38985, ' Writing', ' Novel', ' Georges Arnaud');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2059, 44113, ' Directing', ' Director', ' John Curran');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2060, 21494, ' Writing', ' Writer', ' Gr\\u00e9goire Vigneron');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2061, 164457, ' Production', ' Casting', ' Ronna Kress');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2062, 4566, ' Sound', ' Original Music Composer', ' James Newton Howard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2063, 17795, ' Writing', ' Screenplay', ' Peter Tolan');
@@ -2119,28 +2072,22 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2245, 77948, ' Costume & Make-Up', ' Costume Design', ' Bina Daigeler');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2246, 21755, ' Art', ' Production Design', ' Jim Clay');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2247, 4960, ' Sound', ' Original Music Composer', ' Jon Brion');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2248, 128, ' Directing', ' Director', ' Hayao Miyazaki');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2249, 14652, ' Directing', ' Director', ' Jean-Paul Rappeneau');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2250, 40932, ' Writing', ' Writer', ' Bronte Woodard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2251, 16608, ' Production', ' Executive Producer', ' Robert Jones');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2252, 334531, ' Production', ' Casting', ' Amanda Mackey');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2253, 32316, ' Sound', ' Original Music Composer', ' Mervyn Warren');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2254, 7299, ' Production', ' Casting', ' Lucinda Syson');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2255, 13405, ' Directing', ' Director', ' Roger Spottiswoode');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2256, 19457, ' Sound', ' Music', ' Howard Shore');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2257, 112937, ' Crew', ' Cinematography', ' Peter Kleine');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2258, 314385, ' Production', ' Producer', ' Brad Pitt');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2260, 29078, ' Directing', ' Director', ' David Anspaugh');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2261, 46503, ' Directing', ' Director', ' Andrew Jarecki');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2262, 10448, ' Production', ' Executive Producer', ' Barrie M. Osborne');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2263, 13688, ' Production', ' Producer', ' Han Sanping');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2264, 10353, ' Writing', ' Screenplay', ' Christian Clavier');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2265, 43935, ' Sound', ' Original Music Composer', ' Klaus Badelt');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2266, 11458, ' Production', ' Producer', ' Michael Nozik');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2267, 44638, ' Editing', ' Editor', ' Fran\\u00e7oise Bonnot');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2268, 241257, ' Costume & Make-Up', ' Costume Design', ' Sonia Grande');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2269, 14538, ' Directing', ' Director', ' Daniel Lee');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2270, 13250, ' Production', ' Producer', ' Pierce Brosnan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2272, 280871, ' Editing', ' Editor', ' B. Lenin');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2273, 239897, ' Directing', ' Director', ' Tom Walsh');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2274, 184341, ' Directing', ' Director', ' Jonathan Jakubowicz');
@@ -2161,7 +2108,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2292, 62630, ' Production', ' Casting', ' John Hubbard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2293, 16110, ' Directing', ' Director', ' Britt Allcroft');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2294, 29427, ' Production', ' Casting', ' John Papsidera');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2295, 129, ' Production', ' Producer', ' John Lasseter');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2296, 244114, ' Production', ' Producer', ' William Kong');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2297, 2669, ' Sound', ' Original Music Composer', ' Vangelis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2298, 203833, ' Sound', ' Original Music Composer', ' John Williams');
@@ -2206,7 +2152,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2337, 9829, ' Production', ' Casting', ' John Hubbard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2338, 10028, ' Editing', ' Editor', ' Mark Helfrich');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2339, 10535, ' Production', ' Executive Producer', ' Leslie Nielsen');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2340, 790, ' Camera', ' Director of Photography', ' Dean Cundey');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2341, 43959, ' Directing', ' Director', ' Sean McNamara');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2342, 10364, ' Art', ' Art Direction', ' Harold Michelson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2343, 16991, ' Directing', ' Director', ' Jody Hill');
@@ -2232,18 +2177,15 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2363, 253235, ' Directing', ' Director', ' Rob Reiner');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2364, 22102, ' Art', ' Production Design', ' Robert F. Boyle');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2365, 18701, ' Directing', ' Director', ' Istv\\u00e1n Szab\\u00f3');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2366, 10068, ' Editing', ' Editor', ' Tom Rolf');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2367, 848, ' Art', ' Production Design', ' Elliot Scott');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2368, 36811, ' Directing', ' Director', ' Michael Hoffman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2370, 130150, ' Production', ' Casting', ' Suzanne Smith');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2371, 12246, ' Editing', ' Editor', ' Vald\\u00eds \\u00d3skarsd\\u00f3ttir');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2372, 13809, ' Directing', ' Director', ' Guy Ritchie');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2373, 27380, ' Production', ' Casting', ' Jane Feinberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2374, 10549, ' Writing', ' Theatre Play', ' William Shakespeare');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2375, 33870, ' Directing', ' Director', ' Bruce Beresford');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2376, 245703, ' Production', ' Casting', ' Francine Maisler');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2378, 127560, ' Costume & Make-Up', ' Costume Design', ' Lizzy Gardiner');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2379, 37903, ' Production', ' Producer', ' Stefan Arndt');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2380, 396152, ' Directing', ' Director', ' Zack Ward');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2381, 10017, ' Production', ' Casting', ' Ilene Starger');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2383, 193613, ' Directing', ' Director', ' Nimr\\u00f3d Antal');
@@ -2274,7 +2216,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2411, 21765, ' Production', ' Casting', ' Deborah Aquila');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2412, 146304, ' Production', ' Producer', ' Sean Daniel');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2413, 7516, ' Production', ' Casting', ' Amanda Mackey');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2414, 41439, ' Production', ' Executive Producer', ' James Wan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2415, 2752, ' Production', ' Producer', ' Tim Bevan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2416, 9429, ' Writing', ' Screenplay', ' Steve Koren');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2417, 38117, ' Sound', ' Music', ' Marcelo Zarvos');
@@ -2303,7 +2244,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2441, 10629, ' Production', ' Producer', ' Jerry Bruckheimer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2442, 255343, ' Editing', ' Editor', ' David Brenner');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2443, 4723, ' Directing', ' Director', ' Richard Kelly');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2444, 10800, ' Sound', ' Original Music Composer', ' Klaus Badelt');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2445, 25763, ' Production', ' Casting', ' Jane Feinberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2446, 79694, ' Art', ' Set Decoration', ' Daniele Drobny');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2448, 18615, ' Production', ' Producer', ' Bonnie Timmermann');
@@ -2323,7 +2263,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2463, 10781, ' Production', ' Producer', ' Michael Bay');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2464, 318850, ' Sound', ' Music', ' John Debney');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2465, 13908, ' Directing', ' Director', ' Perry Andelin Blake');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2466, 1417, ' Crew', ' Thanks', ' Alejandro Gonz\\u00e1lez I\\u00f1\\u00e1rritu');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2467, 39180, ' Writing', ' Story', ' George Gallo');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2468, 16161, ' Directing', ' Director', ' John Singleton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2469, 49950, ' Production', ' Executive Producer', ' Beau Marks');
@@ -2332,7 +2271,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2472, 4638, ' Production', ' Executive Producer', ' Natascha Wharton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2473, 13972, ' Directing', ' Director', ' Diane English');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2474, 5038, ' Camera', ' Director of Photography', ' Javier Aguirresarobe');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2475, 13491, ' Camera', ' Director of Photography', ' Eric Kress');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2476, 10571, ' Production', ' Executive Producer', ' Bob Weinstein');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2477, 10994, ' Sound', ' Original Music Composer', ' Thomas Newman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2478, 19994, ' Costume & Make-Up', ' Costume Design', ' Katia Stano');
@@ -2370,12 +2308,10 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2513, 12154, ' Directing', ' Director', ' Leonard Nimoy');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2514, 9576, ' Costume & Make-Up', ' Costume Design', ' Ruth Morley');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2515, 744, ' Production', ' Producer', ' Jerry Bruckheimer');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2516, 146, ' Production', ' Producer', ' William Kong');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2517, 14, ' Sound', ' Original Music Composer', ' Thomas Newman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2518, 45269, ' Editing', ' Editor', ' Tariq Anwar');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2519, 9493, ' Sound', ' Original Music Composer', ' Georges Delerue');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2520, 22556, ' Writing', ' Writer', ' Pete Hamill');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2522, 33196, ' Production', ' Producer', ' David S. Dranitzke');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2523, 205596, ' Art', ' Production Design', ' Maria Djurkovic');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2524, 10765, ' Editing', ' Editor', ' Sheldon Kahn');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2525, 16769, ' Editing', ' Editor', ' Arthur Schmidt');
@@ -2440,7 +2376,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2588, 64689, ' Production', ' Producer', ' Brad Pitt');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2589, 157849, ' Production', ' Casting', ' Jina Jay');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2590, 13166, ' Production', ' Executive Producer', ' Arnon Milchan');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2591, 15511, ' Writing', ' Author', ' Phil Vischer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2593, 12211, ' Production', ' Producer', ' Bob Weinstein');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2594, 13816, ' Production', ' Casting', ' Suzanne Smith');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2595, 51828, ' Directing', ' Director', ' Lone Scherfig');
@@ -2458,7 +2393,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2609, 7874, ' Production', ' Producer', ' John Singleton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2610, 4911, ' Sound', ' Sound Designer', ' Lance Brown');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2611, 1988, ' Directing', ' Director', ' Michael Winterbottom');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2612, 16222, ' Sound', ' Original Music Composer', ' Ed Shearmur');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2613, 9557, ' Production', ' Casting', ' Roger Mussenden');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2615, 57943, ' Directing', ' Director', ' Dan Curtis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2616, 18276, ' Production', ' Producer', ' Frank Marshall');
@@ -2468,7 +2402,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2621, 133694, ' Sound', ' Original Music Composer', ' Danny Elfman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2622, 19265, ' Directing', ' Director', ' Woody Allen');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2623, 36047, ' Directing', ' Director', ' Mary Lambert');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2624, 8053, ' Production', ' Producer', ' Luc Besson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2625, 2290, ' Production', ' Casting', ' Suzanne Smith');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2626, 5236, ' Production', ' Producer', ' Joel Silver');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2627, 6552, ' Editing', ' Editor', ' Stephen E. Rivkin');
@@ -2483,11 +2416,9 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2637, 331592, ' Costume & Make-Up', ' Makeup Artist', ' Haley O''Neil');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2638, 47692, ' Art', ' Production Design', ' Jim Clay');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2639, 19, ' Production', ' Producer', ' Erich Pommer');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2640, 10045, ' Production', ' Producer', ' Luc Besson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2641, 400, ' Editing', ' Editor', ' Richard Marks');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2642, 253450, ' Sound', ' Original Music Composer', ' Lim Giong');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2643, 9104, ' Production', ' Executive Producer', ' James Schamus');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2644, 11190, ' Production', ' Executive Producer', ' Andrew Colton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2645, 16353, ' Directing', ' Director', ' Tony Jaa');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2646, 23759, ' Editing', ' Editor', ' Chris Gill');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2647, 24206, ' Directing', ' Director', ' Russell Mulcahy');
@@ -2496,11 +2427,9 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2650, 74536, ' Writing', ' Screenplay', ' Dito Montiel');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2651, 31668, ' Directing', ' Director', ' Stefan Ruzowitzky');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2652, 13501, ' Directing', ' Director', ' Jake Paltrow');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2653, 15208, ' Production', ' Executive Producer', ' Thom Mount');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2654, 172391, ' Writing', ' Writer', ' Raffaella Delle Donne');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2655, 262543, ' Production', ' Producer', ' Antonio Banderas');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2656, 9288, ' Sound', ' Music', ' David Julyan');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2658, 20083, ' Writing', ' Writer', ' Chun Tin-Nam');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2659, 40880, ' Directing', ' Director', ' Julien Temple');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2660, 137, ' Art', ' Assistant Art Director', ' James J. Murakami');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2661, 264999, ' Camera', ' Director of Photography', ' Steven Soderbergh');
@@ -2542,7 +2471,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2698, 10741, ' Writing', ' Screenplay', ' Emilio Estevez');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2699, 24940, ' Writing', ' Writer', ' John J. Strauss');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2700, 82679, ' Art', ' Production Design', ' Mark White');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2701, 2013, ' Production', ' Producer', ' Kathleen Kennedy');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2702, 1440, ' Sound', ' Original Music Composer', ' Thomas Newman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2703, 18041, ' Sound', ' Original Music Composer', ' Graeme Revell');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2704, 28029, ' Production', ' Casting', ' Suzanne Smith');
@@ -2552,7 +2480,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2708, 16899, ' Production', ' Casting', ' Celestia Fox');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2709, 41317, ' Camera', ' Director of Photography', ' Douglas Slocombe');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2710, 245700, ' Production', ' Executive Producer', ' Tessa Ross');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2711, 37842, ' Editing', ' Editor', ' Herv\\u00e9 de Luze');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2713, 44092, ' Production', ' Producer', ' John Woo');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2714, 16005, ' Editing', ' Editor', ' Naomi Geraghty');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2715, 44754, ' Production', ' Producer', ' Sydney Pollack');
@@ -2564,7 +2491,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2722, 10876, ' Sound', ' Original Music Composer', ' Stephen Warbeck');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2723, 86838, ' Production', ' Executive Producer', ' Tessa Ross');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2725, 613, ' Crew', ' Thanks', ' Oskar Roehler');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2726, 1913, ' Camera', ' Director of Photography', ' Javier Aguirresarobe');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2727, 97370, ' Costume & Make-Up', ' Makeup Artist', ' Christine Beveridge');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2728, 801, ' Production', ' Casting', ' Louis DiGiaimo');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2729, 70829, ' Directing', ' Director', ' Shim Hyung-Rae');
@@ -2572,15 +2498,12 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2733, 9816, ' Production', ' Casting', ' Avy Kaufman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2734, 10131, ' Writing', ' Screenplay', ' Brian Helgeland');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2735, 339984, ' Production', ' Producer', ' Joe Roth');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2736, 8859, ' Production', ' Casting', ' Ronnie Yeskel');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2737, 11967, ' Camera', ' Director of Photography', ' Dean Semler');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2738, 239563, ' Production', ' Producer', ' Fred Roos');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2739, 222899, ' Directing', ' Director', ' Steve Pink');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2740, 4951, ' Art', ' Set Decoration', ' Charles Graffeo');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2741, 10985, ' Editing', ' Additional Editing', ' Ronald Roose');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2742, 9644, ' Editing', ' Editor', ' Christopher Greenbury');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2743, 332567, ' Sound', ' Original Music Composer', ' Marco Beltrami');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2744, 1954, ' Production', ' Producer', ' Chris Bender');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2745, 15489, ' Writing', ' Writer', ' Will McRobb');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2746, 15250, ' Directing', ' Director', ' Preston A. Whitmore II');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2747, 22345, ' Directing', ' Director', ' Bob Clark');
@@ -2631,7 +2554,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2796, 26688, ' Production', ' Casting', ' Joanna Colbert');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2797, 43867, ' Writing', ' Screenplay', ' John L. Balderston');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2798, 6615, ' Production', ' Producer', ' John Cameron');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2799, 14574, ' Sound', ' Supervising Sound Editor', ' Rodney Glenn');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2800, 16, ' Directing', ' Director', ' Lars von Trier');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2801, 39780, ' Directing', ' Director', ' Gillian Armstrong');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2802, 21612, ' Directing', ' Director', ' Abel Ferrara');
@@ -2639,7 +2561,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2804, 23631, ' Writing', ' Screenplay', ' Robert Rodriguez');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2805, 45324, ' Directing', ' Director', ' George Hickenlooper');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2806, 12144, ' Production', ' Executive Producer', ' George Lucas');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2807, 11658, ' Writing', ' Screenplay', ' Kang Je-gyu');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2808, 56601, ' Sound', ' Music', ' Bill Conti');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2809, 9552, ' Production', ' Casting', ' Louis DiGiaimo');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2810, 578, ' Sound', ' Original Music Composer', ' John Williams');
@@ -2654,7 +2575,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2819, 9281, ' Directing', ' Director', ' Peter Weir');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2820, 75674, ' Editing', ' Editor', ' Michael Tronick');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2821, 9762, ' Art', ' Production Design', ' Shepherd Frankel');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2822, 3179, ' Writing', ' Author', ' Joe Stillman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2823, 184, ' Directing', ' Director', ' Quentin Tarantino');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2824, 13335, ' Editing', ' Editor', ' Jeff Freeman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2825, 76726, ' Production', ' Casting', ' Ronna Kress');
@@ -2693,7 +2613,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2861, 387, ' Costume & Make-Up', ' Costume Design', ' Monika Bauert');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2862, 6020, ' Editing', ' Editor', ' Richard Halsey');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2863, 122906, ' Production', ' Producer', ' Nicky Kentish Barnes');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2864, 9550, ' Writing', ' Author', ' Zhang Yimou');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2865, 60599, ' Sound', ' Music', ' Cliff Martinez');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2866, 227719, ' Production', ' Casting', ' Denise Chamian');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2867, 14299, ' Production', ' Executive Producer', ' Beyonc\\u00e9 Knowles');
@@ -2706,7 +2625,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2875, 10944, ' Production', ' Casting', ' Suzanne Smith');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2876, 10362, ' Camera', ' Director of Photography', ' Joaqu\\u00edn Baca-Asay');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2877, 14778, ' Directing', ' Director', ' Fred Schepisi');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2878, 1255, ' Art', ' Production Design', ' Seong-hie Ryu');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2879, 45226, ' Crew', ' Creative Consultant', ' Joel Silver');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2880, 10212, ' Production', ' Casting', ' Suzanne Smith');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2881, 8669, ' Production', ' Casting', ' David Rubin');
@@ -2723,11 +2641,9 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2892, 13079, ' Directing', ' Director', ' Vadim Perelman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2893, 89325, ' Production', ' Producer', ' Anthony Bregman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2894, 4170, ' Directing', ' Director', ' Marco Kreuzpaintner');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2895, 41508, ' Sound', ' Original Music Composer', ' Ennio Morricone');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2896, 12479, ' Sound', ' Original Music Composer', ' Mark Isham');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2897, 44555, ' Directing', ' Director', ' Zhang Yimou');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2898, 10133, ' Sound', ' Original Music Composer', ' Michael Andrews');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2899, 21345, ' Production', ' Producer', ' Han Sanping');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2900, 173931, ' Directing', ' Director', ' Lijun Sun');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2901, 61984, ' Directing', ' Director', ' Takashi Yamazaki');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2902, 50601, ' Sound', ' Music', ' Trevor Rabin');
@@ -2736,7 +2652,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2905, 236751, ' Production', ' Executive Producer', ' Sam Mercer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2906, 107, ' Production', ' Executive Producer', ' Steve Tisch');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2907, 357837, ' Directing', ' Director', ' David Winters');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2909, 13889, ' Directing', ' Director', ' Akira Kurosawa');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2910, 18530, ' Sound', ' Original Music Composer', ' Jeff Danna');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2911, 358451, ' Editing', ' Editor', ' Chi-Leung Kwong');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2912, 927, ' Production', ' Executive Producer', ' Steven Spielberg');
@@ -2786,7 +2701,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2959, 11917, ' Production', ' Producer', ' Mark Burg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2960, 45138, ' Sound', ' Original Music Composer', ' Ennio Morricone');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2962, 4657, ' Art', ' Art Direction', ' Deborah Riley');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2963, 14395, ' Crew', ' Choreographer', ' Farah Khan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2964, 24137, ' Writing', ' Screenplay', ' Oliver Parker');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2965, 190847, ' Production', ' Casting', ' Shaheen Baig');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (2966, 11056, ' Production', ' Executive Producer', ' Bob Weinstein');
@@ -2874,14 +2788,12 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3061, 14283, ' Writing', ' Writer', ' Don McKellar');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3063, 13201, ' Directing', ' Director', ' Scott Kalvert');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3064, 209403, ' Directing', ' Director', ' Jason Bateman');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3065, 7942, ' Production', ' Producer', ' Robert Jones');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3066, 73247, ' Sound', ' Original Music Composer', ' John Williams');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3067, 253331, ' Production', ' Producer', ' Kevin Costner');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3068, 34043, ' Sound', ' Music', ' Stewart Copeland');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3069, 9952, ' Sound', ' Original Music Composer', ' Klaus Badelt');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3070, 256924, ' Directing', ' Director', ' Dan Fogelman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3071, 82532, ' Production', ' Casting', ' Terri Taylor');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3072, 41110, ' Production', ' Producer', ' Tilda Swinton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3073, 134371, ' Directing', ' Director', ' John Putch');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3074, 2088, ' Camera', ' Director of Photography', ' Dariusz Wolski');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3075, 10388, ' Art', ' Production Design', ' Gary Frutkoff');
@@ -2898,7 +2810,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3087, 29076, ' Directing', ' Director', ' Eric Blakeney');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3088, 29339, ' Writing', ' Novel', ' Charles Dickens');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3089, 68812, ' Production', ' Casting', ' Kerry Barden');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3090, 32740, ' Directing', ' Director', ' Rakesh Roshan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3091, 14195, ' Production', ' Casting', ' Suzanne Smith');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3092, 73567, ' Production', ' Casting', ' Denise Chamian');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3093, 41479, ' Directing', ' Director', ' Derrick Borte');
@@ -2907,7 +2818,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3096, 1989, ' Production', ' Casting', ' Avy Kaufman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3098, 12779, ' Production', ' Casting', ' Suzanne Smith');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3099, 13191, ' Writing', ' Writer', ' Jeremy Pikser');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3100, 11770, ' Directing', ' Director', ' Stephen Chow');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3101, 12703, ' Directing', ' Director', ' Vincent Gallo');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3102, 64559, ' Art', ' Set Decoration', ' Fran\\u00e7oise Beno\\u00eet-Fresco');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3103, 222649, ' Production', ' Casting', ' Debra Zane');
@@ -2939,10 +2849,8 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3129, 17622, ' Production', ' Casting', ' John Hubbard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3130, 283671, ' Directing', ' Director', ' Taedong Park');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3132, 217708, ' Production', ' Producer', ' Fri\\u00f0rik \\u00de\\u00f3r Fri\\u00f0riksson');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3133, 42057, ' Writing', ' Screenplay', ' Gurinder Chadha');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3134, 17577, ' Sound', ' Music', ' Bill Brown');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3135, 14608, ' Directing', ' Director', ' Vic Sarin');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3137, 15067, ' Camera', ' Director of Photography', ' Lee Mo-gae');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3138, 78383, ' Writing', ' Writer', ' David Loughery');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3139, 43090, ' Production', ' Producer', ' Niv Fichman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3140, 16614, ' Editing', ' Editor', ' Anne McCabe');
@@ -2969,7 +2877,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3162, 14811, ' Sound', ' Orchestrator', ' John Williams');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3163, 660, ' Sound', ' Original Music Composer', ' John Barry');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3164, 68684, ' Directing', ' Director', ' Joseph Kahn');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3165, 40794, ' Directing', ' Director', ' Ferzan Ozpetek');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3166, 9400, ' Production', ' Producer', ' Oren Koules');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3167, 16162, ' Directing', ' Director', ' Malcolm D. Lee');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3168, 10585, ' Camera', ' Director of Photography', ' Bill Butler');
@@ -2995,14 +2902,11 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3189, 1808, ' Sound', ' Original Music Composer', ' Carter Burwell');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3190, 293670, ' Camera', ' Director of Photography', ' Kyung-Pyo Hong');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3191, 67675, ' Editing', ' Editor', ' Myron I. Kerstein');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3192, 27329, ' Crew', ' Cinematography', ' Igor Luther');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3194, 250349, ' Writing', ' Writer', ' H\\u00e9ctor Cabello Reyes');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3195, 12454, ' Editing', ' Editor', ' Lesley Walker');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3196, 39806, ' Directing', ' Director', ' Marc Forby');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3197, 15699, ' Directing', ' Director', ' Peter Cattaneo');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3199, 17926, ' Production', ' Producer', ' Gary Lucchesi');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3200, 291081, ' Writing', ' Writer', ' Tony Grisoni');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3201, 41248, ' Sound', ' Original Music Composer', ' Philippe Sarde');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3202, 25968, ' Writing', ' Writer', ' Larry Gross');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3203, 9671, ' Sound', ' Original Music Composer', ' Peter Best');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3204, 52010, ' Production', ' Producer', ' Bob Thompson');
@@ -3022,7 +2926,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3219, 272693, ' Production', ' Producer', ' McG');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3220, 10696, ' Production', ' Casting', ' Victoria Thomas');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3221, 150202, ' Directing', ' Director', ' Tom Elkins');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3222, 19644, ' Camera', ' Director of Photography', ' Kim Sung-Bok');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3223, 29963, ' Production', ' Executive Producer', ' David M. Thompson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3224, 26022, ' Production', ' Producer', ' Shah Rukh Khan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3225, 152747, ' Sound', ' Supervising Sound Editor', ' Steve Boeddeker');
@@ -3032,7 +2935,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3229, 185008, ' Sound', ' Music', ' Pritam Chakraborty');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3230, 11620, ' Sound', ' Original Music Composer', ' Mikl\\u00f3s R\\u00f3zsa');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3231, 14353, ' Directing', ' Director', ' Darren Lynn Bousman');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3232, 11818, ' Directing', ' Director', ' Serdar Akar');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3233, 680, ' Directing', ' Director', ' Quentin Tarantino');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3234, 11176, ' Editing', ' Editor', ' Christopher Greenbury');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3235, 242582, ' Production', ' Producer', ' Jake Gyllenhaal');
@@ -3070,7 +2972,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3271, 8293, ' Camera', ' Director of Photography', ' Tony Pierce-Roberts');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3272, 291270, ' Directing', ' Director', ' Charlie Kaufman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3273, 44009, ' Production', ' Executive Producer', ' Tessa Ross');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3274, 1958, ' Writing', ' Screenplay', ' Fran\\u00e7ois Ozon');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3275, 13154, ' Crew', ' Tattooist', ' Fred C. Blau Jr.');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3276, 26618, ' Directing', ' Director', ' David Dobkin');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3277, 43923, ' Art', ' Set Decoration', ' Carrie Stewart');
@@ -3091,11 +2992,8 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3294, 13197, ' Directing', ' Director', ' Robert Moresco');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3295, 10913, ' Writing', ' Screenplay', ' Lars von Trier');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3296, 251321, ' Directing', ' Director', ' Claudia Llosa');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3297, 149, ' Writing', ' Screenplay', ' Katsuhiro \\u014ctomo');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3298, 10425, ' Production', ' Producer', ' Paul Walker');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3300, 256687, ' Directing', ' Director', ' Keith Parmer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3301, 220488, ' Production', ' Producer', ' Zhang Ziyi');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3302, 1544, ' Art', ' Production Design', ' Eve Mavrakis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3303, 374461, ' Sound', ' Original Music Composer', ' Mark Isham');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3304, 302, ' Directing', ' Director', ' Fran\\u00e7ois Ozon');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3305, 182873, ' Production', ' Casting', ' Colin Jones');
@@ -3103,7 +3001,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3307, 389425, ' Production', ' Casting', ' Mary Jo Slater');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3308, 403, ' Sound', ' Original Music Composer', ' Hans Zimmer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3309, 29461, ' Directing', ' Director', ' George Tillman');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3310, 33542, ' Directing', ' Director', ' Stanley Tong');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3311, 283708, ' Production', ' Co-Producer', ' Viggo Mortensen');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3312, 9388, ' Production', ' Casting', ' Mindy Marin');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3313, 1691, ' Production', ' Executive Producer', ' Quentin Tarantino');
@@ -3132,7 +3029,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3337, 681, ' Sound', ' Original Music Composer', ' John Barry');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3338, 238, ' Directing', ' Director', ' Francis Ford Coppola');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3339, 535, ' Production', ' Producer', ' Jerry Bruckheimer');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3340, 19913, ' Sound', ' Original Music Composer', ' Mychael Danna');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3341, 713, ' Camera', ' Director of Photography', ' Stuart Dryburgh');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3342, 77930, ' Directing', ' Director', ' Steven Soderbergh');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3343, 10727, ' Sound', ' Original Music Composer', ' Brian Tyler');
@@ -3202,8 +3098,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3412, 13919, ' Production', ' Producer', ' Lawrence Bender');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3414, 82505, ' Production', ' Producer', ' Aaron Ryder');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3415, 46738, ' Visual Effects', ' Special Effects Supervisor', ' Louis Craig');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3416, 38970, ' Directing', ' Director', ' Gabriele Muccino');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3417, 41009, ' Writing', ' Writer', ' Mark O''Rowe');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3418, 7347, ' Writing', ' Screenplay', ' Br\\u00e1ulio Mantovani');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3419, 250546, ' Production', ' Producer', ' James Wan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3420, 38415, ' Directing', ' Director', ' Rachel Perkins');
@@ -3216,7 +3110,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3427, 8998, ' Production', ' Producer', ' Anthony Bregman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3428, 10514, ' Directing', ' Director', ' Robert Wise');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3429, 10496, ' Writing', ' Screenplay', ' John Logan');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3430, 1591, ' Production', ' Producer', ' Bernd Eichinger');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3431, 76025, ' Production', ' Casting', ' Avy Kaufman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3432, 4836, ' Production', ' Casting', ' Jina Jay');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3434, 87499, ' Production', ' Casting', ' Ronna Kress');
@@ -3238,13 +3131,11 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3452, 11977, ' Directing', ' Director', ' Harold Ramis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3454, 16158, ' Writing', ' Screenplay', ' Rick Famuyiwa');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3455, 629, ' Art', ' Set Decoration', ' Sara Andrews');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3457, 11452, ' Production', ' Producer', ' Peter Abrams');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3459, 32275, ' Art', ' Art Direction', ' James Basevi');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3460, 13785, ' Editing', ' Editor', ' Robert Leighton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3461, 1103, ' Production', ' Producer', ' Larry J. Franco');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3462, 36739, ' Directing', ' Director', ' Spike Lee');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3463, 14144, ' Directing', ' Director', ' Fred Savage');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3464, 10622, ' Sound', ' Original Music Composer', ' J. Peter Robinson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3466, 11191, ' Writing', ' Screenplay', ' Alfred Uhry');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3467, 10215, ' Art', ' Production Design', ' Maria Djurkovic');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3468, 25066, ' Production', ' Line Producer', ' Elaine Dysinger');
@@ -3271,11 +3162,9 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3490, 31064, ' Directing', ' Director', ' Patrick Stettner');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3491, 576, ' Editing', ' Assistant Editor', ' Joel Cox');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3492, 13990, ' Sound', ' Original Music Composer', ' David Torn');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3493, 11583, ' Camera', ' Director of Photography', ' Geoffrey Unsworth');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3494, 18602, ' Production', ' Producer', ' Robyn Slovo');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3495, 27549, ' Production', ' Executive Producer', ' Mark Damon');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3496, 59728, ' Production', ' Casting', ' Monika Mikkelsen');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3497, 10930, ' Production', ' Producer', ' Marin Karmitz');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3498, 32395, ' Directing', ' Director', ' Shana Feste');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3499, 58882, ' Sound', ' Original Music Composer', ' Rachel Portman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3500, 7547, ' Directing', ' Director', ' Joey Lauren Adams');
@@ -3297,13 +3186,11 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3516, 168027, ' Editing', ' Editor', ' William Steinkamp');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3517, 3482, ' Sound', ' Original Music Composer', ' Maurice Jarre');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3518, 135595, ' Directing', ' Director', ' Christopher Bessette');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3519, 8982, ' Writing', ' Screenplay', ' Piyaros Thongdee');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3520, 89861, ' Production', ' Producer', ' Jeremy Bolt');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3521, 455, ' Production', ' Producer', ' Deepak Nayar');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3522, 57022, ' Directing', ' Director', ' John Sayles');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3523, 14351, ' Camera', ' Director of Photography', ' Christian Sebaldt');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3524, 147767, ' Sound', ' Music', ' Himesh Reshammiya');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3525, 10664, ' Writing', ' Screenplay', ' Jaume Balaguer\\u00f3');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3526, 55567, ' Directing', ' Director', ' Stewart Raffill');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3527, 9277, ' Art', ' Art Direction', ' Henry Bumstead');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3528, 9443, ' Sound', ' Original Music Composer', ' Vangelis');
@@ -3319,7 +3206,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3538, 4997, ' Sound', ' Original Music Composer', ' Cliff Martinez');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3539, 925, ' Art', ' Production Design', ' Wynn Thomas');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3541, 73532, ' Directing', ' Director', ' Aki Kaurism\\u00e4ki');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3542, 979, ' Production', ' Co-Producer', ' Vincent Cassel');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3543, 193722, ' Writing', ' Screenplay', ' Hitoshi Matsumoto');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3544, 7913, ' Directing', ' Director', ' Rakeysh Omprakash Mehra');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3545, 253253, ' Production', ' Producer', ' Chris Smith');
@@ -3368,8 +3254,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3592, 21610, ' Directing', ' Director', ' Bruce Malmuth');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3594, 8346, ' Production', ' Producer', ' Tom Hanks');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3595, 122081, ' Sound', ' Original Music Composer', ' Cliff Martinez');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3596, 10987, ' Production', ' Producer', ' Paul Freeman');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3597, 1391, ' Camera', ' Director of Photography', ' Emmanuel Lubezki');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3598, 747, ' Production', ' Casting', ' Jina Jay');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3599, 14745, ' Directing', ' Director', ' Mickey Liddell');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3600, 26748, ' Production', ' Casting', ' Avy Kaufman');
@@ -3387,13 +3271,11 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3612, 22649, ' Camera', ' Director of Photography', ' Charles Lang');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3613, 378200, ' Directing', ' Director', ' Bille Woodruff');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3614, 20455, ' Directing', ' Director', ' Mamoru Hosoda');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3616, 11042, ' Production', ' Producer', ' Daniel Louis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3617, 10786, ' Production', ' Executive Producer', ' Richard Shepherd');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3618, 12484, ' Camera', ' Director of Photography', ' Steven Bernstein');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3619, 17339, ' Directing', ' Director', ' Guy Hamilton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3621, 9900, ' Camera', ' Director of Photography', ' Mark Irwin');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3622, 14662, ' Production', ' Producer', ' Michael Nozik');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3623, 335, ' Sound', ' Original Music Composer', ' Ennio Morricone');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3624, 15745, ' Camera', ' Director of Photography', ' Christopher Doyle');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3625, 17431, ' Sound', ' Original Music Composer', ' Clint Mansell');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3626, 21014, ' Directing', ' Director', ' Scott Marshall');
@@ -3439,7 +3321,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3670, 113406, ' Production', ' Casting', ' Mary Vernieu');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3672, 290825, ' Directing', ' Director', ' Kevin Smith');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3673, 361159, ' Production', ' Producer', ' Benjamin Sacks');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3674, 12555, ' Directing', ' Director', ' Ji\\u0159\\u00ed Menzel');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3675, 31175, ' Directing', ' Director', ' Fatih Akin');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3676, 12498, ' Writing', ' Screenplay', ' Billy Bob Thornton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3677, 77949, ' Production', ' Casting', ' Shaheen Baig');
@@ -3473,15 +3354,11 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3706, 252680, ' Production', ' Executive Producer', ' Patricia Heaton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3707, 141, ' Production', ' Executive Producer', ' Aaron Ryder');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3708, 66607, ' Directing', ' Director', ' Beto G\\u00f3mez');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3709, 17139, ' Directing', ' Director', ' Mike van Diem');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3710, 12079, ' Production', ' Producer', ' Chris Hanley');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3711, 39800, ' Camera', ' Director of Photography', ' Edward Lachman');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3712, 4550, ' Writing', ' Screenplay', ' Park Chan-wook');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3713, 62116, ' Directing', ' Director', ' Ren\\u00e9 F\\u00e9ret');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3714, 9991, ' Production', ' Executive Producer', ' Albert S. Ruddy');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3715, 13807, ' Editing', ' Editor', ' David M. Richardson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3716, 68818, ' Production', ' Casting', ' Jina Jay');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3717, 12093, ' Sound', ' Music', ' Nathan Larson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3718, 36419, ' Editing', ' Editor', ' Niven Howie');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3719, 281730, ' Directing', ' Director', ' Kabir Sadanand');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3720, 510, ' Production', ' Casting', ' Jane Feinberg');
@@ -3521,7 +3398,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3758, 10744, ' Editing', ' Editor', ' Arthur Coburn');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3759, 11536, ' Editing', ' Editor', ' George Tomasini');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3760, 9782, ' Production', ' Producer', ' John Hart');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3762, 6537, ' Production', ' Executive Producer', ' Guillermo del Toro');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3763, 184345, ' Writing', ' Writer', ' Marlon Wayans');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3764, 1809, ' Directing', ' Director', ' Roger Avary');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3765, 2370, ' Art', ' Production Design', ' Henry Bumstead');
@@ -3537,7 +3413,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3775, 48572, ' Production', ' Casting', ' Deborah Aquila');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3776, 14517, ' Crew', ' Stunt Coordinator', ' Stuart St. Paul');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3777, 89708, ' Sound', ' Music', ' Lisa Gerrard');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3778, 27551, ' Editing', ' Editor', ' Eugenio Alabiso');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3779, 64678, ' Crew', ' Stunt Coordinator', ' Manny Siverio');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3780, 309503, ' Production', ' Casting', ' Deborah Aquila');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3781, 14293, ' Directing', ' Director', ' Mars Callahan');
@@ -3570,14 +3445,12 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3808, 46420, ' Sound', ' Music', ' Ollie Olsen');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3810, 158150, ' Directing', ' Director', ' Mark Griffiths');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3811, 251979, ' Directing', ' Director', ' Bruce MacDonald');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3812, 874, ' Camera', ' Director of Photography', ' Ted Moore');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3813, 10774, ' Editing', ' Editor', ' Alan Heim');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3814, 770, ' Camera', ' Director of Photography', ' Ernest Haller');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3815, 266102, ' Editing', ' Editor', ' Chris Gill');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3816, 29715, ' Camera', ' Director of Photography', ' Sam Leavitt');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3817, 25209, ' Production', ' Producer', ' Arthur Freed');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3818, 37495, ' Production', ' Casting', ' Des Hamilton');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3819, 29262, ' Writing', ' Screenstory', ' Luiz Carlos Barreto');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3820, 34769, ' Production', ' Casting', ' Nancy Klopper');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3821, 35032, ' Production', ' Producer', ' Arthur Freed');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3822, 5178, ' Production', ' Executive Producer', ' Robin O''Hara');
@@ -3597,7 +3470,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3836, 310131, ' Production', ' Co-Executive Producer', ' Mark Gingras');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3837, 40505, ' Writing', ' Writer', ' Master P');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3838, 11363, ' Production', ' Producer', ' James Schamus');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3840, 25376, ' Production', ' Casting', ' Walter Rippell');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3841, 22007, ' Production', ' Casting', ' Valerie McCaffrey');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3842, 765, ' Directing', ' Director', ' Sam Raimi');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3843, 10615, ' Production', ' Producer', ' Chris Rock');
@@ -3617,12 +3489,10 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3857, 252360, ' Directing', ' Director', ' Uwe Boll');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3859, 299145, ' Directing', ' Director', ' Daniel Petrie');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3860, 241766, ' Production', ' Producer', ' Glen Murphy');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3862, 1667, ' Directing', ' Director', ' Luc Jacquet');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3863, 50839, ' Sound', ' Original Music Composer', ' Nathan Larson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3864, 86549, ' Directing', ' Director', ' Eldar Rapaport');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3865, 13973, ' Production', ' Casting', ' Suzanne Smith');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3866, 244786, ' Production', ' Casting', ' Terri Taylor');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3867, 598, ' Directing', ' Director', ' Fernando Meirelles');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3868, 11129, ' Production', ' Producer', ' Allan Niblo');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3869, 75861, ' Art', ' Production Design', ' Mark Garner');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3870, 13551, ' Production', ' Producer', ' Tom Rosenberg');
@@ -3636,7 +3506,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3878, 805, ' Directing', ' Director', ' Roman Polanski');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3879, 11697, ' Writing', ' Screenplay', ' Willis Goldbeck');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3880, 22051, ' Sound', ' Original Music Composer', ' Christopher Lennertz');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3881, 436, ' Camera', ' Director of Photography', ' Jim Denault');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3882, 55347, ' Art', ' Production Design', ' Shane Valentino');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3883, 10070, ' Production', ' Executive Producer', ' Ben Affleck');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3884, 8469, ' Art', ' Set Decoration', ' Hal Gausman');
@@ -3649,7 +3518,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3891, 10162, ' Camera', ' Director of Photography', ' Henry Braham');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3892, 1430, ' Crew', ' Thanks', ' Chris Rock');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3893, 259943, ' Directing', ' Director', ' Zhang Yimou');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3894, 10014, ' Crew', ' Stunts', ' Ray Lykins');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3895, 11257, ' Camera', ' Director of Photography', ' Tony Pierce-Roberts');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3896, 158015, ' Production', ' Producer', ' Michael Bay');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3897, 82507, ' Camera', ' Director of Photography', ' Chris Norr');
@@ -3657,7 +3525,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3899, 261, ' Sound', ' Sound Designer', ' Van Allen James');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3900, 1685, ' Sound', ' Original Music Composer', ' Leonard Rosenman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3901, 20737, ' Directing', ' Director', ' Charles Martin Smith');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3902, 10991, ' Directing', ' Director', ' Michael Haigney');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3903, 10225, ' Editing', ' Editor', ' Bruce Green');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3904, 826, ' Writing', ' Screenplay', ' Carl Foreman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3906, 5854, ' Sound', ' Original Music Composer', ' John Williams');
@@ -3694,7 +3561,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3938, 10683, ' Production', ' Producer', ' James Schamus');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3939, 17995, ' Editing', ' Editor', ' Michael R. Miller');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3940, 246403, ' Directing', ' Director', ' Kevin Smith');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3941, 670, ' Directing', ' Director', ' Park Chan-wook');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3942, 35691, ' Directing', ' Director', ' David Nixon');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3943, 49010, ' Production', ' Producer', ' Niv Fichman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3944, 317930, ' Writing', ' Screenplay', ' Gabriel Ripstein');
@@ -3706,7 +3572,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3950, 84174, ' Crew', ' Stunt Coordinator', ' Manny Siverio');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3951, 34099, ' Production', ' Casting', ' Stephanie Gorin');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3952, 79940, ' Production', ' Producer', ' Todd Wagner');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3953, 342, ' Sound', ' Sound Designer', ' Dirk Jacob');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3954, 281230, ' Directing', ' Director', ' Michael Worth');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3955, 38033, ' Editing', ' Editor', ' James Coblentz');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3957, 38541, ' Directing', ' Director', ' Xavier Gens');
@@ -3726,7 +3591,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3972, 191229, ' Directing', ' Director', ' Monte Hellman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3973, 43213, ' Directing', ' Director', ' Brian Caunter');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3974, 44594, ' Production', ' Casting', ' Mary Vernieu');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3975, 666, ' Production', ' Producer', ' Robert Redford');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3976, 248, ' Directing', ' Director', ' Frank Capra');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3977, 325173, ' Production', ' Producer', ' Ehud Bleiberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3979, 351043, ' Directing', ' Director', ' Michael Polish');
@@ -3740,13 +3604,10 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3987, 630, ' Writing', ' Screenplay', ' Edgar Allan Woolf');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3988, 3034, ' Production', ' Casting', ' Jane Feinberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3989, 13025, ' Writing', ' Screenplay', ' George A. Romero');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3990, 21461, ' Directing', ' Director', ' Rajkumar Hirani');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3991, 55306, ' Production', ' Executive Producer', ' John Sloss');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3992, 17264, ' Production', ' Executive Producer', ' Francis Ford Coppola');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3993, 346081, ' Directing', ' Director', ' Rohit Jugraj');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3994, 16016, ' Directing', ' Director', ' Kresten Vestbjerg Andersen');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3995, 15875, ' Art', ' Art Direction', ' Hal Pereira');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3996, 5900, ' Directing', ' Director', ' Alex van Warmerdam');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3997, 43306, ' Camera', ' Director of Photography', ' Karl Freund');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3998, 11072, ' Sound', ' Original Music Composer', ' John Morris');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (3999, 9730, ' Sound', ' Music', ' Harry Manfredini');
@@ -3754,8 +3615,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4001, 26371, ' Art', ' Art Direction', ' Brian Ackland-Snow');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4002, 14137, ' Production', ' Producer', ' Artie Lange');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4003, 291, ' Directing', ' Director', ' Stacy Peralta');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4004, 14139, ' Camera', ' Director of Photography', ' Flavio Mart\\u00ednez Labiano');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4005, 33106, ' Directing', ' Director', ' Ning Hao');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4006, 8875, ' Camera', ' Director of Photography', ' Toby Moore');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4007, 872, ' Costume & Make-Up', ' Hair Designer', ' Sydney Guilaroff');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4008, 72914, ' Directing', ' Director', ' Joe Cross');
@@ -3823,14 +3682,11 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4076, 11624, ' Directing', ' Director', ' Woody Allen');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4077, 595, ' Art', ' Art Direction', ' Henry Bumstead');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4078, 8810, ' Camera', ' Director of Photography', ' Dean Semler');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4079, 12207, ' Production', ' Producer', ' Eric Tsang');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4080, 226, ' Production', ' Casting', ' Suzanne Smith');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4081, 92182, ' Directing', ' Director', ' Chris Kentis');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4082, 582, ' Production', ' Co-Producer', ' Andreas Schreitm\\u00fcller');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4083, 72213, ' Directing', ' Director', ' Alex Kendrick');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4084, 990, ' Camera', ' Director of Photography', ' Eugen Sch\\u00fcfftan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4085, 55604, ' Sound', ' Original Music Composer', ' Franz Waxman');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4086, 9662, ' Directing', ' Director', ' Sylvain Chomet');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4087, 20862, ' Editing', ' Editor', ' Brian Berdan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4088, 2771, ' Writing', ' Writer', ' Harvey Pekar');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4089, 80, ' Writing', ' Screenplay', ' Richard Linklater');
@@ -3849,7 +3705,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4102, 15186, ' Production', ' Casting', ' Debra Zane');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4103, 17994, ' Directing', ' Director', ' Kevin Tenney');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4104, 1378, ' Writing', ' Screenplay', ' John Cameron Mitchell');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4105, 8885, ' Production', ' Producer', ' Gerhard Meixner');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4107, 12901, ' Directing', ' Director', ' Charles Ferguson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4108, 250124, ' Production', ' Casting', ' Nina Henninger');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4109, 14284, ' Directing', ' Director', ' David Sington');
@@ -3863,18 +3718,15 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4118, 24746, ' Camera', ' Director of Photography', ' Kristian Bernier');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4120, 12109, ' Editing', ' Editor', ' Stuart Gazzard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4121, 27023, ' Directing', ' Director', ' Hue Rhodes');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4122, 22913, ' Crew', ' Cinematography', ' Ashley Rowe');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4125, 67373, ' Writing', ' Writer', ' Ted A. Bohus');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4126, 171759, ' Camera', ' Director of Photography', ' Brian Baugh');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4127, 206296, ' Directing', ' Director', ' Richard LaGravenese');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4128, 35219, ' Directing', ' Director', ' Noah Buschel');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4129, 28260, ' Directing', ' Director', ' Brian Yuzna');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4130, 7515, ' Production', ' Producer', ' Bonnie Timmermann');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4131, 13075, ' Production', ' Producer', ' Marc Turtletaub');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4132, 335866, ' Directing', ' Director', ' Aaron Hann');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4133, 13510, ' Sound', ' Original Music Composer', ' David Julyan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4134, 215881, ' Directing', ' Director', ' Catherine Hardwicke');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4135, 18238, ' Production', ' Casting', ' Gail Stevens');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4136, 22600, ' Production', ' Executive Producer', ' Ronnie Apteker');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4137, 12612, ' Production', ' Executive Producer', ' Brendan McCarthy');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4138, 50698, ' Production', ' Producer', ' Shawn Angelski');
@@ -3889,7 +3741,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4149, 198062, ' Crew', ' Cinematography', ' Anthony B. Richmond');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4150, 188652, ' Directing', ' Director', ' Paul Bunnell');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4151, 174311, ' Editing', ' Editor', ' Jeff Buchanan');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4152, 12602, ' Editing', ' Editor', ' Hermann Haller');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4153, 153795, ' Production', ' Producer', ' Holly Wiersma');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4154, 17768, ' Sound', ' Sound Editor', ' Bill Butler');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4155, 13516, ' Production', ' Producer', ' Michael Moore');
@@ -3909,7 +3760,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4171, 38358, ' Production', ' Producer', ' Marc Abraham');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4172, 33511, ' Camera', ' Director of Photography', ' Seamus McGarvey');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4173, 702, ' Directing', ' Director', ' Elia Kazan');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4175, 542, ' Directing', ' Director', ' Carlos Carrera');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4176, 84175, ' Production', ' Executive Producer', ' Paul S. Mezey');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4177, 1705, ' Sound', ' Original Music Composer', ' Leonard Rosenman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4178, 62677, ' Production', ' Executive Producer', ' Jonathan Sehring');
@@ -3917,17 +3767,14 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4180, 260778, ' Production', ' Producer', ' S. S. Chakravarthy');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4181, 58492, ' Directing', ' Director', ' Morgan Spurlock');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4182, 44562, ' Directing', ' Director', ' Jonathan Wacks');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4183, 37232, ' Directing', ' Director', ' Khyentse Norbu');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4184, 4929, ' Camera', ' Director of Photography', ' Richard H. Kline');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4185, 36334, ' Directing', ' Director', ' Richard Brooks');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4186, 9783, ' Production', ' Producer', ' Daniel Myrick');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4187, 386826, ' Writing', ' Writer', ' Adam Weis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4188, 205126, ' Writing', ' Writer', ' Rudy Thauberger');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4189, 98557, ' Costume & Make-Up', ' Makeup Artist', ' Anna Lee');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4190, 104, ' Production', ' Casting', ' An Dorthe Braker');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4191, 10894, ' Editing', ' Editor', ' Chris Sivertson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4192, 246449, ' Directing', ' Director', ' Richard Boddington');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4193, 32579, ' Sound', ' Original Music Composer', ' Carlo Siliotto');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4194, 1688, ' Camera', ' Director of Photography', ' Bruce Surtees');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4196, 43947, ' Directing', ' Director', ' Steven R. Monroe');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4197, 24066, ' Writing', ' Screenplay', ' Phil Reeves');
@@ -3939,11 +3786,8 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4203, 13909, ' Directing', ' Director', ' John Ford');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4204, 206284, ' Directing', ' Director', ' Brad J. Silverman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4206, 66468, ' Directing', ' Director', ' David M. Matthews');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4207, 7973, ' Production', ' Co-Producer', ' R\\u00e9mi Burah');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4208, 283686, ' Costume & Make-Up', ' Costume Design', ' Bina Daigeler');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4209, 15976, ' Directing', ' Director', ' Eytan Fox');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4210, 592, ' Sound', ' Sound Designer', ' Walter Murch');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4212, 1651, ' Writing', ' Screenplay', ' Fran\\u00e7ois Truffaut');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4213, 25428, ' Directing', ' Director', ' Adam Goldberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4214, 298584, ' Production', ' Executive Producer', ' Eli Roth');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4215, 10758, ' Art', ' Set Decoration', ' Susan Lynch');
@@ -3956,7 +3800,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4224, 9464, ' Camera', ' Director of Photography', ' Lance Acord');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4225, 49018, ' Directing', ' Director', ' James Wan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4226, 13820, ' Camera', ' Director of Photography', ' Robby M\\u00fcller');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4227, 18079, ' Writing', ' Screenplay', ' Fabi\\u00e1n Bielinsky');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4228, 127918, ' Directing', ' Director', ' Dror Moreh');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4229, 17113, ' Directing', ' Director', ' Rebecca Miller');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4230, 129139, ' Sound', ' Music Supervisor', ' Howard Paar');
@@ -3996,14 +3839,11 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4268, 2661, ' Writing', ' Novel', ' Bob Kane');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4269, 100, ' Sound', ' Original Music Composer', ' John Murphy');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4270, 218500, ' Directing', ' Director', ' Robert M. Young');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4271, 309, ' Production', ' Producer', ' Birgitte Hald');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4272, 27845, ' Directing', ' Director', ' Steve Buscemi');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4273, 25784, ' Directing', ' Director', ' Ham Tran');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4275, 100275, ' Writing', ' Writer', ' Jonathan Rannells');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4276, 295914, ' Writing', ' Screenplay', ' Sadyk Sher-Niyaz');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4277, 42033, ' Editing', ' Editor', ' Todd C. Ramsay');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4278, 19187, ' Directing', ' Director', ' Jonathan Kesselman');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4280, 38570, ' Writing', ' Writer', ' Brad Kaaya');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4281, 27588, ' Writing', ' Writer', ' Jamieson Stern');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4282, 223, ' Camera', ' Camera Operator', ' Irving Rosenberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4283, 9725, ' Sound', ' Music', ' Harry Manfredini');
@@ -4025,7 +3865,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4300, 176124, ' Writing', ' Writer', ' Eric Newman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4301, 500, ' Directing', ' Director', ' Quentin Tarantino');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4302, 60400, ' Production', ' Producer', ' Darryl F. Zanuck');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4303, 429, ' Production', ' Production Manager', ' Gray Frederickson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4304, 310569, ' Sound', ' Sound Designer', ' Miriam Biderman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4305, 98369, ' Writing', ' Screenplay', ' Steve Taylor');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4308, 49951, ' Directing', ' Director', ' James David Pasternak');
@@ -4063,7 +3902,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4342, 9003, ' Costume & Make-Up', ' Costume Design', ' Joanna Johnston');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4343, 347126, ' Production', ' Casting', ' Billy DaMota');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4344, 10092, ' Production', ' Casting', ' Fern Champion');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4345, 10643, ' Directing', ' Director', ' Takao Okawara');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4346, 46705, ' Production', ' Executive Producer', ' Michelle Williams');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4347, 546, ' Production', ' Executive Producer', ' William H. Macy');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4348, 76487, ' Production', ' Casting', ' Kelly Wagner');
@@ -4144,7 +3982,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4432, 292539, ' Directing', ' Director', ' Sanjay Rawal');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4433, 654, ' Directing', ' Director', ' Elia Kazan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4434, 91070, ' Sound', ' Original Music Composer', ' Mateo Messina');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4435, 2009, ' Directing', ' Director', ' Cristian Mungiu');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4437, 2652, ' Production', ' Casting', ' Valerie McCaffrey');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4438, 9813, ' Production', ' Producer', ' Andrea Sperling');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4439, 60421, ' Directing', ' Director', ' Maryam Keshavarz');
@@ -4164,13 +4001,11 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4455, 11446, ' Editing', ' Editor', ' Alan Oxman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4456, 47889, ' Art', ' Production Design', ' John Iacovelli');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4457, 25461, ' Production', ' Producer', ' Robin O''Hara');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4458, 905, ' Camera', ' Director of Photography', ' G\\u00fcnther Krampf');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4460, 78705, ' Directing', ' Director', ' Jorge Gaggero');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4461, 25212, ' Directing', ' Director', ' Rod Lurie');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4462, 26899, ' Directing', ' Director', ' Michael Burke');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4463, 146269, ' Costume & Make-Up', ' Costume Design', ' Merrie Lawson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4464, 292483, ' Production', ' Executive Producer', ' Chris Moore');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4465, 14451, ' Writing', ' Screenplay', ' Stig Frode Henriksen');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4466, 10105, ' Production', ' Producer', ' Lawrence Bagby');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4467, 211557, ' Directing', ' Director', ' Clark Baker');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4468, 838, ' Writing', ' Screenplay', ' George Lucas');
@@ -4179,14 +4014,12 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4472, 74510, ' Directing', ' Director', ' Tim Story');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4473, 74725, ' Production', ' Producer', ' Andrew Starke');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4474, 58428, ' Production', ' Producer', ' Larry Fessenden');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4475, 8416, ' Camera', ' Director of Photography', ' Vittorio Storaro');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4477, 13429, ' Production', ' Casting', ' Des Hamilton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4478, 9022, ' Directing', ' Director', ' Jonathan Levine');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4479, 22530, ' Directing', ' Director', ' Christopher Hutson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4480, 288, ' Editing', ' Editor', ' Elmo Williams');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4481, 14275, ' Directing', ' Director', ' Steve James');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4482, 2287, ' Directing', ' Director', ' David LaChapelle');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4483, 18734, ' Directing', ' Director', ' Michael Cuesta');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4484, 206197, ' Writing', ' Novel', ' Steven Millhauser');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4485, 26837, ' Directing', ' Director', ' Emily Dell');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4486, 7859, ' Production', ' Executive Producer', ' Paul S. Mezey');
@@ -4236,7 +4069,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4533, 7301, ' Directing', ' Director', ' Steve Buscemi');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4534, 172533, ' Directing', ' Director', ' Joe Swanberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4535, 180383, ' Production', ' Co-Executive Producer', ' Peter Block');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4536, 346, ' Writing', ' Screenplay', ' Akira Kurosawa');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4537, 84318, ' Directing', ' Director', ' Marius Markevicius');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4538, 45145, ' Editing', ' Editor', ' Geraldine Peroni');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4539, 13983, ' Directing', ' Director', ' Justin Lin');
@@ -4268,7 +4100,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4570, 198370, ' Production', ' Producer', ' Jennifer Westin');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4571, 3062, ' Production', ' Producer', ' Hal B. Wallis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4573, 15389, ' Directing', ' Director', ' Whit Stillman');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4574, 464, ' Production', ' Producer', ' Per-Erik Svensson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4575, 308467, ' Directing', ' Director', ' Eric England');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4576, 8193, ' Directing', ' Director', ' Jared Hess');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4577, 188166, ' Production', ' Producer', ' Anish Savjani');
@@ -4279,13 +4110,10 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4582, 281189, ' Directing', ' Director', ' Sue Corcoran');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4583, 1435, ' Production', ' Executive Producer', ' Gus Van Sant');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4585, 189711, ' Writing', ' Writer', ' Michael Skvaria');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4586, 19204, ' Directing', ' Director', ' Lucio Fulci');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4587, 9029, ' Production', ' Casting', ' Avy Kaufman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4588, 18045, ' Crew', ' Cinematography', ' Steve Cosens');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4589, 11240, ' Editing', ' Editor', ' Mick Audsley');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4591, 157909, ' Directing', ' Director', ' Cassandra Nicolaou');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4592, 10238, ' Directing', ' Director', ' Ingmar Bergman');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4593, 3059, ' Writing', ' Screenplay', ' Tod Browning');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4594, 15800, ' Directing', ' Director', ' Roger Nygard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4595, 65203, ' Production', ' Producer', ' Irving Thalberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4596, 764, ' Writing', ' Screenplay', ' Sam Raimi');
@@ -4297,11 +4125,9 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4603, 389, ' Production', ' Producer', ' Henry Fonda');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4604, 52032, ' Directing', ' Director', ' Paul Fierlinger');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4605, 3078, ' Directing', ' Director', ' Frank Capra');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4606, 38810, ' Editing', ' Editor', ' Yorgos Mavropsaridis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4607, 21525, ' Directing', ' Director', ' Lauren Lazin');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4608, 55123, ' Directing', ' Director', ' Gavin O''Connor');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4609, 11980, ' Editing', ' Editor', ' Sonny Baskin');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4610, 11956, ' Camera', ' Director of Photography', ' Beno\\u00eet Delhomme');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4611, 1550, ' Production', ' Producer', ' John S. Lyons');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4612, 162396, ' Directing', ' Director', ' Niall Johnson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4613, 26518, ' Directing', ' Director', ' Kelly Reichardt');
@@ -4359,7 +4185,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4670, 35073, ' Art', ' Set Decoration', ' Edward G. Boyle');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4671, 9659, ' Directing', ' Director', ' George Miller');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4672, 10218, ' Editing', ' Editor', ' Stephen Mirrione');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4673, 391, ' Sound', ' Original Music Composer', ' Ennio Morricone');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4676, 54897, ' Writing', ' Writer', ' Howard Klausner');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4677, 83588, ' Production', ' Casting', ' Aisha Coley');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4678, 53256, ' Writing', ' Screenplay', ' Tom Tykwer');
@@ -4374,12 +4199,10 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4687, 48035, ' Writing', ' Screenplay', ' Carl Theodor Dreyer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4688, 14758, ' Production', ' Producer', ' Jason Ritter');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4689, 13363, ' Production', ' Executive Producer', ' Mark Pellington');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4691, 25786, ' Directing', ' Director', ' Nadia Tass');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4692, 36549, ' Writing', ' Screenplay', ' James Kerwin');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4693, 361398, ' Directing', ' Director', ' Darren Press');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4694, 289180, ' Directing', ' Director', ' Rania Attieh');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4695, 288927, ' Writing', ' Screenplay', ' Sharon Greytak');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4696, 21334, ' Directing', ' Director', ' Majid Majidi');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4697, 79120, ' Directing', ' Director', ' Andrew Haigh');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4698, 27995, ' Art', ' Production Design', ' Wynn Thomas');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4699, 253290, ' Production', ' Producer', ' Jessica Miller');
@@ -4396,12 +4219,10 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4711, 335244, ' Directing', ' Director', ' Dena Seidel');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4712, 178862, ' Directing', ' Director', ' Deborah Anderson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4713, 331745, ' Directing', ' Director', ' Sara Newens');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4714, 1779, ' Directing', ' Director', ' Michael Moore');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4715, 282128, ' Directing', ' Director', ' Sai Varadan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4716, 86812, ' Production', ' Producer', ' Brit Marling');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4718, 84355, ' Crew', ' Creative Consultant', ' Emily Blunt');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4719, 18632, ' Directing', ' Director', ' David Hewlett');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4720, 40652, ' Art', ' Assistant Art Director', ' Jean-Pierre L\\u00e9aud');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4721, 339408, ' Production', ' Casting', ' Mary Vernieu');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4723, 18925, ' Directing', ' Director', ' Alex Kendrick');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4724, 299245, ' Production', ' Producer', ' Jason Blum');
@@ -4411,7 +4232,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4729, 18841, ' Directing', ' Director', ' Larry Blamire');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4730, 272726, ' Directing', ' Director', ' Stephen Langford');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4731, 175291, ' Writing', ' Writer', ' Trent Haaga');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4733, 13538, ' Production', ' Casting', ' Des Hamilton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4734, 51130, ' Camera', ' Director of Photography', ' George Robinson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4735, 270554, ' Directing', ' Director', ' Patrick Ryan Sims');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4736, 72086, ' Directing', ' Director', ' L\\u00e1szl\\u00f3 Benedek');
@@ -4429,7 +4249,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4749, 74777, ' Directing', ' Director', ' Mike Flanagan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4750, 16388, ' Directing', ' Director', ' Edward Burns');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4751, 159770, ' Writing', ' Writer', ' Evan Morgan');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4752, 42109, ' Camera', ' Director of Photography', ' Carlo Di Palma');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4753, 47607, ' Directing', ' Director', ' Lena Dunham');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4754, 193603, ' Directing', ' Director', ' Terron R. Parsons');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4755, 84659, ' Directing', ' Director', ' Daniel Mellitz');
@@ -4466,9 +4285,7 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4788, 86304, ' Directing', ' Director', ' Jason Trost');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4789, 692, ' Directing', ' Director', ' John Waters');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4790, 39851, ' Directing', ' Director', ' Olivier Assayas');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4791, 13898, ' Writing', ' Writer', ' Kambuzia Partovi');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4792, 157185, ' Directing', ' Director', ' Ivan Kavanagh');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4793, 36095, ' Directing', ' Director', ' Kiyoshi Kurosawa');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4794, 182291, ' Directing', ' Director', ' Tadeo Garcia');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4795, 286939, ' Directing', ' Director', ' Thomas L. Phillips');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4796, 124606, ' Directing', ' Director', ' Ash Baron-Cohen');
@@ -4532,7 +4349,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4858, 105864, ' Production', ' Producer', ' John Lasseter');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4859, 62177, ' Sound', ' Sound Re-Recording Mixer', ' Tom Johnson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4860, 188927, ' Art', ' Production Design', ' Thomas E. Sanders');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4861, 10681, ' Directing', ' Director', ' Andrew Stanton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4862, 5174, ' Editing', ' Editor', ' Mark Helfrich');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4864, 17979, ' Directing', ' Director', ' Robert Zemeckis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4865, 76757, ' Editing', ' Editor', ' Alexander Berner');
@@ -4627,7 +4443,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4957, 56292, ' Costume & Make-Up', ' Costume Design', ' Michael Kaplan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4958, 81188, ' Production', ' Producer', ' Christina Steinberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4959, 7552, ' Costume & Make-Up', ' Costume Design', ' Julie Weiss');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4960, 616, ' Production', ' Producer', ' Tom Cruise');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4961, 147441, ' Sound', ' Music', ' Alberto Iglesias');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4962, 13475, ' Writing', ' Characters', ' Gene Roddenberry');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4963, 557, ' Writing', ' Screenplay', ' David Koepp');
@@ -4666,7 +4481,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4998, 10567, ' Production', ' Casting', ' Mary Hidalgo');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (4999, 181533, ' Writing', ' Screenplay', ' Thomas Lennon');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5000, 38055, ' Production', ' Executive Producer', ' Ben Stiller');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5001, 671, ' Art', ' Art Direction', ' Michael Lamont');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5002, 49524, ' Editing', ' Editor', ' Mark Helfrich');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5003, 22, ' Camera', ' Director of Photography', ' Dariusz Wolski');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5004, 131631, ' Sound', ' Original Music Composer', ' James Newton Howard');
@@ -4704,7 +4518,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5036, 76170, ' Sound', ' Sound Effects Editor', ' Doug Jackson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5037, 1893, ' Directing', ' Director', ' George Lucas');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5038, 49519, ' Writing', ' Writer', ' John Cleese');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5039, 2395, ' Production', ' Casting', ' Pierre-Jacques B\\u00e9nichou');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5040, 12100, ' Editing', ' Editor', ' Tom Rolf');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5041, 290595, ' Sound', ' Music', ' James Newton Howard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5042, 98566, ' Sound', ' Music', ' Brian Tyler');
@@ -4748,14 +4561,12 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5084, 11322, ' Production', ' Executive Producer', ' Robert De Niro');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5085, 4982, ' Production', ' Producer', ' Brian Grazer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5086, 36955, ' Production', ' Casting', ' Mali Finn');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5087, 18487, ' Editing', ' Editor', ' Chris Lebenzon');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5088, 39451, ' Crew', ' Cinematography', ' Remi Adefarasin');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5090, 9268, ' Sound', ' Sound Effects Editor', ' Doug Jackson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5091, 68718, ' Directing', ' Director', ' Quentin Tarantino');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5092, 10545, ' Writing', ' Screenplay', ' Jonathan Roberts');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5093, 11688, ' Sound', ' Original Music Composer', ' John Debney');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5094, 76163, ' Art', ' Art Direction', ' Keith Pain');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5095, 2059, ' Production', ' Producer', ' Jerry Bruckheimer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5096, 2486, ' Production', ' Producer', ' John Davis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5097, 16523, ' Writing', ' Screenplay', ' Spike Jonze');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5098, 116711, ' Directing', ' Director', ' Chris Wedge');
@@ -4909,7 +4720,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5257, 12096, ' Art', ' Production Design', ' Lilly Kilvert');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5258, 10200, ' Production', ' Casting', ' Coreen Mayrs');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5259, 8834, ' Production', ' Producer', ' Joel Silver');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5261, 6068, ' Camera', ' Director of Photography', ' Michael Chapman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5262, 41515, ' Production', ' Executive Producer', ' James Dyer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5263, 9023, ' Production', ' Producer', ' Jeffrey Katzenberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5264, 38317, ' Directing', ' Director', ' Frank Coraci');
@@ -4940,7 +4750,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5289, 9447, ' Directing', ' Director', ' George Miller');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5290, 274854, ' Production', ' Casting', ' John Papsidera');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5291, 8870, ' Production', ' Producer', ' Bruce Berman');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5292, 9992, ' Production', ' Producer', ' Luc Besson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5293, 36970, ' Production', ' Executive Producer', ' Don Hahn');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5294, 10077, ' Production', ' Executive Producer', ' John Hardy');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5295, 76649, ' Production', ' Producer', ' Paul W.S. Anderson');
@@ -5009,7 +4818,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5362, 35, ' Writing', ' Screenplay', ' Matt Groening');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5363, 11086, ' Production', ' Casting', ' Deborah Aquila');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5364, 10477, ' Production', ' Producer', ' Sylvester Stallone');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5365, 1997, ' Directing', ' Director', ' Jean-Jacques Annaud');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5366, 6947, ' Camera', ' Director of Photography', ' Roger Deakins');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5367, 3050, ' Production', ' Producer', ' John Davis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5368, 2675, ' Production', ' Unit Production Manager', ' Sam Mercer');
@@ -5023,7 +4831,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5378, 9257, ' Writing', ' Screenplay', ' David McKenna');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5379, 1903, ' Camera', ' Director of Photography', ' John Toll');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5380, 9697, ' Camera', ' Director of Photography', ' Christopher Doyle');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5381, 395, ' Writing', ' Screenplay', ' Paul W.S. Anderson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5382, 23398, ' Sound', ' Original Music Composer', ' David Newman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5383, 10590, ' Production', ' Casting', ' Amanda Mackey');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5386, 44943, ' Costume & Make-Up', ' Costume Design', ' Sanja Milkovic Hays');
@@ -5155,7 +4962,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5519, 9334, ' Editing', ' Editor', ' Michael Tronick');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5520, 11128, ' Crew', ' Post Production Supervisor', ' John A. Amicarella');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5522, 8914, ' Production', ' Executive Producer', ' Bruce Berman');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5523, 13576, ' Sound', ' Music', ' Michael Bearden');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5524, 39538, ' Sound', ' Original Music Composer', ' Cliff Martinez');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5525, 10628, ' Production', ' Casting', ' Ronna Kress');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5526, 14836, ' Writing', ' Screenplay', ' Neil Gaiman');
@@ -5200,7 +5006,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5567, 17332, ' Camera', ' Director of Photography', ' Seamus McGarvey');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5568, 4958, ' Art', ' Art Direction', ' Angelo P. Graham');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5569, 786, ' Camera', ' Director of Photography', ' John Toll');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5570, 9513, ' Writing', ' Screenplay', ' Joel Cohen');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5571, 11679, ' Sound', ' Sound Designer', ' Christopher Boyes');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5572, 38321, ' Production', ' Producer', ' Michael De Luca');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5573, 14411, ' Writing', ' Writer', ' John Logan');
@@ -5237,7 +5042,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5604, 72431, ' Sound', ' Sound Designer', ' Ben Burtt');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5605, 1813, ' Sound', ' Original Music Composer', ' James Newton Howard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5606, 87428, ' Camera', ' Director of Photography', ' Brandon Trost');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5607, 8840, ' Costume & Make-Up', ' Costume Design', ' Anna B. Sheppard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5609, 71676, ' Production', ' Executive Producer', ' David S. Goyer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5610, 1722, ' Sound', ' Original Music Composer', ' Stephen Warbeck');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5611, 10022, ' Writing', ' Screenplay', ' Thomas Lennon');
@@ -5270,7 +5074,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5639, 58224, ' Directing', ' Director', ' Mark Waters');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5640, 1729, ' Editing', ' Editor', ' Eric Strand');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5641, 175574, ' Writing', ' Screenplay', ' Jimmy Hayward');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5642, 8077, ' Art', ' Production Design', ' Norman Reynolds');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5643, 8818, ' Production', ' Producer', ' Robert Stigwood');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5644, 8195, ' Production', ' Casting', ' Amanda Mackey');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5645, 10586, ' Writing', ' Screenplay', ' William Goldman');
@@ -5285,14 +5088,12 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5655, 9566, ' Camera', ' Director of Photography', ' Dariusz Wolski');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5656, 9833, ' Crew', ' Cinematography', ' John Mathieson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5657, 4517, ' Camera', ' Director of Photography', ' Remi Adefarasin');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5658, 8202, ' Production', ' Producer', ' Gale Anne Hurd');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5660, 34314, ' Production', ' Casting', ' Phyllis Huffman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5661, 19724, ' Production', ' Producer', ' Lorenzo di Bonaventura');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5662, 145220, ' Writing', ' Screenplay', ' Nicholas Stoller');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5663, 14623, ' Production', ' Casting', ' Mary Selway');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5664, 42297, ' Visual Effects', ' Special Effects Supervisor', ' John Frazier');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5666, 802, ' Writing', ' Screenplay', ' Stanley Kubrick');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5667, 10375, ' Camera', ' Director of Photography', ' Dean Semler');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5668, 36586, ' Sound', ' Music Editor', ' Bill Abbott');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5669, 11321, ' Production', ' Producer', ' Will Smith');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5670, 70074, ' Production', ' Producer', ' Joel Silver');
@@ -5339,7 +5140,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5711, 2022, ' Production', ' Casting', ' Roger Mussenden');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5712, 37686, ' Production', ' Casting', ' April Webster');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5713, 462, ' Production', ' Producer', ' Danny DeVito');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5714, 9919, ' Production', ' Producer', ' Lynda Obst');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5715, 187017, ' Sound', ' Original Music Composer', ' Mark Mothersbaugh');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5716, 628, ' Production', ' Casting', ' Juliet Taylor');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5717, 10201, ' Production', ' Producer', ' Richard D. Zanuck');
@@ -5431,7 +5231,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5804, 47327, ' Production', ' Producer', ' Michael De Luca');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5805, 15268, ' Sound', ' Original Music Composer', ' Stephen Endelman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5806, 10796, ' Production', ' Casting', ' John Papsidera');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5808, 18947, ' Production', ' Producer', ' Tim Bevan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5809, 1900, ' Sound', ' Original Music Composer', ' Cliff Martinez');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5810, 89, ' Editing', ' Editor', ' George Lucas');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5811, 96724, ' Production', ' Casting', ' Jina Jay');
@@ -5446,12 +5245,10 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5821, 1636, ' Art', ' Art Direction', ' John Dexter');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5822, 2148, ' Directing', ' Director', ' Francis Ford Coppola');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5824, 260346, ' Writing', ' Writer', ' Luc Besson');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5827, 7504, ' Directing', ' Director', ' Deepa Mehta');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5828, 8592, ' Camera', ' Director of Photography', ' Vittorio Storaro');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5829, 913, ' Directing', ' Director', ' John McTiernan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5830, 11091, ' Camera', ' Director of Photography', ' Miroslav Ond\\u0159\\u00ed\\u010dek');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5831, 1368, ' Costume & Make-Up', ' Costume Design', ' Tom Bronson');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5832, 593, ' Writing', ' Screenplay', ' Andrei Tarkovsky');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5833, 5393, ' Production', ' Producer', ' Charlie Woebcken');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5834, 9095, ' Production', ' Casting', ' Juliet Taylor');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5835, 8874, ' Sound', ' Original Music Composer', ' James Newton Howard');
@@ -5511,7 +5308,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5895, 10858, ' Camera', ' Director of Photography', ' Robert Richardson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5896, 11439, ' Sound', ' Original Music Composer', ' Alexandre Desplat');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5897, 9457, ' Sound', ' Original Music Composer', ' Jerry Goldsmith');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5899, 1494, ' Directing', ' Director', ' Zhang Yimou');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5900, 13184, ' Sound', ' Original Music Composer', ' Brian Tyler');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5901, 2185, ' Directing', ' Director', ' Barry Sonnenfeld');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5902, 6639, ' Camera', ' Director of Photography', ' Affonso Beato');
@@ -5542,7 +5338,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5931, 11560, ' Production', ' Casting', ' Mali Finn');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5932, 25189, ' Writing', ' Writer', ' G\\u00e9rard Oury');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5933, 2637, ' Editing', ' Editor', ' Brian Berdan');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5934, 18480, ' Production', ' Producer', ' Sacha Baron Cohen');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5935, 709, ' Production', ' Casting', ' Janet Hirshenson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5936, 49730, ' Art', ' Production Design', ' Thomas E. Sanders');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5937, 2749, ' Production', ' Casting', ' Gail Stevens');
@@ -5551,7 +5346,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5940, 79, ' Production', ' Producer', ' Zhang Yimou');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5941, 54054, ' Production', ' Producer', ' Tom Rosenberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5943, 46528, ' Production', ' Casting', ' Liz Mullane');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5944, 27936, ' Production', ' Producer', ' Jean-Pierre Jeunet');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5946, 280391, ' Writing', ' Scenario Writer', ' Jamel Debbouze');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5948, 10610, ' Camera', ' Director of Photography', ' Arthur Wong');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (5949, 745, ' Production', ' Executive Producer', ' Sam Mercer');
@@ -5619,7 +5413,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6014, 4970, ' Directing', ' Director', ' Mathieu Kassovitz');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6015, 11831, ' Directing', ' Director', ' Steven Spielberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6017, 440, ' Writing', ' Characters', ' Jim Thomas');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6018, 11011, ' Camera', ' Director of Photography', ' Don Burgess');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6019, 10641, ' Production', ' Producer', ' Gary Lucchesi');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6020, 11172, ' Production', ' Executive Producer', ' Nancy Juvonen');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6021, 39513, ' Costume & Make-Up', ' Costume Design', ' Nancy Steiner');
@@ -5664,7 +5457,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6061, 10315, ' Directing', ' Director', ' Wes Anderson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6062, 16643, ' Production', ' Casting', ' Sharon Bialy');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6063, 2687, ' Art', ' Set Designer', ' Lawrence G. Paull');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6064, 194, ' Production', ' Producer', ' Claudie Ossard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6065, 11025, ' Camera', ' Director of Photography', ' Greg Gardiner');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6066, 8849, ' Costume & Make-Up', ' Costume Design', ' Beatrix Aruna Pasztor');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6067, 78698, ' Sound', ' Music', ' Cliff Eidelman');
@@ -5700,11 +5492,9 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6099, 8842, ' Camera', ' Director of Photography', ' Jack Green');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6100, 9531, ' Production', ' Casting', ' Mike Fenton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6101, 64807, ' Sound', ' Original Music Composer', ' Trevor Rabin');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6102, 12289, ' Writing', ' Screenplay', ' John Woo');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6103, 11529, ' Sound', ' Original Music Composer', ' George Fenton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6104, 20943, ' Production', ' Producer', ' Steven Reuther');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6105, 9099, ' Production', ' Producer', ' Brian Grazer');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6106, 9488, ' Writing', ' Screenplay', ' Robert Rodriguez');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6107, 193, ' Camera', ' Director of Photography', ' John A. Alonzo');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6108, 44865, ' Production', ' Producer', ' Wong Kar-wai');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6109, 55787, ' Production', ' Casting', ' Denise Chamian');
@@ -5740,7 +5530,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6142, 8470, ' Production', ' Producer', ' Mark Burg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6143, 11001, ' Sound', ' Original Music Composer', ' Ed Shearmur');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6144, 138832, ' Production', ' Casting', ' Lisa Beach');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6145, 16911, ' Directing', ' Director', ' Fyodor Bondarchuk');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6146, 2163, ' Writing', ' Screenplay', ' Jonathan Mostow');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6147, 36670, ' Writing', ' Story', ' Kevin McClory');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6148, 23048, ' Production', ' Producer', ' John Cusack');
@@ -5815,7 +5604,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6221, 94348, ' Sound', ' Original Music Composer', ' John Debney');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6222, 8197, ' Production', ' Producer', ' Clint Eastwood');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6223, 336004, ' Editing', ' Editor', ' Robert Dalva');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6224, 35019, ' Production', ' Producer', ' Tim Bevan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6225, 10410, ' Directing', ' Director', ' Danny DeVito');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6226, 8836, ' Production', ' Casting', ' Heike Brandstatter');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6228, 321741, ' Editing', ' Editor', ' William Goldenberg');
@@ -5849,7 +5637,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6261, 9311, ' Sound', ' Original Music Composer', ' Harry Gregson-Williams');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6262, 9280, ' Camera', ' Director of Photography', ' Thierry Arbogast');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6263, 26843, ' Writing', ' Writer', ' H.A.L. Craig');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6264, 11876, ' Writing', ' Screenplay', ' Jean-Claude Carri\\u00e8re');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6265, 22267, ' Directing', ' Director', ' Ang Lee');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6266, 45958, ' Directing', ' Director', ' Alejandro Gonz\\u00e1lez I\\u00f1\\u00e1rritu');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6267, 1969, ' Production', ' Producer', ' Luc Besson');
@@ -5860,7 +5647,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6272, 1381, ' Editing', ' Editor', ' Jay Rabinowitz');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6273, 2162, ' Production', ' Producer', ' James G. Robinson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6274, 127493, ' Production', ' Casting', ' Amanda Mackey');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6275, 12429, ' Editing', ' Editor', ' Hayao Miyazaki');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6276, 228205, ' Sound', ' Original Music Composer', ' Mark Isham');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6277, 2900, ' Costume & Make-Up', ' Costume Design', ' Isis Mussenden');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6278, 21311, ' Directing', ' Director', ' Hugh Hudson');
@@ -5876,7 +5662,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6288, 326, ' Camera', ' Director of Photography', ' Adam Greenberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6289, 10685, ' Sound', ' Music', ' Marco Beltrami');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6290, 7220, ' Directing', ' Director', ' Jonathan Hensleigh');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6291, 9763, ' Production', ' Casting', ' Lucinda Syson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6292, 72387, ' Production', ' Executive Producer', ' Kevin Spacey');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6293, 12596, ' Production', ' Producer', ' Art Linson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6294, 1892, ' Production', ' Executive Producer', ' George Lucas');
@@ -5904,7 +5689,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6319, 11141, ' Sound', ' Original Music Composer', ' Ed Shearmur');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6320, 8649, ' Directing', ' Director', ' Martin Scorsese');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6321, 31867, ' Sound', ' Music', ' Marco Beltrami');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6322, 10253, ' Production', ' Casting', ' Christine Sheaks');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6323, 3587, ' Production', ' Producer', ' Arnon Milchan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6324, 124459, ' Production', ' Casting', ' Lisa Beach');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6325, 24662, ' Directing', ' Director', ' Mark Dindal');
@@ -5964,7 +5748,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6386, 10207, ' Production', ' Producer', ' Denise Di Novi');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6387, 172, ' Directing', ' Director', ' William Shatner');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6388, 21972, ' Art', ' Production Design', ' Arlan Jay Vetter');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6389, 36593, ' Production', ' Executive Producer', ' Jim Abrahams');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6390, 707, ' Sound', ' Original Music Composer', ' John Barry');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6391, 533, ' Writing', ' Screenplay', ' Nick Park');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6392, 6023, ' Directing', ' Director', ' Richard LaGravenese');
@@ -5973,7 +5756,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6396, 4105, ' Directing', ' Director', ' Ridley Scott');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6397, 76489, ' Camera', ' Director of Photography', ' Matthew F. Leonetti');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6398, 3933, ' Writing', ' Characters', ' Tim Burton');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6399, 9918, ' Production', ' Casting', ' Ronna Kress');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6400, 273481, ' Sound', ' Sound Effects Editor', ' Bub Asman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6402, 16871, ' Costume & Make-Up', ' Costume Design', ' Isis Mussenden');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6403, 293863, ' Production', ' Producer', ' Gary Lucchesi');
@@ -6022,7 +5804,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6452, 58151, ' Directing', ' Director', ' Craig Gillespie');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6453, 11400, ' Production', ' Executive Producer', ' Mark Ordesky');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6455, 28902, ' Production', ' Casting', ' Janet Hirshenson');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6456, 14164, ' Writing', ' Screenplay', ' Ben Ramsey');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6457, 76640, ' Writing', ' Writer', ' George Nolfi');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6458, 11058, ' Production', ' Casting', ' Stephanie Gorin');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6459, 14844, ' Production', ' Casting', ' Sarah Katzman');
@@ -6038,7 +5819,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6469, 11162, ' Sound', ' Original Music Composer', ' Jocelyn Pook');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6470, 6016, ' Writing', ' Screenplay', ' Jean-Pierre Melville');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6471, 17186, ' Directing', ' Director', ' Steve Boyum');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6473, 2008, ' Camera', ' Director of Photography', ' Peter Pau');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6474, 9053, ' Writing', ' Author', ' J. F. Lawton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6475, 4512, ' Production', ' Producer', ' David Valdes');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6476, 76349, ' Crew', ' Stunt Coordinator', ' Jackie Chan');
@@ -6130,7 +5910,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6572, 5126, ' Art', ' Production Design', ' Hugo Luczyc-Wyhowski');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6573, 56288, ' Camera', ' Director of Photography', ' Robert Rodriguez');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6574, 303858, ' Camera', ' Director of Photography', ' Matthew Libatique');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6575, 1613, ' Production', ' Casting', ' Nina Gold');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6576, 31582, ' Production', ' Producer', ' Jane Rosenthal');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6577, 16617, ' Production', ' Co-Executive Producer', ' Bob Weinstein');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6578, 8944, ' Writing', ' Author', ' Art Linson');
@@ -6160,7 +5939,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6603, 2057, ' Production', ' Producer', ' Denise Di Novi');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6604, 70436, ' Production', ' Producer', ' Aaron Ryder');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6605, 16784, ' Writing', ' Screenplay', ' Tom Schulman');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6606, 8011, ' Writing', ' Screenplay', ' Paul Ohl');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6607, 31640, ' Production', ' Executive Producer', ' Bernard Williams');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6608, 9092, ' Costume & Make-Up', ' Costume Design', ' Charles Knode');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6609, 2779, ' Directing', ' Director', ' Woody Allen');
@@ -6294,12 +6072,9 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6747, 22256, ' Directing', ' Director', ' Robert Towne');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6748, 12404, ' Directing', ' Director', ' Richard Linklater');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6749, 152742, ' Writing', ' Screenplay', ' Giuseppe Tornatore');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6750, 11699, ' Production', ' Producer', ' Nicolas Cage');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6751, 49953, ' Directing', ' Director', ' Ben Stassen');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6752, 48034, ' Directing', ' Director', ' Guillaume Canet');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6753, 39845, ' Writing', ' Screenplay', ' Mark Jacobson');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6754, 25353, ' Directing', ' Director', ' Pascal H\\u00e9rold');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6755, 36696, ' Directing', ' Director', ' Svyatoslav Ushakov');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6756, 109091, ' Camera', ' Director of Photography', ' Dariusz Wolski');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6757, 38543, ' Art', ' Production Design', ' Joseph C. Nemec III');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6758, 33157, ' Production', ' Producer', ' Dino De Laurentiis');
@@ -6332,12 +6107,10 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6788, 26672, ' Sound', ' Music', ' Robert Folk');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6789, 45881, ' Sound', ' Original Music Composer', ' Lalo Schifrin');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6790, 41283, ' Editing', ' Dialogue Editor', ' Walter Spencer');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6791, 4935, ' Directing', ' Director', ' Hayao Miyazaki');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6792, 19908, ' Production', ' Executive Producer', ' Rhett Reese');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6793, 10663, ' Writing', ' Screenplay', ' Adam Sandler');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6794, 1891, ' Production', ' Executive Producer', ' George Lucas');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6795, 9737, ' Production', ' Casting', ' Francine Maisler');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6796, 37137, ' Writing', ' Writer', ' Jim Abrahams');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6797, 9532, ' Sound', ' Supervising Sound Editor', ' Scott Martin Gershin');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6798, 10316, ' Directing', ' Director', ' George Clooney');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6799, 2787, ' Production', ' Casting', ' Mary Vernieu');
@@ -6353,11 +6126,9 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6810, 20024, ' Production', ' Casting', ' Susie Figgis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6811, 2453, ' Directing', ' Director', ' Simon Wincer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6812, 6973, ' Crew', ' Thanks', ' Clint Eastwood');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6813, 11156, ' Production', ' Producer', ' Simon Arnal');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6814, 354110, ' Writing', ' Writer', ' Brad Mirman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6815, 22215, ' Sound', ' Original Music Composer', ' Alexandre Desplat');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6816, 11632, ' Camera', ' Director of Photography', ' Declan Quinn');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6817, 30596, ' Directing', ' Director', ' Teddy Chan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6818, 3021, ' Production', ' Executive Producer', ' Harvey Weinstein');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6819, 957, ' Production', ' Casting', ' Lynn Stalmaster');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6820, 256917, ' Crew', ' Additional Music', ' Lisa Gerrard');
@@ -6395,13 +6166,11 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6854, 287948, ' Production', ' Producer', ' Luc Besson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6855, 7548, ' Editing', ' Editor', ' Jill Bilcock');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6856, 9075, ' Production', ' Casting', ' Job Gosschalk');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6857, 11661, ' Camera', ' Camera Operator', ' Jean-Paul Meurisse');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6858, 109513, ' Directing', ' Director', ' Dax Shepard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6859, 12085, ' Camera', ' Director of Photography', ' John Bailey');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6860, 204922, ' Art', ' Production Design', ' Kave Quinn');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6861, 38985, ' Writing', ' Screenplay', ' Walon Green');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6862, 44113, ' Writing', ' Writer', ' Angus MacLachlan');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6863, 21494, ' Directing', ' Director', ' Laurent Tirard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6864, 164457, ' Production', ' Producer', ' Ridley Scott');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6865, 4566, ' Production', ' Executive Producer', ' George Clooney');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (6866, 17795, ' Directing', ' Director', ' Peter Segal');
@@ -6580,26 +6349,21 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7048, 77948, ' Camera', ' Director of Photography', ' Remi Adefarasin');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7049, 21755, ' Costume & Make-Up', ' Costume Design', ' Beatrix Aruna Pasztor');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7050, 4960, ' Writing', ' Screenplay', ' Charlie Kaufman');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7051, 128, ' Writing', ' Screenplay', ' Hayao Miyazaki');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7052, 14652, ' Writing', ' Writer', ' Jean-Paul Rappeneau');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7053, 40932, ' Writing', ' Writer', ' Allan Carr');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7054, 16608, ' Editing', ' Editor', ' Jon Gregory');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7055, 334531, ' Production', ' Casting', ' Cathy Sandrich');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7056, 32316, ' Sound', ' Songs', ' Mervyn Warren');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7057, 7299, ' Sound', ' Music', ' Klaus Badelt');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7058, 13405, ' Camera', ' Director of Photography', ' Zhao Xiaoding');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7059, 19457, ' Production', ' Executive Producer', ' Bob Weinstein');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7060, 112937, ' Directing', ' Director', ' Matthew Diamond');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7061, 314385, ' Art', ' Production Design', ' Jon Hutman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7064, 46503, ' Writing', ' Screenplay', ' Marc Smerling');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7065, 10448, ' Production', ' Producer', ' Kevin Costner');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7066, 13688, ' Directing', ' Director', ' Stephen Chow');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7067, 10353, ' Directing', ' Director', ' Jean-Marie Poir\\u00e9');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7068, 43935, ' Production', ' Executive Producer', ' Gilbert Adler');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7069, 11458, ' Sound', ' Original Music Composer', ' Terence Blanchard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7070, 44638, ' Production', ' Executive Producer', ' Ronald M. Bozman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7071, 241257, ' Production', ' Casting', ' Jina Jay');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7073, 13250, ' Production', ' Executive Producer', ' Bruce Davey');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7075, 280871, ' Camera', ' Director of Photography', ' Sunny Joseph');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7076, 239897, ' Production', ' Producer', ' Tom Walsh');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7077, 184341, ' Writing', ' Writer', ' Jonathan Jakubowicz');
@@ -6619,7 +6383,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7094, 12090, ' Art', ' Art Direction', ' Troy Sizemore');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7095, 62630, ' Costume & Make-Up', ' Costume Design', ' Anna B. Sheppard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7097, 29427, ' Production', ' Executive Producer', ' George A. Romero');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7098, 129, ' Directing', ' Director', ' Hayao Miyazaki');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7099, 244114, ' Production', ' Producer', ' Andy Lau');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7100, 2669, ' Production', ' Producer', ' Bernard Williams');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7101, 203833, ' Editing', ' Editor', ' John Wilson');
@@ -6663,7 +6426,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7140, 9829, ' Production', ' Producer', ' Lloyd Levin');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7141, 10028, ' Production', ' Casting', ' Michelle Morris');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7142, 10535, ' Sound', ' Original Music Composer', ' Bill Conti');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7143, 790, ' Writing', ' Screenplay', ' Debra Hill');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7144, 43959, ' Writing', ' Screenplay', ' Sean McNamara');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7145, 10364, ' Production', ' Producer', ' Martin Ransohoff');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7146, 16991, ' Writing', ' Writer', ' Jody Hill');
@@ -6688,16 +6450,13 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7165, 68924, ' Directing', ' Director', ' Ang Lee');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7166, 253235, ' Production', ' Producer', ' Rob Reiner');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7167, 22102, ' Production', ' Co-Producer', ' Peter Macgregor-Scott');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7169, 10068, ' Production', ' Producer', ' Mark Damon');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7170, 848, ' Production', ' Executive Producer', ' Howard W. Koch');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7173, 130150, ' Costume & Make-Up', ' Costume Design', ' Danny Glicker');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7174, 12246, ' Editing', ' Editor', ' Zach Staenberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7175, 13809, ' Production', ' Producer', ' Guy Ritchie');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7176, 27380, ' Production', ' Casting', ' Mike Fenton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7177, 10549, ' Sound', ' Original Music Composer', ' Patrick Doyle');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7179, 245703, ' Production', ' Producer', ' Sarah Green');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7181, 127560, ' Production', ' Producer', ' Chris Brown');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7182, 37903, ' Production', ' Casting', ' Simone B\\u00e4r');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7183, 396152, ' Writing', ' Screenplay', ' Zack Ward');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7184, 10017, ' Editing', ' Editor', ' Scott Conrad');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7186, 193613, ' Writing', ' Writer', ' Nimr\\u00f3d Antal');
@@ -6728,7 +6487,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7214, 21765, ' Sound', ' Music', ' Mark Mothersbaugh');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7215, 146304, ' Directing', ' Director', ' Malcolm D. Lee');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7216, 7516, ' Production', ' Producer', ' Tim Bevan');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7217, 41439, ' Production', ' Executive Producer', ' Leigh Whannell');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7218, 2752, ' Camera', ' Director of Photography', ' Elliot Davis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7219, 9429, ' Sound', ' Music', ' David Kitay');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7220, 38117, ' Directing', ' Director', ' Daniel Barnz');
@@ -6757,7 +6515,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7244, 10629, ' Production', ' Executive Producer', ' Mike Stenson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7245, 255343, ' Art', ' Production Design', ' Carlos Conti');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7246, 4723, ' Writing', ' Screenplay', ' Richard Kelly');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7247, 10800, ' Directing', ' Director', ' Guillaume Ivernel');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7248, 25763, ' Production', ' Casting', ' Mike Fenton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7249, 79694, ' Production', ' Executive Producer', ' Daniel Alter');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7251, 18615, ' Sound', ' Original Music Composer', ' Carter Burwell');
@@ -6777,7 +6534,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7266, 10781, ' Production', ' Executive Producer', ' Mark Ordesky');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7267, 318850, ' Writing', ' Novel', ' Anne Rice');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7268, 13908, ' Writing', ' Writer', ' Dana Carvey');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7269, 1417, ' Production', ' Casting', ' Sara Bilbat\\u00faa');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7270, 39180, ' Writing', ' Writer', ' George Gallo');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7271, 16161, ' Production', ' Producer', ' John Singleton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7272, 49950, ' Art', ' Production Design', ' Jon Gary Steele');
@@ -6785,7 +6541,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7274, 9594, ' Production', ' Producer', ' Paul Michael Glaser');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7275, 4638, ' Production', ' Producer', ' Tim Bevan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7277, 5038, ' Directing', ' Director', ' Woody Allen');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7278, 13491, ' Production', ' Producer', ' Waldemar Bergendahl');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7279, 10571, ' Production', ' Executive Producer', ' Harvey Weinstein');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7280, 10994, ' Production', ' Casting', ' Ellen Lewis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7281, 19994, ' Sound', ' Original Music Composer', ' Theodore Shapiro');
@@ -6822,12 +6577,10 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7316, 12154, ' Camera', ' Director of Photography', ' Adam Greenberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7317, 9576, ' Production', ' Casting', ' Lynn Stalmaster');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7318, 744, ' Editing', ' Editor', ' Chris Lebenzon');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7319, 146, ' Sound', ' Original Music Composer', ' Dun Tan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7320, 14, ' Directing', ' Director', ' Sam Mendes');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7321, 45269, ' Production', ' Executive Producer', ' Geoffrey Rush');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7322, 9493, ' Editing', ' Editor', ' Sheldon Kahn');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7323, 22556, ' Directing', ' Director', ' Udayan Prasad');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7325, 33196, ' Sound', ' Original Music Composer', ' Byungwoo Lee');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7326, 205596, ' Editing', ' Editor', ' William Goldenberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7327, 10765, ' Sound', ' Original Music Composer', ' Bill Conti');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7328, 16769, ' Art', ' Set Decoration', ' John M. Dwyer');
@@ -6891,7 +6644,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7391, 64689, ' Production', ' Casting', ' Francine Maisler');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7392, 157849, ' Production', ' Casting', ' Simone B\\u00e4r');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7393, 13166, ' Production', ' Producer', ' Marc S. Fischer');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7394, 15511, ' Directing', ' Director', ' Mike Nawrocki');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7396, 12211, ' Costume & Make-Up', ' Costume Design', ' Wendy Partridge');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7397, 13816, ' Production', ' Producer', ' Charles Roven');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7398, 51828, ' Art', ' Production Design', ' Mark Tildesley');
@@ -6908,7 +6660,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7412, 7874, ' Writing', ' Screenplay', ' Craig Brewer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7413, 4911, ' Production', ' Casting', ' Francine Maisler');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7414, 1988, ' Production', ' Producer', ' Andrew Eaton');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7415, 16222, ' Editing', ' Editor', ' Ronald Roose');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7416, 9557, ' Art', ' Art Direction', ' Uli Hanisch');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7419, 18276, ' Camera', ' Director of Photography', ' Michael Chapman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7420, 8321, ' Production', ' Casting', ' Jina Jay');
@@ -6917,7 +6668,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7424, 133694, ' Writing', ' Writer', ' Matt Damon');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7425, 19265, ' Writing', ' Writer', ' Woody Allen');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7426, 36047, ' Writing', ' Writer', ' Mark Gibson');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7427, 8053, ' Writing', ' Screenplay', ' Guillermo Arriaga');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7428, 2290, ' Sound', ' Original Music Composer', ' Ed Shearmur');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7429, 5236, ' Writing', ' Screenplay', ' Shane Black');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7430, 6552, ' Production', ' Producer', ' Suzanne Todd');
@@ -6931,11 +6681,9 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7440, 331592, ' Sound', ' Original Music Composer', ' Edward White');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7441, 47692, ' Costume & Make-Up', ' Costume Design', ' Sandy Powell');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7442, 19, ' Directing', ' Director', ' Fritz Lang');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7443, 10045, ' Writing', ' Screenplay', ' Luc Besson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7444, 400, ' Writing', ' Screenplay', ' Scott Rosenberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7445, 253450, ' Directing', ' Director', ' Hou Hsiao-hsien');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7446, 9104, ' Sound', ' Original Music Composer', ' David Holmes');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7447, 11190, ' Directing', ' Director', ' Andrey Zvyagintsev');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7448, 16353, ' Writing', ' Writer', ' Tony Jaa');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7449, 23759, ' Production', ' Producer', ' Robert Jones');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7450, 24206, ' Writing', ' Writer', ' Sergio Altieri');
@@ -6944,11 +6692,9 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7453, 74536, ' Directing', ' Director', ' Dito Montiel');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7454, 31668, ' Production', ' Unit Production Manager', ' Markus Brinkmann');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7455, 13501, ' Writing', ' Writer', ' Jake Paltrow');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7456, 15208, ' Sound', ' Original Music Composer', ' Simon Boswell');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7457, 172391, ' Directing', ' Director', ' Anthony Silverston');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7458, 262543, ' Production', ' Producer', ' Les Weldon');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7459, 9288, ' Editing', ' Editor', ' Rodney Holland');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7461, 20083, ' Directing', ' Director', ' Derek Yee Tung-Sing');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7463, 137, ' Writing', ' Screenplay', ' Harold Ramis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7464, 264999, ' Editing', ' Editor', ' Steven Soderbergh');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7465, 454, ' Editing', ' Editor', ' Jill Bilcock');
@@ -6987,7 +6733,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7501, 10741, ' Directing', ' Director', ' Emilio Estevez');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7502, 24940, ' Directing', ' Director', ' Mark Waters');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7503, 82679, ' Sound', ' Original Music Composer', ' Lyle Workman');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7504, 2013, ' Camera', ' Director of Photography', ' Janusz Kami\\u0144ski');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7505, 1440, ' Production', ' Casting', ' Todd M. Thaler');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7506, 18041, ' Production', ' Casting', ' Lora Kennedy');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7507, 28029, ' Production', ' Casting', ' Billy Hopkins');
@@ -6997,7 +6742,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7511, 16899, ' Production', ' Casting', ' Deborah Aquila');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7512, 41317, ' Production', ' Producer', ' Elmo Williams');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7513, 245700, ' Editing', ' Editor', ' Jon Gregory');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7514, 37842, ' Directing', ' Director', ' Alain Resnais');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7516, 44092, ' Directing', ' Director', ' John Woo');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7517, 16005, ' Production', ' Casting', ' Deborah Aquila');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7518, 44754, ' Production', ' Executive Producer', ' Anthony Minghella');
@@ -7009,7 +6753,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7525, 10876, ' Directing', ' Director', ' Philip Kaufman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7526, 86838, ' Sound', ' Original Music Composer', ' Carter Burwell');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7528, 613, ' Writing', ' Screenplay', ' Bernd Eichinger');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7529, 1913, ' Costume & Make-Up', ' Costume Design', ' Sonia Grande');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7530, 97370, ' Production', ' Producer', ' Nick Wechsler');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7531, 801, ' Art', ' Production Design', ' Roy Walker');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7532, 70829, ' Writing', ' Writer', ' Shim Hyung-Rae');
@@ -7017,15 +6760,12 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7536, 9816, ' Sound', ' Original Music Composer', ' Mark Isham');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7537, 10131, ' Writing', ' Characters', ' Wes Craven');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7538, 339984, ' Production', ' Producer', ' T.D. Jakes');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7539, 8859, ' Art', ' Assistant Art Director', ' Brad Ricker');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7540, 11967, ' Production', ' Executive Producer', ' James G. Robinson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7541, 239563, ' Editing', ' Editor', ' Sarah Flack');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7542, 222899, ' Production', ' Producer', ' William Packer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7543, 4951, ' Writing', ' Theatre Play', ' William Shakespeare');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7544, 10985, ' Directing', ' Director', ' Ed Decter');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7545, 9644, ' Production', ' Producer', ' Suzanne Todd');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7546, 332567, ' Production', ' Producer', ' Lynn Harris');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7547, 1954, ' Camera', ' Director of Photography', ' Matthew F. Leonetti');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7548, 15489, ' Writing', ' Writer', ' Chris Viscardi');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7549, 15250, ' Writing', ' Screenplay', ' Preston A. Whitmore II');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7550, 22345, ' Writing', ' Screenplay', ' Bob Clark');
@@ -7076,7 +6816,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7599, 26688, ' Writing', ' Writer', ' Josh Stolberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7600, 43867, ' Art', ' Art Direction', ' Lyle R. Wheeler');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7601, 6615, ' Editing', ' Editor', ' Tatiana S. Riegel');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7602, 14574, ' Sound', ' Original Music Composer', ' James Horner');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7603, 16, ' Camera', ' Camera Operator', ' Lars von Trier');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7604, 39780, ' Writing', ' Screenplay', ' Laura Jones');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7605, 21612, ' Writing', ' Writer', ' Nicholas St. John');
@@ -7084,7 +6823,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7607, 23631, ' Directing', ' Director', ' Robert Rodriguez');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7608, 45324, ' Writing', ' Writer', ' Norman Snider');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7609, 12144, ' Production', ' Executive Producer', ' Steven Spielberg');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7610, 11658, ' Directing', ' Director', ' Kang Je-gyu');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7611, 56601, ' Production', ' Producer', ' Mark W. Koch');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7612, 9552, ' Production', ' Casting', ' Juliet Taylor');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7613, 578, ' Directing', ' Director', ' Steven Spielberg');
@@ -7099,7 +6837,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7622, 9281, ' Camera', ' Director of Photography', ' John Seale');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7623, 75674, ' Production', ' Casting', ' Nancy Nayor');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7624, 9762, ' Art', ' Art Direction', ' Laura Ballinger');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7625, 3179, ' Writing', ' Screenplay', ' Joe Stillman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7626, 184, ' Writing', ' Author', ' Quentin Tarantino');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7627, 13335, ' Camera', ' Director of Photography', ' Daryn Okada');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7628, 76726, ' Production', ' Producer', ' John Davis');
@@ -7137,7 +6874,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7664, 387, ' Crew', ' Sound Recordist', ' Karsten Ullrich');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7665, 6020, ' Sound', ' Original Music Composer', ' Mark Mothersbaugh');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7666, 122906, ' Production', ' Producer', ' Tim Bevan');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7667, 9550, ' Production', ' Producer', ' Zhang Yimou');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7668, 60599, ' Camera', ' Director of Photography', ' Yorick Le Saux');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7669, 227719, ' Production', ' Producer', ' Michael Bay');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7670, 14299, ' Camera', ' Director of Photography', ' Anastas N. Michos');
@@ -7149,7 +6885,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7677, 61752, ' Writing', ' Writer', ' Suzan-Lori Parks');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7678, 10944, ' Production', ' Producer', ' Laurie Parker');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7679, 10362, ' Production', ' Producer', ' Donna Gigliotti');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7681, 1255, ' Directing', ' Director', ' Bong Joon-ho');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7682, 45226, ' Directing', ' Director', ' Roger Spottiswoode');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7683, 10212, ' Production', ' Producer', ' Adam Fields');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7684, 8669, ' Production', ' Producer', ' Jay Roach');
@@ -7166,11 +6901,9 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7695, 13079, ' Writing', ' Writer', ' Emil Stern');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7696, 89325, ' Sound', ' Music', ' James Newton Howard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7697, 4170, ' Camera', ' Director of Photography', ' Daniel Gottschalk');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7698, 41508, ' Directing', ' Director', ' Lajos Koltai');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7699, 12479, ' Camera', ' Director of Photography', ' Elliot Davis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7700, 44555, ' Writing', ' Original Story', ' Joel Coen');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7701, 10133, ' Directing', ' Director', ' Vincenzo Natali');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7702, 21345, ' Production', ' Producer', ' John Chong');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7704, 61984, ' Camera', ' Director of Photography', ' K\\u00f4z\\u00f4 Shibasaki');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7705, 50601, ' Production', ' Casting', ' Nancy Nayor');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7706, 26466, ' Production', ' Producer', ' Chris Brown');
@@ -7178,7 +6911,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7708, 236751, ' Directing', ' Director', ' Randall Wallace');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7709, 107, ' Production', ' Casting', ' Lucinda Syson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7710, 357837, ' Writing', ' Writer', ' David A. Prior');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7712, 13889, ' Writing', ' Writer', ' Akira Kurosawa');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7713, 18530, ' Writing', ' Novel', ' Patricia Highsmith');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7714, 358451, ' Directing', ' Director', ' Mabel Cheung');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7715, 927, ' Sound', ' Supervising Sound Editor', ' Richard L. Anderson');
@@ -7228,7 +6960,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7762, 11917, ' Production', ' Producer', ' Gregg Hoffman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7763, 45138, ' Production', ' Producer', ' Bino Cicogna');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7765, 4657, ' Writing', ' Story', ' Raymond Carver');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7766, 14395, ' Camera', ' Director of Photography', ' Anil Mehta');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7767, 24137, ' Directing', ' Director', ' Oliver Parker');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7768, 190847, ' Production', ' Producer', ' Michael Kuhn');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7769, 11056, ' Production', ' Executive Producer', ' Harvey Weinstein');
@@ -7316,14 +7047,12 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7864, 14283, ' Directing', ' Director', ' Fran\\u00e7ois Girard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7866, 13201, ' Writing', ' Author', ' Paul Kimatian');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7867, 209403, ' Writing', ' Screenplay', ' Andrew Dodge');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7868, 7942, ' Writing', ' Screenplay', ' Simon Pegg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7869, 73247, ' Production', ' Producer', ' Michael Phillips');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7870, 253331, ' Sound', ' Music', ' Terence Blanchard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7871, 34043, ' Production', ' Casting', ' Nancy Nayor');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7872, 9952, ' Writing', ' Author', ' Werner Herzog');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7873, 256924, ' Writing', ' Screenplay', ' Dan Fogelman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7874, 82532, ' Sound', ' Original Music Composer', ' Michael Andrews');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7875, 41110, ' Camera', ' Director of Photography', ' Yorick Le Saux');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7876, 134371, ' Production', ' Producer', ' Harmon Kaslow');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7877, 2088, ' Editing', ' Editor', ' Walter Murch');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7878, 10388, ' Production', ' Casting', ' Debra Zane');
@@ -7348,7 +7077,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7899, 1989, ' Camera', ' Director of Photography', ' Darius Khondji');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7901, 12779, ' Production', ' Casting', ' Lucinda Syson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7902, 13191, ' Directing', ' Director', ' Joshua Seftel');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7903, 11770, ' Writing', ' Screenplay', ' Stephen Chow');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7904, 12703, ' Writing', ' Screenplay', ' Vincent Gallo');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7905, 64559, ' Production', ' Producer', ' Marin Karmitz');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7906, 222649, ' Sound', ' Music', ' Howard Shore');
@@ -7378,10 +7106,8 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7932, 17622, ' Art', ' Production Design', ' Eve Stewart');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7933, 283671, ' Writing', ' Writer', ' Johnny Hartmann');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7935, 217708, ' Directing', ' Director', ' Benedikt Erlingsson');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7936, 42057, ' Directing', ' Director', ' Gurinder Chadha');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7937, 17577, ' Production', ' Casting', ' Ricki Maslar');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7938, 14608, ' Writing', ' Writer', ' Vic Sarin');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7940, 15067, ' Writing', ' Screenplay', ' Kim Min-suk');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7941, 78383, ' Production', ' Executive Producer', ' John Sacchi');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7942, 43090, ' Production', ' Casting', ' Deirdre Bowen');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7943, 16614, ' Production', ' Producer', ' Ted Hope');
@@ -7408,7 +7134,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7965, 14811, ' Sound', ' Conductor', ' John Williams');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7966, 660, ' Writing', ' Original Story', ' Ian Fleming');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7967, 68684, ' Writing', ' Writer', ' Joseph Kahn');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7968, 40794, ' Writing', ' Writer', ' Ferzan Ozpetek');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7969, 9400, ' Sound', ' Music', ' Christopher Young');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7970, 16162, ' Writing', ' Writer', ' Malcolm D. Lee');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7971, 10585, ' Editing', ' Editor', ' Edward Warschilka');
@@ -7433,13 +7158,10 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7992, 1808, ' Production', ' Casting', ' Susie Figgis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7993, 293670, ' Sound', ' Original Music Composer', ' Dalparan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7994, 67675, ' Camera', ' Director of Photography', ' Glen MacPherson');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7995, 27329, ' Editing', ' Editor', ' Patamanadda Yukol');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7997, 250349, ' Directing', ' Director', ' Eric Lavaine');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (7998, 12454, ' Production', ' Producer', ' Alain Sarde');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8000, 15699, ' Writing', ' Screenplay', ' Peter Cattaneo');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8002, 17926, ' Production', ' Producer', ' Michael Burns');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8003, 291081, ' Directing', ' Director', ' Julian Jarrold');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8004, 41248, ' Art', ' Production Design', ' Mich\\u00e8le Abb\\u00e9-Vannier');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8005, 25968, ' Production', ' Casting', ' Sig De Miguel');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8006, 9671, ' Camera', ' Director of Photography', ' Russell Boyd');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8007, 52010, ' Directing', ' Director', ' Martyn Pick');
@@ -7459,7 +7181,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8022, 272693, ' Editing', ' Editor', ' Wendy Greene Bricmont');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8023, 10696, ' Sound', ' Original Music Composer', ' Terence Blanchard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8024, 150202, ' Writing', ' Screenplay', ' David Coggeshall');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8025, 19644, ' Directing', ' Director', ' Kang Woo-Suk');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8026, 29963, ' Production', ' Executive Producer', ' Fran\\u00e7ois Ivernel');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8027, 26022, ' Art', ' Production Design', ' Sharmishta Roy');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8028, 152747, ' Sound', ' Sound Designer', ' Steve Boeddeker');
@@ -7469,7 +7190,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8032, 185008, ' Directing', ' Director', ' Ayan Mukherjee');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8033, 11620, ' Directing', ' Director', ' Mervyn LeRoy');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8034, 14353, ' Writing', ' Author', ' Terrance Zdunich');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8035, 11818, ' Directing', ' Director', ' Sadullah \\u015eent\\u00fcrk');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8036, 680, ' Writing', ' Screenplay', ' Quentin Tarantino');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8037, 11176, ' Art', ' Production Design', ' Joel Schiller');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8038, 242582, ' Sound', ' Original Music Composer', ' James Newton Howard');
@@ -7505,7 +7225,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8074, 8293, ' Editing', ' Editor', ' Andrew Marcus');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8075, 291270, ' Writing', ' Theatre Play', ' Charlie Kaufman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8076, 44009, ' Editing', ' Editor', ' Jon Gregory');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8077, 1958, ' Directing', ' Director', ' Fran\\u00e7ois Ozon');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8078, 13154, ' Costume & Make-Up', ' Tattoo Designer', ' Patrick Tatopoulos');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8079, 26618, ' Writing', ' Writer', ' Matthew L. Healy');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8080, 43923, ' Sound', ' Supervising Sound Editor', ' Paul Hsu');
@@ -7526,11 +7245,8 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8097, 13197, ' Writing', ' Writer', ' Robert Moresco');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8098, 10913, ' Production', ' Executive Producer', ' Peter Aalb\\u00e6k Jensen');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8099, 251321, ' Writing', ' Writer', ' Claudia Llosa');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8100, 149, ' Directing', ' Director', ' Katsuhiro \\u014ctomo');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8101, 10425, ' Editing', ' Editor', ' Bruce Cannon');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8103, 256687, ' Writing', ' Screenplay', ' Keith Parmer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8104, 220488, ' Sound', ' Original Music Composer', ' Nathan Wang');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8105, 1544, ' Production', ' Executive Producer', ' Stefan Arndt');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8106, 374461, ' Directing', ' Director', ' Bruce Beresford');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8107, 302, ' Writing', ' Screenplay', ' Fran\\u00e7ois Ozon');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8108, 182873, ' Production', ' Producer', ' James Harris');
@@ -7538,7 +7254,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8110, 389425, ' Editing', ' Editor', ' Robert A. Ferretti');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8111, 403, ' Art', ' Art Direction', ' Victor Kempster');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8112, 29461, ' Writing', ' Writer', ' George Tillman');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8113, 33542, ' Writing', ' Writer', ' Edward Tang');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8114, 283708, ' Editing', ' Editor', ' Juliette Welfling');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8115, 9388, ' Production', ' Co-Producer', ' Mindy Marin');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8116, 1691, ' Production', ' Producer', ' Chris Briggs');
@@ -7565,7 +7280,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8140, 681, ' Directing', ' Director', ' Guy Hamilton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8141, 238, ' Writing', ' Screenplay', ' Francis Ford Coppola');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8142, 535, ' Costume & Make-Up', ' Costume Design', ' Michael Kaplan');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8143, 19913, ' Costume & Make-Up', ' Costume Design', ' Hope Hanafin');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8144, 713, ' Writing', ' Screenplay', ' Jane Campion');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8145, 77930, ' Editing', ' Editor', ' Steven Soderbergh');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8146, 10727, ' Editing', ' Editor', ' Steve Mirkovich');
@@ -7630,8 +7344,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8215, 13919, ' Editing', ' Editor', ' Arthur Schmidt');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8217, 82505, ' Production', ' Casting', ' John Papsidera');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8218, 46738, ' Production', ' Casting', ' Lucie Robitaille');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8219, 38970, ' Writing', ' Writer', ' Gabriele Muccino');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8220, 41009, ' Directing', ' Director', ' Ian Fitzgibbon');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8221, 7347, ' Editing', ' Editor', ' Daniel Rezende');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8222, 250546, ' Directing', ' Director', ' John R. Leonetti');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8223, 38415, ' Visual Effects', ' Animation', ' Nicholas Tripodi');
@@ -7644,7 +7356,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8230, 8998, ' Editing', ' Editor', ' Richard Marks');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8231, 10514, ' Production', ' Producer', ' Robert Wise');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8232, 10496, ' Sound', ' Original Music Composer', ' Graeme Revell');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8233, 1591, ' Camera', ' Director of Photography', ' Gernot Roll');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8234, 76025, ' Costume & Make-Up', ' Costume Design', ' David C. Robinson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8235, 4836, ' Sound', ' Music', ' Lisa Gerrard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8237, 87499, ' Production', ' Producer', ' Ridley Scott');
@@ -7666,13 +7377,11 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8255, 11977, ' Writing', ' Screenplay', ' Harold Ramis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8257, 16158, ' Directing', ' Director', ' Rick Famuyiwa');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8258, 629, ' Art', ' Art Direction', ' David Lazan');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8260, 11452, ' Production', ' Producer', ' Robert L. Levy');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8262, 32275, ' Writing', ' Screenplay', ' David O. Selznick');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8263, 13785, ' Production', ' Producer', ' Karen Murphy');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8264, 1103, ' Camera', ' Director of Photography', ' Dean Cundey');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8265, 36739, ' Writing', ' Writer', ' Spike Lee');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8266, 14144, ' Writing', ' Screenplay', ' J. David Stem');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8267, 10622, ' Writing', ' Screenplay', ' Edward Tang');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8269, 11191, ' Camera', ' Director of Photography', ' Tim Suhrstedt');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8270, 10215, ' Camera', ' Director of Photography', ' Remi Adefarasin');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8271, 25066, ' Production', ' Executive Producer', ' Spike Lee');
@@ -7698,11 +7407,9 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8293, 31064, ' Writing', ' Writer', ' Patrick Stettner');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8294, 576, ' Sound', ' Music Editor', ' Donald Harris');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8295, 13990, ' Directing', ' Director', ' Jonathan Levine');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8296, 11583, ' Production', ' Casting', ' Mary Selway');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8297, 18602, ' Production', ' Producer', ' George Faber');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8298, 27549, ' Writing', ' Screenplay', ' Sylvio Tabet');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8299, 59728, ' Production', ' Casting', ' Sheila Jaffe');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8300, 10930, ' Camera', ' Director of Photography', ' Eduardo Serra');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8301, 32395, ' Writing', ' Writer', ' Shana Feste');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8302, 58882, ' Writing', ' Screenplay', ' Ronald Bass');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8303, 7547, ' Writing', ' Author', ' Joey Lauren Adams');
@@ -7724,12 +7431,10 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8319, 168027, ' Writing', ' Novel', ' Elmore Leonard');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8320, 3482, ' Writing', ' Screenplay', ' Walter Bernstein');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8321, 135595, ' Writing', ' Screenplay', ' Christopher Bessette');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8322, 8982, ' Writing', ' Screenplay', ' Joe Wannapin');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8323, 89861, ' Sound', ' Sound Editor', ' Danny Hambrook');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8324, 455, ' Production', ' Executive Producer', ' Ulrich Felsberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8326, 14351, ' Production', ' Casting', ' Robi Reed');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8327, 147767, ' Writing', ' Story', ' Himesh Reshammiya');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8328, 10664, ' Directing', ' Director', ' Jaume Balaguer\\u00f3');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8329, 55567, ' Writing', ' Writer', ' Stewart Raffill');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8330, 9277, ' Production', ' Executive Producer', ' Richard D. Zanuck');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8331, 9443, ' Production', ' Executive Producer', ' Jake Eberts');
@@ -7745,7 +7450,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8341, 4997, ' Production', ' Producer', ' Holly Wiersma');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8342, 925, ' Directing', ' Director', ' Spike Lee');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8344, 73532, ' Writing', ' Writer', ' Aki Kaurism\\u00e4ki');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8345, 979, ' Production', ' Producer', ' Christophe Rossignon');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8346, 193722, ' Directing', ' Director', ' Hitoshi Matsumoto');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8347, 7913, ' Production', ' Producer', ' Rakeysh Omprakash Mehra');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8348, 253253, ' Production', ' Producer', ' Mary Pat Bentel');
@@ -7794,8 +7498,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8395, 21610, ' Writing', ' Writer', ' David Shaber');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8397, 8346, ' Camera', ' Director of Photography', ' Jeff Jur');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8398, 122081, ' Production', ' Casting', ' Laray Mayfield');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8399, 10987, ' Writing', ' Characters', ' Debra Hill');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8400, 1391, ' Directing', ' Director', ' Alfonso Cuar\\u00f3n');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8401, 747, ' Production', ' Executive Producer', ' Tim Bevan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8402, 14745, ' Camera', ' Director of Photography', ' Sharone Meir');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8403, 26748, ' Production', ' Executive Producer', ' John Sloss');
@@ -7812,13 +7514,11 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8415, 22649, ' Costume & Make-Up', ' Costume Design', ' Travis Banton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8416, 378200, ' Crew', ' Documentation & Support', ' Bille Woodruff');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8417, 20455, ' Directing', ' Director', ' Shigeyasu Yamauchi');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8419, 11042, ' Production', ' Producer', ' Denise Robert');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8420, 10786, ' Sound', ' Original Music Composer', ' John Barry');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8421, 12484, ' Editing', ' Editor', ' Norman Buckley');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8422, 17339, ' Writing', ' Novel', ' Alistair MacLean');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8424, 9900, ' Production', ' Executive Producer', ' Adam Sandler');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8425, 14662, ' Production', ' Producer', ' Stan Wlodkowski');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8426, 335, ' Camera', ' Director of Photography', ' Tonino Delli Colli');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8427, 15745, ' Production', ' Producer', ' Vince Vaughn');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8428, 17431, ' Production', ' Casting', ' Jeremy Zimmermann');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8429, 21014, ' Writing', ' Writer', ' Mark Zakarin');
@@ -7864,7 +7564,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8473, 113406, ' Camera', ' Director of Photography', ' Tom Richmond');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8475, 290825, ' Editing', ' Editor', ' Kevin Smith');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8476, 361159, ' Camera', ' Director of Photography', ' Don E. FauntLeRoy');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8477, 12555, ' Writing', ' Screenplay', ' Ji\\u0159\\u00ed Menzel');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8478, 31175, ' Writing', ' Screenplay', ' Adam Bousdoukos');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8479, 12498, ' Directing', ' Director', ' Billy Bob Thornton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8480, 77949, ' Sound', ' Sound Designer', ' James Harrison');
@@ -7896,15 +7595,11 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8508, 6106, ' Directing', ' Director', ' Oliver Stone');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8509, 252680, ' Production', ' Executive Producer', ' David Hunt');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8510, 141, ' Writing', ' Screenplay', ' Richard Kelly');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8512, 17139, ' Writing', ' Screenplay', ' Mike van Diem');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8513, 12079, ' Sound', ' Music', ' Billy Corgan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8514, 39800, ' Costume & Make-Up', ' Costume Design', ' Diana Noris');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8515, 4550, ' Directing', ' Director', ' Park Chan-wook');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8516, 62116, ' Writing', ' Writer', ' Ren\\u00e9 F\\u00e9ret');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8517, 9991, ' Sound', ' Original Music Composer', ' John Murphy');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8518, 13807, ' Directing', ' Director', ' Johnnie To');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8519, 68818, ' Directing', ' Director', ' Mateo Gil');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8520, 12093, ' Writing', ' Screenplay', ' Lukas Moodysson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8521, 36419, ' Sound', ' Music', ' Paul Haslinger');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8522, 281730, ' Writing', ' Writer', ' Rahul Handa');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8523, 510, ' Production', ' Casting', ' Mike Fenton');
@@ -7943,7 +7638,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8561, 10744, ' Sound', ' Original Music Composer', ' Mark Isham');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8562, 11536, ' Sound', ' Original Music Composer', ' Alex North');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8563, 9782, ' Production', ' Producer', ' Jeffrey Sharp');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8565, 6537, ' Production', ' Producer', ' \\u00c1lvaro August\\u00edn');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8566, 184345, ' Writing', ' Writer', ' Rick Alvarez');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8567, 1809, ' Writing', ' Writer', ' Roger Avary');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8568, 2370, ' Sound', ' Original Music Composer', ' Maurice Jarre');
@@ -7958,7 +7652,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8578, 48572, ' Production', ' Producer', ' Jonathan Gordon');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8579, 14517, ' Writing', ' Writer', ' Neil Gaiman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8580, 89708, ' Sound', ' Music', ' Michael Stearns');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8581, 27551, ' Sound', ' Music', ' Pino Donaggio');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8582, 64678, ' Production', ' Casting', ' Laura Rosenthal');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8583, 309503, ' Production', ' Executive Producer', ' Darren Aronofsky');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8584, 14293, ' Writing', ' Writer', ' Mars Callahan');
@@ -7991,14 +7684,12 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8611, 46420, ' Production', ' Casting', ' Anousha Zarkesh');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8613, 158150, ' Writing', ' Writer', ' Bart Fisher');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8614, 251979, ' Production', ' Producer', ' Bruce MacDonald');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8615, 874, ' Sound', ' Original Music Composer', ' Georges Delerue');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8616, 10774, ' Production', ' Casting', ' Juliet Taylor');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8617, 770, ' Production', ' Producer', ' David O. Selznick');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8618, 266102, ' Production', ' Producer', ' Pippa Cross');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8619, 29715, ' Writing', ' Screenplay', ' Sam Peckinpah');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8620, 25209, ' Camera', ' Director of Photography', ' Charles Rosher');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8621, 37495, ' Art', ' Production Design', ' Dick Lunn');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8622, 29262, ' Writing', ' Screenstory', ' Elena Soarez');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8623, 34769, ' Costume & Make-Up', ' Costume Design', ' Gersha Phillips');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8624, 35032, ' Art', ' Art Direction', ' Cedric Gibbons');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8625, 5178, ' Production', ' Executive Producer', ' Sigurj\\u00f3n Sighvatsson');
@@ -8018,7 +7709,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8639, 310131, ' Sound', ' Original Music Composer', ' Mark Korven');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8640, 40505, ' Writing', ' Story', ' Master P');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8641, 11363, ' Production', ' Producer', ' Ted Hope');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8643, 25376, ' Sound', ' Original Music Composer', ' Federico Jusid');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8644, 22007, ' Production', ' Producer', ' Boaz Davidson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8645, 765, ' Writing', ' Screenplay', ' Sam Raimi');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8646, 10615, ' Production', ' Executive Producer', ' Sean Daniel');
@@ -8037,11 +7727,9 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8660, 252360, ' Production', ' Producer', ' Dan Clarke');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8662, 299145, ' Production', ' Producer', ' Scott Eastwood');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8663, 241766, ' Crew', ' Cinematography', ' James Friend');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8665, 1667, ' Writing', ' Screenplay', ' Luc Jacquet');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8666, 50839, ' Camera', ' Director of Photography', ' Frank G. DeMarco');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8668, 13973, ' Production', ' Executive Producer', ' Mary Vernieu');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8669, 244786, ' Sound', ' Music Editor', ' Richard Henderson');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8670, 598, ' Directing', ' Director', ' K\\u00e1tia Lund');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8671, 11129, ' Directing', ' Director', ' Justin Kerrigan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8672, 75861, ' Directing', ' Director', ' Nathan Frankowski');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8673, 13551, ' Production', ' Producer', ' Gary Lucchesi');
@@ -8055,7 +7743,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8681, 805, ' Writing', ' Screenplay', ' Roman Polanski');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8682, 11697, ' Production', ' Producer', ' Willis Goldbeck');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8683, 22051, ' Production', ' Producer', ' Leslie Urdang');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8684, 436, ' Editing', ' Editor', ' Lee Percy');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8685, 55347, ' Directing', ' Director', ' Mike Mills');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8686, 10070, ' Production', ' Executive Producer', ' Bob Weinstein');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8687, 8469, ' Writing', ' Writer', ' Harold Ramis');
@@ -8068,7 +7755,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8694, 10162, ' Editing', ' Editor', ' Alan Strachan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8695, 1430, ' Directing', ' Director', ' Michael Moore');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8696, 259943, ' Production', ' Producer', ' William Kong');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8697, 10014, ' Writing', ' Characters', ' Wes Craven');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8698, 11257, ' Editing', ' Editor', ' Humphrey Dixon');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8699, 158015, ' Directing', ' Director', ' James DeMonaco');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8700, 82507, ' Art', ' Production Design', ' David Brisbin');
@@ -8076,7 +7762,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8702, 261, ' Writing', ' Screenplay', ' Richard Brooks');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8703, 1685, ' Writing', ' Novel', ' Pierre Boileau');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8704, 20737, ' Writing', ' Writer', ' Paul Tamasy');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8705, 10991, ' Writing', ' Screenplay', ' Kunihiko Yuyama');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8706, 10225, ' Production', ' Production Supervisor', ' Don Behrns');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8707, 826, ' Production', ' Producer', ' Sam Spiegel');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8709, 5854, ' Art', ' Production Design', ' Henry Bumstead');
@@ -8112,7 +7797,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8741, 10683, ' Camera', ' Director of Photography', ' Maryse Alberti');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8742, 17995, ' Production', ' Producer', ' David Permut');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8743, 246403, ' Writing', ' Writer', ' Kevin Smith');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8744, 670, ' Writing', ' Screenplay', ' Park Chan-wook');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8745, 35691, ' Directing', ' Director', ' Patrick Doughtie');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8746, 49010, ' Production', ' Casting', ' Deirdre Bowen');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8747, 317930, ' Crew', ' Cinematography', ' Federico Barbabosa');
@@ -8123,7 +7807,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8753, 84174, ' Art', ' Production Design', ' Richard Hoover');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8754, 34099, ' Editing', ' Editor', ' Henk van Eeghen');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8755, 79940, ' Writing', ' Screenplay', ' Tim Heidecker');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8756, 342, ' Production', ' Casting', ' Simone B\\u00e4r');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8757, 281230, ' Writing', ' Writer', ' Kate Connor');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8758, 38033, ' Production', ' Producer', ' Michael J. Pagan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8760, 38541, ' Crew', ' Cinematography', ' Laurent Bar\\u00e8s');
@@ -8142,7 +7825,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8775, 191229, ' Writing', ' Writer', ' Monte Hellman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8776, 43213, ' Writing', ' Screenplay', ' John Bosher');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8777, 44594, ' Production', ' Associate Producer', ' Brad Goodman');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8778, 666, ' Directing', ' Assistant Director', ' K\\u00e1tia Lund');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8779, 248, ' Production', ' Producer', ' Frank Capra');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8780, 325173, ' Writing', ' Writer', ' Shane Dax Taylor');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8782, 351043, ' Writing', ' Writer', ' Amy Kolquist');
@@ -8156,12 +7838,9 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8790, 630, ' Production', ' Casting', ' Leonard Murphy');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8791, 3034, ' Production', ' Casting', ' Mike Fenton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8792, 13025, ' Directing', ' Director', ' George A. Romero');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8793, 21461, ' Editing', ' Editor', ' Rajkumar Hirani');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8794, 55306, ' Production', ' Executive Producer', ' Edward Saxon');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8795, 17264, ' Production', ' Producer', ' Fred Roos');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8797, 16016, ' Directing', ' Director', ' Thorbj\\u00f8rn Christoffersen');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8798, 15875, ' Directing', ' Director', ' John Ford');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8799, 5900, ' Writing', ' Screenplay', ' Alex van Warmerdam');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8800, 43306, ' Directing', ' Director', ' Victor Fleming');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8801, 11072, ' Writing', ' Screenplay', ' Richard Pryor');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8802, 9730, ' Writing', ' Author', ' Victor Miller');
@@ -8169,8 +7848,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8804, 26371, ' Directing', ' Director', ' James Ivory');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8805, 14137, ' Writing', ' Writer', ' Artie Lange');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8806, 291, ' Writing', ' Screenplay', ' Stacy Peralta');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8807, 14139, ' Directing', ' Director', ' Nacho Vigalondo');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8808, 33106, ' Writing', ' Writer', ' Ning Hao');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8809, 8875, ' Sound', ' Music', ' Henning Lohner');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8810, 872, ' Production', ' Producer', ' Arthur Freed');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8811, 72914, ' Directing', ' Director', ' Kurt Engfehr');
@@ -8237,14 +7914,11 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8879, 11624, ' Writing', ' Screenplay', ' Woody Allen');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8880, 595, ' Camera', ' Director of Photography', ' Russell Harlan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8881, 8810, ' Writing', ' Screenplay', ' Terry Hayes');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8882, 12207, ' Directing', ' Director', ' Liu Chia-Liang');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8883, 226, ' Production', ' Executive Producer', ' John Sloss');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8884, 92182, ' Directing', ' Director', ' Laura Lau');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8885, 582, ' Production', ' Casting', ' Simone B\\u00e4r');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8886, 72213, ' Writing', ' Writer', ' Alex Kendrick');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8887, 990, ' Costume & Make-Up', ' Costume Design', ' Ruth Morley');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8888, 55604, ' Art', ' Set Decoration', ' Henry Grace');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8889, 9662, ' Writing', ' Author', ' Sylvain Chomet');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8890, 20862, ' Sound', ' Music', ' BC Smith');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8891, 2771, ' Directing', ' Director', ' Shari Springer Berman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8892, 80, ' Directing', ' Director', ' Richard Linklater');
@@ -8263,7 +7937,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8905, 15186, ' Production', ' Casting Associate', ' Terri Taylor');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8906, 17994, ' Writing', ' Screenplay', ' Kevin Tenney');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8907, 1378, ' Directing', ' Director', ' John Cameron Mitchell');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8908, 8885, ' Production', ' Producer', ' Roman Paul');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8910, 12901, ' Writing', ' Writer', ' Charles Ferguson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8911, 250124, ' Production', ' Producer', ' Anne Carey');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8913, 57120, ' Sound', ' Foley', ' Ellen Heuer');
@@ -8274,18 +7947,15 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8920, 13121, ' Production', ' Casting', ' Kerry Barden');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8921, 24746, ' Production', ' Executive Producer', ' Michael Burns');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8923, 12109, ' Production', ' Producer', ' James Richardson');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8925, 22913, ' Sound', ' Original Music Composer', ' Boo Hewerdine');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8928, 67373, ' Directing', ' Director', ' Danny Provenzano');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8929, 171759, ' Art', ' Production Design', ' Mona Nahm');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8930, 206296, ' Production', ' Producer', ' Richard LaGravenese');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8931, 35219, ' Writing', ' Writer', ' Noah Buschel');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8932, 28260, ' Production', ' Producer', ' Brian Yuzna');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8933, 7515, ' Costume & Make-Up', ' Costume Design', ' Rhona Meyers');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8934, 13075, ' Costume & Make-Up', ' Makeup Department Head', ' Julia Lallas');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8935, 335866, ' Writing', ' Writer', ' Aaron Hann');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8936, 13510, ' Editing', ' Editor', ' Jon Harris');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8937, 215881, ' Writing', ' Writer', ' Catherine Hardwicke');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8938, 18238, ' Sound', ' Original Music Composer', ' Debbie Wiseman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8939, 22600, ' Directing', ' Director', ' Ralph Ziman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8940, 12612, ' Sound', ' Original Music Composer', ' Debbie Wiseman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8941, 50698, ' Camera', ' Director of Photography', ' Tony Mirza');
@@ -8300,7 +7970,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8952, 198062, ' Editing', ' Editor', ' Ned Bastille');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8953, 188652, ' Writing', ' Writer', ' Paul Bunnell');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8954, 174311, ' Directing', ' Director', ' Phil Morrison');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8955, 12602, ' Sound', ' Original Music Composer', ' Peter Thoms');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8956, 153795, ' Directing', ' Director', ' James Cox');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8957, 17768, ' Crew', ' Special Effects', ' Cliff Richardson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8958, 13516, ' Directing', ' Director', ' Michael Moore');
@@ -8320,23 +7989,19 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8974, 38358, ' Production', ' Producer', ' Eli Roth');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8975, 33511, ' Editing', ' Editor', ' Lisa Gunning');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8976, 702, ' Editing', ' Editor', ' David Weisbart');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8978, 542, ' Writing', ' Author', ' E\\u00e7a de Queir\\u00f3s');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8979, 84175, ' Editing', ' Editor', ' Affonso Gon\\u00e7alves');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8980, 1705, ' Camera', ' Director of Photography', ' Richard H. Kline');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8981, 62677, ' Production', ' Executive Producer', ' Caroline Kaplan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8983, 260778, ' Production', ' Producer', ' S.S.Chakravarthy');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8984, 58492, ' Writing', ' Writer', ' Morgan Spurlock');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8986, 37232, ' Writing', ' Writer', ' Khyentse Norbu');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8987, 4929, ' Art', ' Set Decoration', ' Arthur Krams');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8988, 36334, ' Writing', ' Writer', ' Richard Brooks');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8989, 9783, ' Writing', ' Author', ' Erik Jendresen');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8990, 386826, ' Writing', ' Writer', ' Cory Knauf');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8991, 205126, ' Directing', ' Director', ' W.D. Hogan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8992, 98557, ' Production', ' Producer', ' Greg Carter');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8993, 104, ' Directing', ' Director', ' Tom Tykwer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8994, 10894, ' Directing', ' Director', ' Lucky McKee');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8995, 246449, ' Writing', ' Writer', ' Richard Boddington');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8996, 32579, ' Camera', ' Director of Photography', ' Checco Varese');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8997, 1688, ' Writing', ' Screenplay', ' Paul Dehn');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (8999, 43947, ' Production', ' Producer', ' Lisa M. Hansen');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9000, 24066, ' Writing', ' Screenplay', ' Ed Stone');
@@ -8348,11 +8013,8 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9006, 13909, ' Writing', ' Screenplay', ' Laurence Stallings');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9007, 206284, ' Writing', ' Writer', ' Brad J. Silverman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9009, 66468, ' Writing', ' Writer', ' Julius Lewis');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9010, 7973, ' Writing', ' Screenplay', ' Nadine Labaki');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9011, 283686, ' Editing', ' Editor', ' Bernat Vilaplana');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9012, 15976, ' Writing', ' Writer', ' Eytan Fox');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9013, 592, ' Directing', ' Director', ' Francis Ford Coppola');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9015, 1651, ' Directing', ' Director', ' Fran\\u00e7ois Truffaut');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9016, 25428, ' Writing', ' Writer', ' Adam Goldberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9017, 298584, ' Writing', ' Original Story', ' Eli Roth');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9018, 10758, ' Production', ' Casting', ' Meg Morman');
@@ -8365,7 +8027,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9027, 9464, ' Editing', ' Editor', ' Curtiss Clayton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9028, 49018, ' Editing', ' Editor', ' James Wan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9029, 13820, ' Directing', ' Director', ' Alex Cox');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9030, 18079, ' Directing', ' Director', ' Fabi\\u00e1n Bielinsky');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9032, 17113, ' Writing', ' Author', ' Rebecca Miller');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9033, 129139, ' Writing', ' Screenplay', ' Maggie Carey');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9034, 507, ' Art', ' Production Design', ' David Wasco');
@@ -8401,14 +8062,11 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9071, 2661, ' Sound', ' Original Music Composer', ' Nelson Riddle');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9072, 100, ' Directing', ' Director', ' Guy Ritchie');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9073, 218500, ' Writing', ' Writer', ' Am\\u00e9rico Paredes');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9074, 309, ' Production', ' Line Producer', ' Morten Kaufmann');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9075, 27845, ' Writing', ' Writer', ' Steve Buscemi');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9076, 25784, ' Writing', ' Writer', ' Ham Tran');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9078, 100275, ' Writing', ' Story', ' Alex Epstein');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9079, 295914, ' Directing', ' Director', ' Sadyk Sher-Niyaz');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9080, 42033, ' Sound', ' Original Music Composer', ' Christopher Young');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9081, 19187, ' Writing', ' Writer', ' Jonathan Kesselman');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9083, 38570, ' Directing', ' Director', ' Craig Moss');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9084, 27588, ' Directing', ' Director', ' Tyler Oliver');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9085, 223, ' Directing', ' Director', ' Alfred Hitchcock');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9086, 9725, ' Camera', ' Director of Photography', ' Peter Steinfeld');
@@ -8429,7 +8087,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9103, 176124, ' Directing', ' Director', ' David Boyd');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9104, 500, ' Writing', ' Writer', ' Quentin Tarantino');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9105, 60400, ' Art', ' Art Direction', ' Richard Day');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9106, 429, ' Sound', ' Original Music Composer', ' Ennio Morricone');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9107, 310569, ' Production', ' Producer', ' Caio Gullane');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9108, 98369, ' Directing', ' Director', ' Steve Taylor');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9112, 86331, ' Production', ' Producer', ' Ludi Boeken');
@@ -8461,7 +8118,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9145, 9003, ' Sound', ' Original Music Composer', ' Christopher Young');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9146, 347126, ' Writing', ' Writer', ' Cary Solomon');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9147, 10092, ' Directing', ' Director', ' Jeff Wadlow');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9148, 10643, ' Production', ' Producer', ' Shogo Tomiyama');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9149, 46705, ' Production', ' Executive Producer', ' Ryan Gosling');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9150, 546, ' Writing', ' Screenplay', ' Duncan Tucker');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9151, 76487, ' Editing', ' Editor', ' Tim Mirkovich');
@@ -8533,7 +8189,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9234, 29731, ' Writing', ' Writer', ' Caytha Jentis');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9236, 654, ' Production', ' Production Manager', ' George Justin');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9237, 91070, ' Editing', ' Editor', ' Eli Nilsen');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9238, 2009, ' Writing', ' Screenplay', ' Cristian Mungiu');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9240, 2652, ' Sound', ' Original Music Composer', ' Harry Escott');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9241, 9813, ' Camera', ' Director of Photography', ' M. David Mullen');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9242, 60421, ' Writing', ' Screenplay', ' Maryam Keshavarz');
@@ -8553,12 +8208,10 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9258, 11446, ' Directing', ' Director', ' Todd Solondz');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9259, 47889, ' Directing', ' Director', ' Victor Nunez');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9260, 25461, ' Directing', ' Director', ' Peter Sollett');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9261, 905, ' Directing', ' Director', ' G.W. Pabst');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9264, 25212, ' Writing', ' Writer', ' Rod Lurie');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9265, 26899, ' Writing', ' Writer', ' Michael Burke');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9266, 146269, ' Writing', ' Theatre Play', ' Wolfgang Bauer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9267, 292483, ' Production', ' Executive Producer', ' Carl Kurlander');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9268, 14451, ' Directing', ' Director', ' Tommy Wirkola');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9269, 10105, ' Writing', ' Author', ' Geoffrey Panos');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9270, 211557, ' Sound', ' Original Music Composer', ' Austin Wintory');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9271, 838, ' Directing', ' Director', ' George Lucas');
@@ -8567,13 +8220,11 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9275, 74510, ' Writing', ' Writer', ' Kevin Hart');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9276, 74725, ' Camera', ' Director of Photography', ' Laurie Rose');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9277, 58428, ' Production', ' Casting', ' Lisa Fields');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9278, 8416, ' Art', ' Production Design', ' Ferdinando Scarfiotti');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9280, 13429, ' Production', ' Executive Producer', ' Peter Carlton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9281, 9022, ' Production', ' Producer', ' Felipe Marino');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9283, 288, ' Directing', ' Director', ' Fred Zinnemann');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9284, 14275, ' Writing', ' Writer', ' Steve James');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9285, 2287, ' Sound', ' Music', ' Amy Marie Beauchamp');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9286, 18734, ' Writing', ' Writer', ' Michael Cuesta');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9287, 206197, ' Directing', ' Director', ' Caryn Waechter');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9289, 7859, ' Directing', ' Director', ' Ryan Fleck');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9290, 302579, ' Crew', ' Property Master', ' Lisa De Alva');
@@ -8613,7 +8264,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9336, 7301, ' Production', ' Producer', ' Jake Abraham');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9337, 172533, ' Editing', ' Editor', ' Joe Swanberg');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9338, 180383, ' Crew', ' Cinematography', ' Ed Marritz');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9339, 346, ' Directing', ' Director', ' Akira Kurosawa');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9340, 84318, ' Writing', ' Writer', ' Marius A. Markevicius');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9341, 45145, ' Art', ' Set Decoration', ' Stephanie Carroll');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9342, 13983, ' Writing', ' Writer', ' Justin Lin');
@@ -8641,7 +8291,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9373, 198370, ' Directing', ' Director', ' Matthew Watts');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9374, 3062, ' Production', ' Producer', ' Darryl F. Zanuck');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9376, 15389, ' Writing', ' Writer', ' Whit Stillman');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9377, 464, ' Directing', ' Director', ' Kay Pollak');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9379, 8193, ' Writing', ' Screenplay', ' Jared Hess');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9380, 188166, ' Directing', ' Director', ' Jeremy Saulnier');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9381, 23827, ' Writing', ' Screenplay', ' Oren Peli');
@@ -8650,13 +8299,10 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9384, 64499, ' Production', ' Casting', ' Jason L. Wood');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9386, 1435, ' Production', ' Executive Producer', ' John Cameron Mitchell');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9388, 189711, ' Directing', ' Director', ' Matt Jackson');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9389, 19204, ' Writing', ' Screenplay', ' Lucio Fulci');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9390, 9029, ' Camera', ' Director of Photography', ' Matthew F. Leonetti');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9391, 18045, ' Production', ' Casting', ' Robin D. Cook');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9392, 11240, ' Art', ' Production Design', ' Hugo Luczyc-Wyhowski');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9394, 157909, ' Writing', ' Writer', ' Cassandra Nicolaou');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9395, 10238, ' Writing', ' Screenplay', ' Ingmar Bergman');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9396, 3059, ' Writing', ' Writer', ' Anita Loos');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9398, 65203, ' Production', ' Producer', ' Lawrence Weingarten');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9399, 764, ' Directing', ' Director', ' Sam Raimi');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9400, 103620, ' Camera', ' Director of Photography', ' Maxime Alexandre');
@@ -8666,10 +8312,8 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9406, 389, ' Directing', ' Director', ' Sidney Lumet');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9407, 52032, ' Writing', ' Screenplay', ' Paul Fierlinger');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9408, 3078, ' Production', ' Producer', ' Frank Capra');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9409, 38810, ' Directing', ' Director', ' Yorgos Lanthimos');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9410, 21525, ' Production', ' Producer', ' Karolyn Ali');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9412, 11980, ' Production', ' Executive Producer', ' Don Phillips');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9413, 11956, ' Directing', ' Director', ' C\\u00e9dric Klapisch');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9414, 1550, ' Writing', ' Screenplay', ' Peter Hedges');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9416, 26518, ' Writing', ' Screenplay', ' Kelly Reichardt');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9417, 8942, ' Production', ' Executive Producer', ' Todd Haynes');
@@ -8719,7 +8363,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9473, 35073, ' Camera', ' Director of Photography', ' John L. Russell');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9474, 9659, ' Writing', ' Screenplay', ' George Miller');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9475, 10218, ' Directing', ' Director', ' Doug Liman');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9476, 391, ' Directing', ' Director', ' Sergio Leone');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9479, 54897, ' Directing', ' Director', ' David Evans ');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9480, 83588, ' Directing', ' Director', ' Ava DuVernay');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9481, 53256, ' Directing', ' Director', ' Tom Tykwer');
@@ -8732,12 +8375,10 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9490, 48035, ' Directing', ' Director', ' Carl Theodor Dreyer');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9491, 14758, ' Directing', ' Director', ' Marianna Palka');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9492, 13363, ' Writing', ' Writer', ' Jerome Bixby');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9494, 25786, ' Writing', ' Teleplay', ' Marsha Norman');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9495, 36549, ' Directing', ' Director', ' James Kerwin');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9496, 361398, ' Writing', ' Screenplay', ' C. Fraser Press');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9497, 289180, ' Writing', ' Writer', ' Rania Attieh');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9498, 288927, ' Directing', ' Director', ' Sharon Greytak');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9499, 21334, ' Writing', ' Writer', ' Majid Majidi');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9500, 79120, ' Writing', ' Writer', ' Andrew Haigh');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9501, 27995, ' Directing', ' Director', ' Spike Lee');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9502, 253290, ' Production', ' Producer', ' Cary Bell');
@@ -8751,11 +8392,9 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9513, 13187, ' Writing', ' Writer', ' Charles M. Schulz');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9515, 178862, ' Production', ' Producer', ' Deborah Anderson');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9516, 331745, ' Directing', ' Director', ' Mina T. Son');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9517, 1779, ' Production', ' Producer', ' Michael Moore');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9519, 86812, ' Writing', ' Writer', ' Brit Marling');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9521, 84355, ' Directing', ' Director', ' Lynn Shelton');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9522, 18632, ' Writing', ' Writer', ' David Hewlett');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9523, 40652, ' Directing', ' Assistant Director', ' Jean-Pierre L\\u00e9aud');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9524, 339408, ' Editing', ' Editor', ' Steven Rosenblum');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9526, 18925, ' Writing', ' Writer', ' Alex Kendrick');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9527, 299245, ' Sound', ' Music', ' Zach Lemmon');
@@ -8765,7 +8404,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9532, 18841, ' Writing', ' Writer', ' Larry Blamire');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9533, 272726, ' Writing', ' Screenplay', ' Stephen Langford');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9534, 175291, ' Directing', ' Director', ' E.L. Katz');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9536, 13538, ' Production', ' Casting', ' Kathleen Crawford');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9537, 51130, ' Editing', ' Editor', ' Stanley Frazen');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9538, 270554, ' Writing', ' Writer', ' Patrick Ryan Sims');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9539, 72086, ' Writing', ' Writer', ' Guy Elmes');
@@ -8781,7 +8419,6 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9552, 74777, ' Editing', ' Editor', ' Mike Flanagan');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9553, 16388, ' Writing', ' Screenplay', ' Edward Burns');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9554, 159770, ' Directing', ' Director', ' Matt Johnson');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9555, 42109, ' Writing', ' Screenplay', ' Bruno Barreto');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9556, 47607, ' Writing', ' Writer', ' Lena Dunham');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9557, 193603, ' Writing', ' Writer', ' Terron R. Parsons');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9558, 84659, ' Writing', ' Writer', ' Daniel Mellitz');
@@ -8813,9 +8450,7 @@ INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES 
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9591, 86304, ' Writing', ' Writer', ' Jason Trost');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9592, 692, ' Writing', ' Screenplay', ' John Waters');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9593, 39851, ' Writing', ' Writer', ' Olivier Assayas');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9594, 13898, ' Directing', ' Director', ' Jafar Panahi');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9595, 157185, ' Production', ' Producer', ' Ivan Kavanagh');
-INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9596, 36095, ' Writing', ' Writer', ' Kiyoshi Kurosawa');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9597, 182291, ' Writing', ' Story', ' Tadeo Garcia');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9598, 286939, ' Production', ' Producer', ' Thomas L. Phillips');
 INSERT INTO stockmovies.department (id, movie_id, department, job, name) VALUES (9599, 124606, ' Writing', ' Writer', ' Ash Baron-Cohen');

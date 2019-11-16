@@ -7,6 +7,7 @@ create table cast
     actor       text null,
     constraint MOVIE_FK
         foreign key (movieid) references movie (id)
+            on delete cascade
 );
 
 create index MOVIE_FK_idx
@@ -67,11 +68,9 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (54, 217, 
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (55, 105864, ' Arlo (voice)', ' Raymond Ochoa');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (56, 62177, ' M\\u00e9rida (voice)', ' Kelly Macdonald');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (57, 188927, ' James T. Kirk', ' Chris Pine');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (58, 10681, ' WALL\\u00b7E / M-O (voice)', ' Ben Burtt');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (59, 5174, ' Det. James Carter', ' Chris Tucker');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1002, 15268, ' Chun-Li', ' Kristin Kreuk');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1003, 10796, ' Gabe Law / Gabriel Yulaw / Lawless', ' Jet Li');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1005, 18947, ' Carl', ' Tom Sturridge');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1006, 1900, ' Robert Wakefield', ' Michael Douglas');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1007, 89, ' Indiana Jones', ' Harrison Ford');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1008, 96724, ' Anna Karenina', ' Keira Knightley');
@@ -87,12 +86,10 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1017, 112
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1018, 1636, ' The Devil', ' Elizabeth Hurley');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1019, 2148, ' Dixie Dwyer', ' Richard Gere');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1021, 260346, ' Bryan Mills', ' Liam Neeson');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1024, 7504, ' Dil Navaz', ' Aamir Khan');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1025, 8592, ' Dick Tracy', ' Warren Beatty');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1026, 913, ' Thomas Crown', ' Pierce Brosnan');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1027, 11091, ' Beverly Donofrio', ' Drew Barrymore');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1028, 1368, ' John J. Rambo', ' Sylvester Stallone');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1029, 593, ' Kris Kelvin', ' Donatas Banionis');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1030, 5393, ' Der Zauberer', ' George Carlin');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1031, 9095, ' Mary Reilly', ' Julia Roberts');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1032, 8874, ' Julianne Potter', ' Julia Roberts');
@@ -152,7 +149,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1091, 213
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1092, 10858, ' Richard Nixon', ' Anthony Hopkins');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1093, 11439, ' The Ghost', ' Ewan McGregor');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1094, 9457, ' John Finnegan', ' Treat Williams');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1096, 1494, ' Emperor Ping', ' Chow Yun-fat');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1097, 13184, ' Joe', ' Nicolas Cage');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1098, 2185, ' Eliot Arnold', ' Tim Allen');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1099, 6639, ' Florentino Ariza', ' Javier Bardem');
@@ -183,7 +179,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1127, 878
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1128, 11560, ' Claire Chapman', ' Ashley Judd');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1129, 25189, ' Rose Morgan', ' Barbra Streisand');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1130, 2637, ' John Klein', ' Richard Gere');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1131, 18480, ' Bruno', ' Sacha Baron Cohen');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1132, 709, ' James Bond', ' Timothy Dalton');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1133, 49730, ' Valerie', ' Amanda Seyfried');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1134, 2749, ' Detective Eddie Flemming', ' Robert De Niro');
@@ -192,7 +187,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1136, 183
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1137, 79, ' Nameless', ' Jet Li');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1138, 54054, ' Stephanie Plum', ' Katherine Heigl');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1140, 46528, ' Lynne', ' Kate Bosworth');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1141, 27936, ' Bazil', ' Dany Boon');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1143, 280391, ' Edouard (voice)', ' Jamel Debbouze');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1145, 10610, ' Eddie Yang', ' Jackie Chan');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1146, 745, ' Malcolm Crowe', ' Bruce Willis');
@@ -260,7 +254,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1210, 119
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1211, 4970, ' Miranda Grey', ' Halle Berry');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1212, 11831, ' Theodore', ' Morgan Freeman');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1214, 440, ' Dallas Howard', ' Steven Pasquale');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1215, 11011, ' Richie Rich', ' Macaulay Culkin');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1216, 10641, ' Will Keane', ' Richard Gere');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1217, 11172, ' Sophie Fisher', ' Drew Barrymore');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1218, 39513, ' Paul (voice)', ' Seth Rogen');
@@ -305,7 +298,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1257, 127
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1258, 10315, ' Mr. Fox (voice)', ' George Clooney');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1259, 16643, ' Lanie Kerrigan', ' Angelina Jolie');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1260, 2687, ' Nick Holloway', ' Chevy Chase');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1261, 194, ' Am\\u00e9lie Poulain', ' Audrey Tautou');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1262, 11025, ' Jane Ryan', ' Ashley Olsen');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1263, 8849, ' Alfie', ' Jude Law');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1264, 78698, ' Rachel Kramer', ' Drew Barrymore');
@@ -341,11 +333,9 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1295, 163
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1296, 8842, ' Jackie Kallen', ' Meg Ryan');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1297, 9531, ' Superman / Clark Kent', ' Christopher Reeve');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1298, 64807, ' Billy ''The Kid'' McDonnen', ' Robert De Niro');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1299, 12289, ' Sun Quan', ' Chang Chen');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1300, 11529, ' Melanie \\Carmichael\\ Smooter Perry', ' Reese Witherspoon');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1301, 20943, ' Abby', ' Katherine Heigl');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1302, 9099, ' Master Sergeant Ernest G. Bilko', ' Steve Martin');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1303, 9488, ' Gregorio Cortez', ' Antonio Banderas');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1304, 193, ' Captain Jean-Luc Picard', ' Patrick Stewart');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1305, 44865, ' Ip Man', ' Tony Leung Chiu-Wai');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1306, 55787, ' Jacob Jankowski', ' Robert Pattinson');
@@ -381,7 +371,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1338, 896
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1339, 8470, ' John Quincy Archibald', ' Denzel Washington');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1340, 11001, ' Miles Logan', ' Martin Lawrence');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1341, 138832, ' David Clark', ' Jason Sudeikis');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1342, 16911, ' Maxim Kammerer', ' Vasily Stepanov');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1343, 2163, ' Jeffrey \\ Jeff \\ Taylor', ' Kurt Russell');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1344, 36670, ' James Bond', ' Sean Connery');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1345, 23048, ' Adam', ' John Cusack');
@@ -456,7 +445,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1417, 954
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1418, 94348, ' Dr. Alex Cross', ' Tyler Perry');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1419, 8197, ' John Kelso', ' John Cusack');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1420, 336004, ' Vaughn', ' Jeffrey Dean Morgan');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1421, 35019, ' Nanny McPhee', ' Emma Thompson');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1422, 10410, ' James R. ''Jimmy'' Hoffa', ' Jack Nicholson');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1423, 8836, ' Fox Mulder', ' David Duchovny');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1425, 321741, ' Dr. Bennet Omalu', ' Will Smith');
@@ -490,7 +478,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1455, 972
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1458, 9311, ' Smilla Jasperson', ' Julia Ormond');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1459, 9280, ' Laure/lily', ' Rebecca Romijn');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1460, 26843, ' Omar Mukhtar', ' Anthony Quinn');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1461, 11876, ' Pauline de Th\\u00e9us', ' Juliette Binoche');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1462, 22267, ' Jake Roedel', ' Tobey Maguire');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1463, 45958, ' Uxbal', ' Javier Bardem');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1464, 1969, ' Maria Alvarez', ' Pen\\u00e9lope Cruz');
@@ -501,7 +488,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1468, 104
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1469, 1381, ' Tom\\u00e1s/Tom Creo/Tommy', ' Hugh Jackman');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1470, 2162, ' Arlo', ' Cuba Gooding Jr.');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1471, 127493, ' Will Montgomery', ' Nicolas Cage');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1472, 12429, ' Ponyo (voice)', ' Yuria Nara');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1473, 228205, ' Luke Collins', ' Scott Eastwood');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1474, 2900, ' Commander Spencer Armacost', ' Johnny Depp');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1475, 21311, ' Kuki Gallmann', ' Kim Basinger');
@@ -517,7 +503,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1484, 854
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1485, 326, ' Neville Flynn', ' Samuel L. Jackson');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1486, 10685, ' FBI Special Agent Joel Campbell', ' James Spader');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1487, 7220, ' Frank Castle / The Punisher', ' Thomas Jane');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1488, 9763, ' Santiago Munez', ' Kuno Becker');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1489, 72387, ' Luke Wright', ' Jason Statham');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1490, 12596, ' Nick Falzone', ' John Cusack');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1491, 1892, ' Luke Skywalker', ' Mark Hamill');
@@ -545,7 +530,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1515, 121
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1516, 11141, ' Daniel Rafferty', ' Pierce Brosnan');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1517, 8649, ' Frank Pierce', ' Nicolas Cage');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1518, 31867, ' Remy', ' Jude Law');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1519, 10253, ' Ethan Kendrick', ' Jason Behr');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1520, 3587, ' Harriet Franklin', ' Whoopi Goldberg');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1521, 124459, ' Burt Wonderstone', ' Steve Carell');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1522, 24662, ' Danny', ' Scott Bakula');
@@ -605,7 +589,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1582, 413
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1583, 10207, ' Garrett Blake', ' Kevin Costner');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1584, 172, ' Captain James T. Kirk', ' William Shatner');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1585, 21972, ' Calvin Cambridge', ' Shad Moss');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1586, 36593, ' Lt. Frank Drebin', ' Leslie Nielsen');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1587, 707, ' James Bond', ' Roger Moore');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1588, 533, ' Wallace / Hutch', ' Peter Sallis');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1589, 6023, ' Holly', ' Hilary Swank');
@@ -614,7 +597,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1591, 434
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1593, 4105, ' Nick', ' Michael Douglas');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1594, 76489, ' Larry', ' Sean Hayes');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1595, 3933, ' Victor Van Dort (voice)', ' Johnny Depp');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1596, 9918, ' Don Haskins', ' Josh Lucas');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1597, 273481, ' Kate Macer', ' Emily Blunt');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1599, 16871, ' Christine Brown', ' Alison Lohman');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1600, 293863, ' Adaline Bowman', ' Blake Lively');
@@ -664,7 +646,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1648, 112
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1649, 58151, ' Charley Brewster', ' Anton Yelchin');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1650, 11400, ' Captain Smith', ' Colin Farrell');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1652, 28902, ' Claire Cooper', ' Annette Bening');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1653, 14164, ' Master Roshi', ' Chow Yun-fat');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1654, 76640, ' Sheriff Ray Owens', ' Arnold Schwarzenegger');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1655, 11058, ' Paul Duncan', ' Greg Kinnear');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1656, 14844, ' Anna Foster', ' Mandy Moore');
@@ -680,7 +661,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1665, 102
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1666, 11162, ' Shylock', ' Al Pacino');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1667, 6016, ' Bob Montagnet', ' Nick Nolte');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1668, 17186, ' K.C. Carlyle', ' Steve Howey');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1670, 2008, ' Princess Qingcheng', ' Cecilia Cheung');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1671, 9053, ' Tina Armstrong', ' Jaime Pressly');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1672, 4512, ' Jesse James', ' Brad Pitt');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1673, 76349, ' Huang Xing / Huang Keqiang', ' Jackie Chan');
@@ -772,7 +752,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1768, 808
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1769, 5126, ' David', ' John Cusack');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1770, 56288, ' Marissa Cortez Wilson', ' Jessica Alba');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1771, 303858, ' Lee Gates', ' George Clooney');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1772, 1613, ' Elmo McElroy', ' Samuel L. Jackson');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1773, 31582, ' Walt Koontz', ' Robert De Niro');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1774, 16617, ' Gabe Jensen', ' LL Cool J');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1775, 8944, ' Himself', ' Bruce Willis');
@@ -802,7 +781,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1799, 628
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1800, 2057, ' Julia Russell/Bonnie Castle', ' Angelina Jolie');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1801, 70436, ' Edgar Allan Poe', ' John Cusack');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1802, 16784, ' Harold ''Handy'' Harrison', ' Ray Romano');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1803, 8011, ' Connor ''The Highlander'' MacLeod', ' Christopher Lambert');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1804, 31640, ' Alex Gates', ' Jack Nicholson');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1805, 9092, ' Lady Claudia Hoffman', ' Sigourney Weaver');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1806, 2779, ' Chris Magruder', ' Dan Aykroyd');
@@ -937,12 +915,9 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1943, 943
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1944, 22256, ' Steve Prefontaine', ' Billy Crudup');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1945, 12404, ' Richard Samuels', ' Zac Efron');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1946, 152742, ' Virgil Oldman', ' Geoffrey Rush');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1947, 11699, ' Terence McDonagh', ' Nicolas Cage');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1948, 49953, ' Sammy (voice)', ' Yuri Lowenthal');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1949, 48034, ' Max Cantara', ' Fran\\u00e7ois Cluzet');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1950, 39845, ' Grace Bontempo', ' Helen Mirren');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1951, 25353, ' Le chat', ' J\\u00e9r\\u00f4me Deschamps');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1952, 36696, ' Belka (voice)', ' Anna Bolshova');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1953, 109091, ' The Counselor', ' Michael Fassbender');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1954, 38543, ' Thomas Marshall', ' James Purefoy');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1955, 33157, ' Napoleon Bonaparte', ' Rod Steiger');
@@ -975,12 +950,10 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1984, 406
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1985, 26672, ' Zigzag the Grand Vizier (voice)', ' Vincent Price');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1986, 45881, ' Brother Juniper', ' Gabriel Byrne');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1987, 41283, ' Driver', ' Dwayne Johnson');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1988, 4935, ' Hauru', ' Takuya Kimura');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1989, 19908, ' Columbus', ' Jesse Eisenberg');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1990, 10663, ' Bobby Boucher', ' Adam Sandler');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1991, 1891, ' Luke Skywalker', ' Mark Hamill');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1992, 9737, ' Detective Mike Lowrey', ' Will Smith');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1993, 37137, ' Frank Drebin', ' Leslie Nielsen');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1994, 9532, ' Alex Chance Browning', ' Devon Sawa');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1995, 10316, ' Stephen Meyers', ' Ryan Gosling');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (1996, 2787, ' Richard B. Riddick', ' Vin Diesel');
@@ -1040,14 +1013,12 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3059, 240
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3060, 14283, ' Nicolo Bussotti (Cremona)', ' Carlo Cecchi');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3062, 13201, ' Leon', ' Stephen Dorff');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3063, 209403, ' Guy Trilby', ' Jason Bateman');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3064, 7942, ' Dennis', ' Simon Pegg');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3065, 73247, ' Val', ' Andy Kaufman');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3066, 253331, ' Elliot Anderson', ' Kevin Costner');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3067, 34043, ' Kevin Gibbons', ' Lance Bass');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3068, 9952, ' Dieter Dengler', ' Christian Bale');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3069, 256924, ' Danny Collins', ' Al Pacino');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3070, 82532, ' Jeff', ' Jason Segel');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3071, 41110, ' Emma Recchi', ' Tilda Swinton');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3072, 134371, ' Dagny Taggart', ' Samantha Mathis');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3073, 2088, ' Jack Grimaldi', ' Gary Oldman');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3074, 10388, ' Wilson', ' Terence Stamp');
@@ -1064,7 +1035,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3085, 961
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3086, 29076, ' Judy Tipp', ' Sandra Bullock');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3087, 29339, ' Nicholas Nickleby', ' Charlie Hunnam');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3088, 68812, ' Richard Kuklinski', ' Michael Shannon');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3089, 32740, ' Krishna Mehra / Krrish / Rohit Mehra', ' Hrithik Roshan');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3090, 14195, ' Honey Whitlock', ' Melanie Griffith');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3091, 73567, ' Killer Joe Cooper', ' Matthew McConaughey');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3092, 41479, ' Steve Jones', ' David Duchovny');
@@ -1073,7 +1043,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3094, 100
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3095, 1989, ' Elizabeth', ' Norah Jones');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3097, 12779, ' Amber Leighton', ' Madonna');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3098, 13191, ' Brand Hauser', ' John Cusack');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3099, 11770, ' Sing', ' Stephen Chow');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3100, 12703, ' Bud Clay', ' Vincent Gallo');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3101, 64559, ' Victor', ' Michel Serrault');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3102, 222649, ' Maziar Bahari', ' Gael Garc\\u00eda Bernal');
@@ -1105,10 +1074,8 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3127, 667
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3128, 17622, ' Fergus', ' Ben Kingsley');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3129, 283671, ' Manu (voice)', ' Drake Bell');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3131, 217708, ' Kolbeinn', ' Ingvar Eggert Sigur\\u00f0sson');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3132, 42057, ' Mrs. Sethi', ' Shabana Azmi');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3133, 17577, ' Mack', ' Cuba Gooding Jr.');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3134, 14608, ' Naseem Khan', ' Kristin Kreuk');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3136, 15067, ' Yoon Tae-goo', ' 20738');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3137, 78383, ' Abby Russell', ' Paz de la Huerta');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3138, 43090, ' Jane Taylor', ' Sienna Guillory');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3139, 16614, ' James Brennan', ' Jesse Eisenberg');
@@ -1135,7 +1102,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3160, 275
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3161, 14811, ' Tevye', ' Chaim Topol');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3162, 660, ' James Bond', ' Sean Connery');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3163, 68684, ' Riley Jones', ' Shanley Caswell');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3164, 40794, ' Alba', ' Nicole Grimaudo');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3165, 9400, ' Stony', ' Jada Pinkett Smith');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3166, 16162, ' Jordan Armstrong', ' Nia Long');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3167, 10585, ' Karen Barclay', ' Catherine Hicks');
@@ -1161,14 +1127,11 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3186, 140
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3188, 1808, ' Curt Wild', ' Ewan McGregor');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3189, 293670, ' Jong-Goo', ' Kwak Do-won');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3190, 67675, ' Quinn Fabray', ' Dianna Agron');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3191, 27329, ' Queen Suriyothai', ' M.L. Piyapas Bhirombhakdi');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3193, 250349, ' Antoine', ' Lambert Wilson');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3194, 12454, ' Rory', ' James Corden');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3195, 39806, ' Princess Ka''iulani', ' Q''orianka Kilcher');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3196, 15699, ' Kellyanne Williamson', ' Sapphire Boyce');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3198, 17926, ' Euan Falcon', ' Kip Pardue');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3199, 291081, ' Eddie Dunford', ' Andrew Garfield');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3200, 41248, ' Samuel Bleistein', ' Michel Blanc');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3201, 25968, ' Veronika', ' Sarah Michelle Gellar');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3202, 9671, ' Michael J. ''Crocodile'' Dundee', ' Paul Hogan');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3203, 52010, ' Severus (voice)', ' Terence Stamp');
@@ -1188,7 +1151,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3217, 167
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3218, 272693, ' Bianca Piper', ' Mae Whitman');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3219, 10696, ' Billie Frank', ' Mariah Carey');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3220, 150202, ' ', ' Chad Michael Murray');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3221, 19644, ' Kang In-chan', ' Sol Kyung-gu');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3222, 29963, ' Fanny Brawne', ' Abbie Cornish');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3223, 26022, ' Rizwan Khan', ' Shah Rukh Khan');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3224, 152747, ' Our Man', ' Robert Redford');
@@ -1198,7 +1160,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3227, 111
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3228, 185008, ' Bunny', ' Ranbir Kapoor');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3229, 11620, ' Marcus Vinicius', ' Robert Taylor');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3230, 14353, ' Shilo Wallace', ' Alexa PenaVega');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3231, 11818, ' Polat Alemdar', ' Muhammed Necati \\u015ea\\u015fmaz');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3232, 680, ' Vincent Vega', ' John Travolta');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3233, 11176, ' Kermit the Frog / Rowlf / Dr. Teeth / Waldorf / Doc Hopper''s Men / Link Hogthrob / Swedish Chef (voice)', ' Jim Henson');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3234, 242582, ' Louis Bloom', ' Jake Gyllenhaal');
@@ -1236,7 +1197,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3268, 194
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3270, 8293, ' Ruth Wilcox', ' Vanessa Redgrave');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3271, 291270, ' Michael Stone (voice)', ' David Thewlis');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3272, 44009, ' Tom', ' Jim Broadbent');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3273, 1958, ' Gaby', ' Catherine Deneuve');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3274, 13154, ' Sgt. Chris Kenner', ' Dolph Lundgren');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3275, 26618, ' Clay Bidwell', ' Joaquin Phoenix');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3276, 43923, ' Craig Gilner', ' Keir Gilchrist');
@@ -1257,11 +1217,8 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3292, 365
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3293, 13197, ' Tommy', ' James Marsden');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3294, 10913, ' Dick Dandelion', ' Jamie Bell');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3295, 251321, ' Nana Kunning', ' Jennifer Connelly');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3296, 149, ' Sh\\u00f4tar\\u00f4 Kaneda (voice)', ' Mitsuo Iwata');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3297, 10425, ' Tim Kearney', ' Paul Walker');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3299, 256687, ' Stillman', ' Jean-Claude Van Damme');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3300, 220488, ' Sophie', ' Zhang Ziyi');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3301, 1544, ' Rachel', ' Piper Perabo');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3302, 374461, ' Henry Church', ' Eddie Murphy');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3303, 302, ' Sarah Morton', ' Charlotte Rampling');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3304, 182873, ' Danny', ' Scott Adkins');
@@ -1269,7 +1226,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3305, 215
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3306, 389425, ' Robert Sikes', ' Steven Seagal');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3307, 403, ' Hoke Colburn', ' Morgan Freeman');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3308, 29461, ' Maxine', ' Vivica A. Fox');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3309, 33542, ' Keung', ' Jackie Chan');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3310, 283708, ' Daru', ' Viggo Mortensen');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3311, 9388, ' Nick Naylor', ' Aaron Eckhart');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3312, 1691, ' Beth', ' Lauren German');
@@ -1298,7 +1254,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3335, 326
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3336, 681, ' James Bond', ' Sean Connery');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3337, 238, ' Don Vito Corleone', ' Marlon Brando');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3338, 535, ' Alex Owens', ' Jennifer Beals');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3339, 19913, ' Tom Hansen', ' Joseph Gordon-Levitt');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3340, 713, ' Ada McGrath', ' Holly Hunter');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3341, 77930, ' Mike ''Magic Mike'' Martingano', ' Channing Tatum');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3342, 10727, ' Kyle Walsh', ' Chaney Kley');
@@ -1368,8 +1323,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3409, 334
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3411, 13919, ' Dean', ' Jamie Bell');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3413, 82505, ' Elissa Cassidy', ' Jennifer Lawrence');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3414, 46738, ' Nawal', ' Lubna Azabal');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3415, 38970, ' Carlo Ristuccia', ' Fabrizio Bentivoglio');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3416, 41009, ' Michael McCrea', ' Cillian Murphy');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3417, 7347, ' Capit\\u00e3o Nascimento', ' Wagner Moura');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3418, 250546, ' Mia Form', ' Annabelle Wallis');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3419, 38415, ' Willie', ' Rocky McKenzie');
@@ -1382,7 +1335,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3425, 943
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3426, 8998, ' Christine', ' Catherine Keener');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3427, 10514, ' Dr. Jeremy Stone', ' Arthur Hill');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3428, 10496, ' Sheriff Emmett Kimsey', ' Lou Diamond Phillips');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3429, 1591, ' Jettel Redlich', ' Juliane K\\u00f6hler');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3430, 76025, ' Brandon Sullivan', ' Michael Fassbender');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3431, 4836, ' XXXX', ' Daniel Craig');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3433, 87499, ' Sarah', ' Brit Marling');
@@ -1404,13 +1356,11 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3449, 166
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3451, 11977, ' Ty Webb', ' Chevy Chase');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3453, 16158, ' Mike', ' Omar Epps');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3454, 629, ' Michael McManus', ' Stephen Baldwin');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3456, 11452, ' Van Wilder', ' Ryan Reynolds');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3458, 32275, ' Pearl Chavez', ' Jennifer Jones');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3459, 13785, ' Dr. Chuck Nelken', ' Jay Brazeau');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3460, 1103, ' Snake Plissken', ' Kurt Russell');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3461, 36739, ' Leeds', ' Samuel L. Jackson');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3462, 14144, ' Charlie Hinton', ' Cuba Gooding Jr.');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3463, 10622, ' Jackie', ' Jackie Chan');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3465, 11191, ' Kat Arujo', ' Annabeth Gish');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3466, 10215, ' Helen Quilley', ' Gwyneth Paltrow');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3467, 25066, ' Mr. Simms', ' Clarence Williams III');
@@ -1437,11 +1387,9 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3488, 207
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3489, 31064, ' ', ' Julia Stiles');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3490, 576, ' Pike Bishop', ' William Holden');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3491, 13990, ' Dr. Squires', ' Ben Kingsley');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3492, 11583, ' Edward Pierce', ' Sean Connery');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3493, 18602, ' Morvern Callar', ' Samantha Morton');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3494, 27549, ' Dar', ' Marc Singer');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3495, 59728, ' Steven Abbate', ' Aidan Quinn');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3496, 10930, ' Fran\\u00e7ois Vasseur', ' Beno\\u00eet Magimel');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3497, 32395, ' Allen Brewer', ' Pierce Brosnan');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3498, 58882, ' Nina / Lily', ' Li Bingbing');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3499, 7547, ' Lucy Fowler', ' Ashley Judd');
@@ -1463,13 +1411,11 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3514, 165
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3515, 168027, ' Skip Gibbs', ' Christian Slater');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3516, 3482, ' Paul Labiche', ' Burt Lancaster');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3517, 135595, ' Alex Becker', ' Dermot Mulroney');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3518, 8982, ' Kham', ' Tony Jaa');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3519, 89861, ' Emily', ' Georgina Cates');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3520, 455, ' Jesminder ''Jess'' Kaur Bhamra', ' Parminder Nagra');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3521, 57022, ' Murray Silver', ' Alan King');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3522, 14351, ' Tech', ' Anthony Mackie');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3523, 147767, ' Bahattar Singh (72) / Inspector Tehattar Singh (73)', ' Akshay Kumar');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3524, 10664, ' \\u00c1ngela Vidal', ' Manuela Velasco');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3525, 55567, ' Brittany', ' Kayla Jackson');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3526, 9277, ' Henry Gondorff', ' Paul Newman');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3527, 9443, ' Harold Abrahams', ' Ben Cross');
@@ -1485,7 +1431,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3536, 321
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3537, 4997, ' John Holmes', ' Val Kilmer');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3538, 925, ' Sal', ' Danny Aiello');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3540, 73532, ' Marcel Marx', ' Andr\\u00e9 Wilms');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3541, 979, ' Alex', ' Monica Bellucci');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3542, 193722, ' Takafumi Katayama', ' Nao Omori');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3543, 7913, ' DJ', ' Aamir Khan');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3544, 253253, ' Jude', ' David Dastmalchian');
@@ -1534,8 +1479,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3590, 249
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3591, 21610, ' Det. Sgt. Deke DaSilva', ' Sylvester Stallone');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3593, 8346, ' Toula', ' Nia Vardalos');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3594, 122081, ' Alien', ' James Franco');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3595, 10987, ' Dr. Sam Loomis', ' Donald Pleasence');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3596, 1391, ' Julio Zapata', ' Gael Garc\\u00eda Bernal');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3597, 747, ' Shaun', ' Simon Pegg');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3598, 14745, ' Molly Hartley', ' Haley Bennett');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3599, 26748, ' Sam Deeds', ' Chris Cooper');
@@ -1553,13 +1496,11 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3610, 148
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3611, 22649, ' Catherine Barkley', ' Helen Hayes');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3612, 378200, ' Charlie', ' Terrence Jenkins');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3613, 20455, ' Kari / Young Kari (voice)', ' Lara Jill Miller');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3615, 11042, ' R\\u00e9my', ' R\\u00e9my Girard');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3616, 10786, ' Robin Hood', ' Sean Connery');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3617, 12484, ' Sean', ' Kerr Smith');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3618, 17339, ' Lieutenant Colonel Barnsby', ' Harrison Ford');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3620, 9900, ' Samantha', ' Linda Cardellini');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3621, 14662, ' Vivian Abromowitz', ' Natasha Lyonne');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3622, 335, ' Frank', ' Henry Fonda');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3623, 15745, ' Ricky Slade', ' Vince Vaughn');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3624, 17431, ' Sam Bell', ' Sam Rockwell');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3625, 21014, ' Benjamin Fiedler', ' Daryl Sabara');
@@ -1606,7 +1547,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3668, 119
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3669, 113406, ' Joey', ' Paul Ben-Victor');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3670, 290825, ' Colleen Collette', ' Lily-Rose Depp');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3671, 361159, ' Lt. Pete Cunnigham', ' Ed Quinn');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3672, 12555, ' Jan D\\u00edte junior', ' Ivan Barnev');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3673, 31175, ' Zinos Kazantsakis', ' Adam Bousdoukos');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3674, 12498, ' Karl Childers', ' Billy Bob Thornton');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3675, 77949, ' Florence Cathcart', ' Rebecca Hall');
@@ -1640,15 +1580,11 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3703, 610
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3704, 252680, ' Allyson', ' Sarah Drew');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3705, 141, ' Donnie Darko', ' Jake Gyllenhaal');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3706, 66607, ' Rosal\\u00edo', ' Joaqu\\u00edn Cosio');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3707, 17139, ' Dreverhaven', ' Jan Decleir');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3708, 12079, ' Ross', ' Jason Schwartzman');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3709, 39800, ' Helen', ' Ally Sheedy');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3710, 4550, ' Mr. Baek', ' Choi Min-sik');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3711, 62116, ' Nannerl Mozart', ' Marie F\\u00e9ret');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3712, 9991, ' Danny Meehan', ' Vinnie Jones');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3713, 13807, ' Blaze', ' Anthony Wong');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3714, 68818, ' James', ' Sam Shepard');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3715, 12093, ' Lilja', ' Oksana Akinshina');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3716, 36419, ' Eliot Deacon', ' Liam Neeson');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3717, 281730, ' R.S Chautala', ' Jimmy Shergill');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3718, 510, ' Randle Patrick McMurphy', ' Jack Nicholson');
@@ -1688,7 +1624,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3754, 134
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3756, 10744, ' Bernie Lootz', ' William H. Macy');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3757, 11536, ' Gay Langland', ' Clark Gable');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3758, 9782, ' Donna D. Logand', ' Toni Collette');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3760, 6537, ' Laura', ' Bel\\u00e9n Rueda');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3761, 184345, ' Malcolm', ' Marlon Wayans');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3762, 1809, ' Sean Bateman', ' James Van Der Beek');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3763, 2370, ' Andr\\u00e9 Devereaux', ' Frederick Stafford');
@@ -1704,7 +1639,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3772, 154
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3773, 48572, ' Pastor Abin Cooper', ' Michael Parks');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3774, 14517, ' Helena', ' Stephanie Leonidas');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3775, 89708, ' ', ' Marcos Luna');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3776, 27551, ' Kutchek', ' Peter Paul');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3777, 64678, ' George Zinavoy', ' Freddie Highmore');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3778, 309503, ' Sam Ellis', ' Patrick Wilson');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3779, 14293, ' Brad', ' Ricky Schroder');
@@ -1737,14 +1671,12 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3805, 257
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3806, 46420, ' Brent Mitchell', ' Xavier Samuel');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3808, 158150, ' Annie Hayes', ' Brooke D''Orsay');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3809, 251979, ' Ian McCormack', ' Scott Eastwood');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3810, 874, ' Thomas More', ' Paul Scofield');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3811, 10774, ' Diana Christensen', ' Faye Dunaway');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3812, 770, ' Scarlett O''Hara', ' Vivien Leigh');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3813, 266102, ' Elaheh', ' Freida Pinto');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3814, 29715, ' Major Amos Charles Dundee', ' Charlton Heston');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3815, 25209, ' Annie Oakley', ' Betty Hutton');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3816, 37495, ' Omar', ' Riz Ahmed');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3817, 29262, ' Dona Maria/\\u00c1urea/Maria', ' Fernanda Montenegro');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3818, 34769, ' Arthur Poppington / Defendor', ' Woody Harrelson');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3819, 35032, ' Manuela', ' Judy Garland');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3820, 5178, ' Jacques', ' Brian Cox');
@@ -1764,7 +1696,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3833, 573
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3834, 310131, ' Thomasin', ' Anya Taylor-Joy');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3835, 40505, ' Black', ' Master P');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3836, 11363, ' Mickey Fitzpatrick', ' Edward Burns');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3838, 25376, ' Benjam\\u00edn Esp\\u00f3sito', ' Ricardo Dar\\u00edn');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3839, 22007, ' Alex', ' Thora Birch');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3840, 765, ' Ashley ''Ash'' J. Williams', ' Bruce Campbell');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3841, 10615, ' Ireenie', ' Jennifer Coolidge');
@@ -1784,12 +1715,10 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3854, 370
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3855, 252360, ' Hazen Kaine', ' Dominic Purcell');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3857, 299145, ' John', ' Scott Eastwood');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3858, 241766, ' Tony Lord', ' Glen Murphy');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3860, 1667, ' Narrator', ' Morgan Freeman');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3861, 50839, ' Sam Rogers', ' Kevin Spacey');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3862, 86549, ' Troy', ' Murray Bartlett');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3863, 13973, ' Victor Mancini', ' Sam Rockwell');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3864, 244786, ' Andrew Neimann', ' Miles Teller');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3865, 598, ' Buscap\\u00e9', ' Alexandre Rodrigues');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3866, 11129, ' Jip', ' John Simm');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3867, 75861, ' Renee Yohe', ' Kat Dennings');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3868, 13551, ' Krista', ' Brittany Murphy');
@@ -1803,7 +1732,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3875, 884
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3876, 805, ' Rosemary Woodhouse', ' Mia Farrow');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3877, 11697, ' Tom Doniphon', ' John Wayne');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3878, 22051, ' Adam Raki', ' Hugh Dancy');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3879, 436, ' Mar\\u00eda \\u00c1lvarez', ' Catalina Sandino Moreno');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3880, 55347, ' Oliver Fields', ' Ewan McGregor');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3881, 10070, ' Bozo', ' Balthazar Getty');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3882, 8469, ' John \\Bluto\\ Blutarski', ' John Belushi');
@@ -1816,7 +1744,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3888, 414
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3889, 10162, ' Jackie O''Shea', ' Ian Bannen');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3890, 1430, ' Himself', ' Michael Moore');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3891, 259943, ' Feng Wanyu', ' Gong Li');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3892, 10014, ' Freddy Krueger', ' Robert Englund');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3893, 11257, ' Charlotte Bartlett', ' Maggie Smith');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3894, 158015, ' Mary Sandin', ' Lena Headey');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3895, 82507, ' Ellison Oswalt', ' Ethan Hawke');
@@ -1824,7 +1751,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3896, 203
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3897, 261, ' Maggie', ' Elizabeth Taylor');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3898, 1685, ' Brent', ' James Franciscus');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3899, 20737, ' Josh Framm', ' Kevin Zegers');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3900, 10991, ' Ash Ketchum', ' Veronica Taylor');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3901, 10225, ' Tommy', ' Thom Mathews');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3902, 826, ' Cmdr. Shears', ' William Holden');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3904, 5854, ' Blanche', ' Barbara Harris');
@@ -1861,7 +1787,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3935, 868
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3936, 10683, ' Joy Jordan', ' Jane Adams');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3937, 17995, ' Eddie Griffin', ' Eddie Griffin');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3938, 246403, ' Howard Howe', ' Michael Parks');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3939, 670, ' Oh Dae-su', ' Choi Min-sik');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3940, 35691, ' Maddy Doherty', ' Robyn Lively');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3941, 49010, ' Hobo', ' Rutger Hauer');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3942, 317930, ' ', ' Omar Chaparro');
@@ -1873,7 +1798,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3947, 509
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3948, 84174, ' Regan Crawford', ' Kirsten Dunst');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3949, 34099, ' Wanda Lovell', ' Virginia Madsen');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3950, 79940, ' ', ' Eric Wareheim');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3951, 342, ' Tobi', ' Robert Stadlober');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3952, 281230, ' Frank Stirn', ' Eric Stoltz');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3953, 38033, ' Jessie Campbell', ' Nikki Reed');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3955, 38541, ' Eva', ' Lauren German');
@@ -1893,7 +1817,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3969, 342
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3970, 191229, ' Oberlus', ' Everett McGill');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3971, 43213, ' Lou Marazano', ' Frank Vincent');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3972, 44594, ' Barry Munday', ' Patrick Wilson');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3973, 666, ' Dora', ' Fernanda Montenegro');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3974, 248, ' Dave ''the Dude'' Conway', ' Glenn Ford');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3975, 325173, ' Colton MacReady', ' Scott Adkins');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3976, 55831, ' Marilyn', ' Brenda Vaccaro');
@@ -1908,12 +1831,9 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3984, 102
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3985, 630, ' Dorothy Gale', ' Judy Garland');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3986, 3034, ' Dr. Frederick Frankenstein', ' Gene Wilder');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3987, 13025, ' Debra Moynihan', ' Michelle Morgan');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3988, 21461, ' Murli Prasad Sharma', ' Sanjay Dutt');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3989, 55306, ' Ulee Jackson', ' Peter Fonda');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3990, 17264, ' Alec Ramsey', ' Kelly Reno');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3991, 16016, ' Per Jensen', ' Casper Christensen');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3992, 15875, ' Michael Patrick ''Guns'' Donovan', ' John Wayne');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3993, 5900, ' Van Tilt', ' Henri Garcin');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3994, 43306, ' Pete Sandidge', ' Spencer Tracy');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3995, 11072, ' Sheriff Bart', ' Cleavon Little');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3996, 9730, ' Trisha ''Trish'' Jarvis', ' Kimberly Beck');
@@ -1921,7 +1841,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3997, 209
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3998, 26371, ' Maurice Hall', ' James Wilby');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (3999, 14137, ' Artie DeVanzo', ' Artie Lange');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (4000, 291, ' Jeff Clark', ' Jeff Clark');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (4001, 14139, ' H\\u00e9ctor', ' Karra Elejalde');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5002, 308531, ' Vernon Fenwick', ' Will Arnett');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5003, 166424, ' Johnny Storm / The Human Torch', ' Michael B. Jordan');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5004, 1593, ' Rebecca', ' Carla Gugino');
@@ -1960,14 +1879,12 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5040, 280
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5041, 11322, ' Alvin Karpis', ' Giovanni Ribisi');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5042, 4982, ' Huey Lucas', ' Chiwetel Ejiofor');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5043, 36955, ' Albert Gibson', ' Tom Arnold');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5044, 18487, ' Phil Ramos', ' Luis Guzm\\u00e1n');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5045, 39451, ' Kevin Rawley', ' Owen Wilson');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5047, 9268, ' Lee Cullen', ' Vanessa Williams');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5048, 68718, ' Calvin Candie', ' Leonardo DiCaprio');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5049, 10545, ' Frollo (voice)', ' Tony Jay');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5050, 11688, ' Yzma (voice)', ' Eartha Kitt');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5051, 76163, ' Gunnar Jensen', ' Dolph Lundgren');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5052, 2059, ' Riley Poole', ' Justin Bartha');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5053, 2486, ' Arya', ' Sienna Guillory');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5054, 16523, ' KW (voice)', ' Lauren Ambrose');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5055, 116711, ' Ronin (voice)', ' Colin Farrell');
@@ -2121,7 +2038,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5213, 230
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5214, 12096, ' Gendarme Gilbert Ponton', ' Jean Reno');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5215, 10200, ' Regina Jackson', ' Kathy Bates');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5216, 8834, ' Dr. Jonas', ' Patrick Stewart');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5218, 6068, ' Frank Martin', ' David Schwimmer');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5219, 41515, ' Rachel', ' Anna Faris');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5220, 9023, ' Little Creek (voice)', ' Daniel Studi');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5221, 38317, ' Lion (voice)', ' Sylvester Stallone');
@@ -2152,7 +2068,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5245, 992
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5246, 9447, ' Fugly Floom', ' 1937');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5247, 274854, ' Dolan 37th', ' Elijah Wood');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5248, 8870, ' Lt. Ted Santen', ' Benjamin Bratt');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5249, 9992, ' Archibald Suchot', ' Ron Crawford');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5250, 36970, ' Narrator (voice', ' Rie Miyazawa');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5251, 10077, ' Payne', ' David Oyelowo');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5252, 76649, ' Cassia', ' Emily Browning');
@@ -2221,7 +2136,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5318, 25,
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5319, 35, ' Bart Simpson / Maggie Simpson / Ralph / Nelson / Todd Flanders / TV Daughter / Woman on Phone (voice)', ' Nancy Cartwright');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5320, 11086, ' Adele Stanton', ' Laurie Holden');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5321, 10477, ' Beau Brandenburg', ' Til Schweiger');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5322, 1997, ' Seine Exzellenz', ' Oanh Nguyen');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5323, 6947, ' Noah Percy', ' Adrien Brody');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5324, 3050, ' Dr. Mark Weller', ' Oliver Platt');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5325, 2675, ' Morgan Hess', ' Rory Culkin');
@@ -2235,7 +2149,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5334, 157
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5335, 9257, ' Chris Sanchez', ' Michelle Rodriguez');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5336, 1903, ' Julie Gianni', ' Cameron Diaz');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5337, 9697, ' Harry Farber', ' Bob Balaban');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5338, 395, ' Graeme Miller', ' Ewen Bremner');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5339, 23398, ' Dave', ' Jason Lee');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5340, 10590, ' Julie Moore', ' Madeleine Stowe');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5343, 44943, ' Cpl. Lee Imlay', ' Will Rothhaar');
@@ -2367,7 +2280,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5475, 153
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5476, 9334, ' Balthazar', ' Michael Clarke Duncan');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5477, 11128, ' Linda Morrison', ' Jacinda Barrett');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5479, 8914, ' Sherman ''Preacher'' Dudley', ' LL Cool J');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5480, 13576, ' Kenny Ortega', ' Kenny Ortega');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5481, 39538, ' Dr. Erin Mears', ' Kate Winslet');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5482, 10628, ' Jessie', ' Estella Warren');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5483, 14836, ' Miss Spink (voice)', ' Jennifer Saunders');
@@ -2412,7 +2324,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5523, 883
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5524, 17332, ' Mary Weston', ' Catherine Keener');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5525, 4958, ' Adele Invergordon', ' Charlize Theron');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5526, 786, ' Elaine Miller', ' Frances McDormand');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5527, 9513, ' Dargis', ' Billy Connolly');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5528, 11679, ' Gen. George Octavius Deckert', ' Willem Dafoe');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5529, 38321, ' Hicks', ' Cam Gigandet');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5530, 14411, ' Eris (voice)', ' Michelle Pfeiffer');
@@ -2449,7 +2360,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5560, 357
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5561, 72431, ' Major Emanuelle Stance', ' Cuba Gooding Jr.');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5562, 1813, ' Mary Ann Lomax', ' Charlize Theron');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5563, 87428, ' Ms. McGarricle', ' Eva Amurri Martino');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5564, 8840, ' Gilbert of Glockenspur', ' Pete Postlethwaite');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5566, 71676, ' Nadya', ' Violante Placido');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5567, 1722, ' Dr. Iannis', ' John Hurt');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5568, 10022, ' Julie Plummer', ' Faith Ford');
@@ -2482,7 +2392,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5595, 232
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5596, 58224, ' Janie Popper', ' Madeline Carroll');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5597, 1729, ' Jason Tripitikas', ' Michael Angarano');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5598, 175574, ' Jenny (voice)', ' Amy Poehler');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5599, 8077, ' Clemens', ' Charles Dance');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5600, 8818, ' Juan Per\\u00f3n', ' Jonathan Pryce');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5601, 8195, ' Deirdre', ' Natascha McElhone');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5602, 10586, ' Robert Beaumont', ' Tom Wilkinson');
@@ -2497,14 +2406,12 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5611, 121
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5612, 9566, ' Jewel Stern', ' Ellen Barkin');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5613, 9833, ' Raoul', ' 17178');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5614, 4517, ' Sir Francis Walsingham', ' Geoffrey Rush');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5615, 8202, ' Oren Goodchild', ' Jonny Lee Miller');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5617, 34314, ' Stubbs', ' Brendan Gleeson');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5618, 19724, ' Olivia Danielson', ' Yara Shahidi');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5619, 145220, ' Nadya', ' Tina Fey');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5620, 14623, ' Teacher', ' Debora Weston');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5621, 42297, ' Marcus Gerber', ' Eric Dane');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5623, 802, ' Charlotte Haze', ' Shelley Winters');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5624, 10375, ' Hank', ' Tom Berenger');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5625, 36586, ' Reinhardt', ' Ron Perlman');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5626, 11321, ' Susan', ' Sarah Jane Morris');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5627, 70074, ' Lisa', ' Sarah Shahi');
@@ -2551,7 +2458,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5667, 109
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5668, 2022, ' Emilio Lopez', ' John Turturro');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5669, 37686, ' Charles Kaznyk', ' Riley Griffiths');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5670, 462, ' George', ' Aaron Eckhart');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5671, 9919, ' Michelle Rubin', ' Kathryn Hahn');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5672, 187017, ' Eric Molson', ' Dave Franco');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5673, 628, ' Claudia', ' Kirsten Dunst');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5674, 10201, ' Norman', ' Rhys Darby');
@@ -2643,7 +2549,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5760, 104
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5761, 47327, ' Accountant', ' William Fichtner');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5762, 15268, ' Bison', ' Neal McDonough');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5763, 10796, ' T.K. Law / Massie Walsh', ' Carla Gugino');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5765, 18947, ' Gavin', ' Rhys Ifans');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5766, 1900, ' Manolo Sanchez', ' Jacob Vargas');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5767, 89, ' Dr. Marcus Brody', ' Denholm Elliott');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5768, 96724, ' Alexei Vronsky', ' Aaron Taylor-Johnson');
@@ -2659,12 +2564,10 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5777, 112
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5778, 1636, ' Alison', ' Frances O''Connor');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5779, 2148, ' Vera Cicero', ' Diane Lane');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5781, 260346, ' Kim Mills', ' Maggie Grace');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5784, 7504, ' Lenny Sethna', ' Maia Sethna');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5785, 8592, ' Breathless Mahoney', ' Madonna');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5786, 913, ' Michael McCann', ' Denis Leary');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5787, 11091, ' Jason', ' Adam Garcia');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5788, 1368, ' Hope Sheriff Will Teasle', ' Brian Dennehy');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5789, 593, ' Dr. Snaut', ' J\\u00fcri J\\u00e4rvet');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5790, 5393, ' Ella', ' Sarah Michelle Gellar');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5791, 9095, ' Der Butler Mr. Poole', ' George Cole');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5792, 8874, ' Kimberly Wallace', ' Cameron Diaz');
@@ -2724,7 +2627,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5851, 213
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5852, 10858, ' Alexander Haig', ' Powers Boothe');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5853, 11439, ' Rick Ricardelli', ' Jon Bernthal');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5854, 9457, ' Simon Canton', ' Anthony Heald');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5856, 1494, ' Prince Zhai', ' Jay Chou');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5857, 13184, ' Fon', ' Charlie Yeung');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5858, 2185, ' Officer Walter Kramitz', ' Patrick Warburton');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5859, 6639, ' Juvenal Urbino', ' Benjamin Bratt');
@@ -2755,7 +2657,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5887, 878
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5888, 11560, ' Tom Kubik / Sgt. Ron Chapman', ' Jim Caviezel');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5889, 25189, ' Hannah Morgan', ' Lauren Bacall');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5890, 2637, ' Gordon Smallwood', ' Will Patton');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5891, 18480, ' Himself', ' Ron Paul');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5892, 709, ' Franz Sanchez', ' Robert Davi');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5893, 49730, ' Cesaire', ' Billy Burke');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5894, 2749, ' Jordy Warsaw', ' Edward Burns');
@@ -2764,7 +2665,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5896, 183
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5897, 79, ' Flying Snow', ' Maggie Cheung');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5898, 54054, ' Ranger', ' Daniel Sunjata');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5900, 46528, ' Ron', ' Geoffrey Rush');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5901, 27936, ' Nicolas Thibault De Fenouillet', ' Andr\\u00e9 Dussollier');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5903, 280391, ' Lucie (voice)', ' M\\u00e9lissa Theuriau');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5905, 10610, ' Nicole James', ' Claire Forlani');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5906, 745, ' Anna Crowe', ' Olivia Williams');
@@ -2832,7 +2732,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5970, 119
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5971, 4970, ' Dr. Douglas Grey', ' Charles S. Dutton');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5972, 11831, ' John Quincy Adams', ' Anthony Hopkins');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5974, 440, ' Sheriff Eddie Morales', ' John Ortiz');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5975, 11011, ' Richard Rich', ' Edward Herrmann');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5976, 10641, ' John Volpe', ' Anthony LaPaglia');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5977, 11172, ' Colin Thompson', ' Scott Porter');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (5978, 39513, ' Clive Gollings', ' Nick Frost');
@@ -2863,28 +2762,22 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7003, 390
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7004, 77948, ' Jean Carrack', ' Sigourney Weaver');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7005, 21755, ' Stephen', ' Mark Ruffalo');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7006, 4960, ' Maria', ' Jennifer Jason Leigh');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7007, 128, ' Eboshi-gozen (voice)', ' Y\\u016bko Tanaka');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7008, 14652, ' Viviane Denvers', ' Isabelle Adjani');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7009, 40932, ' Glenn the Leatherman', ' Glenn Hughes');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7010, 16608, ' Martha Stanley', ' Emily Watson');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7011, 334531, ' Gloria Steinmark', ' Robin Tunney');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7012, 32316, ' Ben Feld', ' Richard Benjamin');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7013, 7299, ' Mary O''Brien', ' Emily Watson');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7014, 13405, ' Chen Hansheng', ' Chow Yun-fat');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7015, 19457, ' Erica Soltz', ' Charlize Theron');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7016, 112937, ' Lola', ' Jaime Pressly');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7017, 314385, ' Lea', ' M\\u00e9lanie Laurent');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7019, 29078, ' Stanley Mortensen', ' Gavin Rossdale');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7020, 46503, ' Lauren Fleck', ' Kristen Wiig');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7021, 10448, ' Ramana', ' Sandrine Holt');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7022, 13688, ' Miss Yuen', ' Kitty Zhang Yuqi');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7023, 10353, ' Ginette', ' Marie-Anne Chazel');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7024, 43935, ' Marcus', ' Sam Huntington');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7025, 11458, ' Cary Launer', ' Ryan O''Neal');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7026, 44638, ' Prince Ferdinand', ' Reeve Carney');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7027, 241257, ' Professor Kenneth Raines', ' David Thewlis');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7028, 14538, ' Cao Ying', ' Maggie Q');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7029, 13250, ' Neil Randall', ' Gerard Butler');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7031, 280871, ' G. H. Hardy', ' Kevin McGowan');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7032, 239897, ' Davargan / Yabo Potato / Sweetfang / Clyde', ' Joey D. Vieira');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7033, 184341, ' Juanita Leonard', ' Jurnee Smollett');
@@ -2905,7 +2798,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7050, 120
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7051, 62630, ' Munem', ' Raad Rawi');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7052, 16110, ' Lily Stone', ' Mara Wilson');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7053, 29427, ' Russell', ' Joe Anderson');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7054, 129, ' Yubaba (voice)', ' Mari Natsuki');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7055, 244114, ' Bing', ' Yao Chen');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7056, 2669, ' Admiral Hood', ' Laurence Olivier');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7057, 203833, ' Rosa Hubermann', ' Emily Watson');
@@ -2950,7 +2842,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7095, 160
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7096, 9829, ' Sandra Bradshaw', ' Trish Gates');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7097, 10028, ' Gina', ' Joy Bryant');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7098, 10535, ' The Director', ' Charles Durning');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7099, 790, ' Kathy Williams', ' Janet Leigh');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7100, 43959, ' Alana Blanchard', ' Lorraine Nicholson');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7101, 10364, ' Major Danby (Flight Operations Officer)', ' Richard Benjamin');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7102, 16991, ' Dennis', ' Michael Pe\\u00f1a');
@@ -2976,18 +2867,15 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7121, 689
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7122, 253235, ' Sarah', ' Sterling Jerins');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7123, 22102, ' Velda Plendor', ' Betty Thomas');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7124, 18701, ' Archie Dexter', ' Leigh Lawson');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7125, 10068, ' Molly', ' Margaret Whitton');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7126, 848, ' Ulrich', ' Ralph Richardson');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7127, 36811, ' Sofya Tolstoya', ' Helen Mirren');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7129, 130150, ' Henry Wheeler', ' Gattlin Griffith');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7130, 12246, ' Borte', ' Khulan Chuluun');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7131, 13809, ' Johnny Quid', ' Toby Kebbell');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7132, 27380, ' Major Zara', ' Persis Khambatta');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7133, 10549, ' Gertrude', ' Julie Christie');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7134, 33870, ' Li Cunxin - boy', ' Wen Bin Huang');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7135, 245703, ' Lucas', ' Joel Edgerton');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7137, 127560, ' Finlay', ' Stellan Skarsg\\u00e5rd');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7138, 37903, ' The Pastor', ' Burghart Klau\\u00dfner');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7139, 396152, ' Harold', ' Zack Ward');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7140, 10017, ' Keri Johnson', ' Sherilyn Fenn');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7142, 193613, ' Himself', ' James Hetfield');
@@ -3018,7 +2906,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7169, 948
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7170, 21765, ' Hubble (voice)', ' Matthew Broderick');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7171, 146304, ' Lance Sullivan', ' Morris Chestnut');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7172, 7516, ' Primo Sparazza', ' Joseph Ruskin');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7173, 41439, ' Jill Tuck', ' Betsy Russell');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7174, 2752, ' John Sullivan', ' Adam Trese');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7175, 9429, ' Hottie Cop', ' Jennifer Coolidge');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7176, 38117, ' Kendra Hilferty', ' Mary-Kate Olsen');
@@ -3047,7 +2934,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7199, 298
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7200, 10629, ' John Traynor', ' Ciar\\u00e1n Hinds');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7201, 255343, ' Dylan', ' Brady Corbet');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7202, 4723, ' Krysta Now', ' Sarah Michelle Gellar');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7203, 10800, ' Le Seigneur Arnold', ' Philippe Nahon');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7204, 25763, ' Janice', ' Dominique Sanda');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7205, 79694, ' Patrick', ' Tom Felton');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7207, 18615, ' Allan Arbus', ' Ty Burrell');
@@ -3067,7 +2953,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7221, 836
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7222, 10781, ' Bailey', ' Diora Baird');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7223, 318850, ' Joseph', ' Vincent Walsh');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7224, 13908, ' Jennifer Baker', ' Jennifer Esposito');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7225, 1417, ' Capit\\u00e1n Vidal', ' Sergi L\\u00f3pez');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7226, 39180, ' Stephanie', ' Leslie Bibb');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7227, 16161, ' Sweetpea', ' Omar Gooding');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7228, 49950, ' Stephen', ' Cam Gigandet');
@@ -3076,7 +2961,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7230, 959
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7231, 4638, ' Inspector Frank Butterman', ' Jim Broadbent');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7232, 13972, ' Sylvia Fowler', ' Annette Bening');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7233, 5038, ' Juan Antonio Gonzalo', ' Javier Bardem');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7234, 13491, ' Birger Brosa', ' Stellan Skarsg\\u00e5rd');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7235, 10571, ' Hunter / Steve', ' Jason Biggs');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7236, 10994, ' Ray', ' Cole Hauser');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7237, 19994, ' Chip Dove', ' Johnny Simmons');
@@ -3114,12 +2998,10 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7271, 771
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7272, 12154, ' Jack Holden', ' Ted Danson');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7273, 9576, ' Sandy', ' Teri Garr');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7274, 744, ' Tom ''Iceman'' Kazanski', ' Val Kilmer');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7275, 146, ' Jen Yu (Mandarin) / Jiao Long (English)', ' Zhang Ziyi');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7276, 14, ' Jane Burnham', ' Thora Birch');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7277, 45269, ' Queen Elizabeth', ' Helena Bonham Carter');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7278, 9493, ' Marnie Mason', ' Kelly Preston');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7279, 22556, ' Martine', ' Kristen Stewart');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7281, 33196, ' \\uc774\\uc720\\uc9c4 (Lee Yu-jin)', ' Uhm Jung-hwa');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7282, 205596, ' Hugh Alexander', ' Matthew Goode');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7283, 10765, ' Henri Alan Tremont', ' Armand Assante');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7284, 16769, ' Ted Webb', ' Levon Helm');
@@ -3184,7 +3066,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7346, 114
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7347, 64689, ' Russell', ' Ben Mendelsohn');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7348, 157849, ' Martha Sullivan', ' Robin Wright');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7349, 13166, ' Betty', ' Marisa Coughlan');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7350, 15511, ' Robert the Terrible / The King', ' Cam Clarke');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7352, 12211, ' Duncan MacLeod', ' Adrian Paul');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7353, 13816, ' Trumpy', ' Terrence Howard');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7354, 51828, ' Alison Mayhew', ' Patricia Clarkson');
@@ -3201,7 +3082,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7365, 140
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7367, 7874, ' Ronnie Morgan', ' Justin Timberlake');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7368, 4911, ' Beth Williamson', ' Michael Michele');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7369, 1988, ' Captain', ' Irrfan Khan');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7370, 16222, ' Maggie Carter', ' Marla Sokoloff');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7371, 9557, ' Gabriella', ' Roselyn S\\u00e1nchez');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7373, 57943, ' Everett Reagle', ' David Dukes');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7374, 18276, ' Beatrice \\The Bear\\ Leep', ' Brie Larson');
@@ -3211,7 +3091,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7378, 257
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7379, 133694, ' Sue Thomason', ' Frances McDormand');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7380, 19265, ' Boris'' Friend #1', ' Adam Brooks');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7381, 36047, ' Matt', ' Matthew Settle');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7382, 8053, ' Belmont', ' Dwight Yoakam');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7383, 2290, ' Lina Kronstein', ' Hannah Taylor-Gordon');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7384, 5236, ' Harmony Faith Lane', ' Michelle Monaghan');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7385, 6552, ' Molly', ' Jessica Alba');
@@ -3226,11 +3105,9 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7394, 846
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7395, 331592, ' Jordan', ' Amber Marie Bollinger');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7396, 47692, ' Gala', ' Arsin\\u00e9e Khanjian');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7397, 19, ' Freder Fredersen', ' Gustav Fr\\u00f6hlich');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7398, 10045, ' K2', ' Tony D''Amario');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7399, 400, ' Franchise', ' William Forsythe');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7400, 253450, ' Concubine Huji', ' Nikki Hsieh');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7401, 9104, ' Sergeant Lee', ' Scott Glenn');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7402, 11190, ' Mother', ' Nataliya Vdovina');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7403, 16353, ' Chernang', ' Sorapong Chatree');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7404, 23759, ' Bothos', ' David Morrissey');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7405, 24206, ' Klein', ' Conrad Dunn');
@@ -3239,11 +3116,9 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7407, 750
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7408, 74536, ' Lauren Bridges', ' Juliette Binoche');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7409, 31668, ' Archie', ' James Cosmo');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7410, 13501, ' Dora Shaller', ' Gwyneth Paltrow');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7411, 15208, ' Caravaggio', ' Hans Matheson');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7412, 172391, ' Skalk (voice)', ' Steve Buscemi');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7413, 262543, ' Wallace', ' Dylan McDermott');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7414, 9288, ' Melora', ' Clemency Burton-Hill');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7416, 20083, ' Jie', ' Daniel Wu');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7417, 40880, ' Sara Coleridge', ' Samantha Morton');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7418, 137, ' Larry', ' Chris Elliott');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7419, 264999, ' Big Dick Richie', ' Joe Manganiello');
@@ -3285,7 +3160,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7455, 114
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7456, 10741, ' Fisher', ' Ashton Kutcher');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7457, 24940, ' Jade', ' Shalom Harlow');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7458, 82679, ' Joy', ' Chelsea Handler');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7459, 2013, ' Henriette Durand', ' Marie-Jos\\u00e9e Croze');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7460, 1440, ' Kathy Adamson', ' Jennifer Connelly');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7461, 18041, ' Naomi Preston', ' Kate Hudson');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7462, 28029, ' Marty Kantrowitz', ' Liev Schreiber');
@@ -3295,7 +3169,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7465, 877
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7466, 16899, ' Mrs. Whittaker', ' Kristin Scott Thomas');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7467, 41317, ' Mark Miller', ' Michael Sarrazin');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7468, 245700, ' Sophia Booth', ' Marion Bailey');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7469, 37842, ' Josepha', ' Emmanuelle Devos');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7471, 44092, ' King of Dharma Wheel', ' Wang Xue-qi');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7472, 16005, ' T.K. Poole', ' Michael Pe\\u00f1a');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7473, 44754, ' Jason Berstone', ' Mark Ruffalo');
@@ -3307,7 +3180,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7478, 107
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7480, 10876, ' The Abbe du Coulmier', ' Joaquin Phoenix');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7481, 86838, ' Charlie', ' Woody Harrelson');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7483, 613, ' Magda Goebbels', ' Corinna Harfouch');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7484, 1913, ' Rosa', ' Lola Due\\u00f1as');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7485, 97370, ' Andrew', ' Paul Brannigan');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7486, 801, ' Tuan', ' Tung Thanh Tran');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7487, 70829, ' Captain O''Brian', ' Blake Clark');
@@ -3315,15 +3187,12 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7490, 240
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7491, 9816, ' Chenille Reynolds', ' Kerry Washington');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7492, 10131, ' Roland Kincaid', ' Ken Sagoes');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7493, 339984, ' Kevin Beam', ' Martin Henderson');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7494, 8859, ' Christie Boner', ' Kristy Swanson');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7495, 11967, ' Jose Chavez y Chavez', ' Lou Diamond Phillips');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7496, 239563, ' Daka', ' Naomi Watts');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7497, 222899, ' Joan', ' Regina Hall');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7498, 4951, ' Cameron James', ' Joseph Gordon-Levitt');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7499, 10985, ' Nora', ' Zooey Deschanel');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7500, 9644, ' Becker', ' Jon Lovitz');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7501, 332567, ' Surfer 1', ' Angelo Josue Lozano Corzo');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7502, 1954, ' Kayleigh Miller', ' Amy Smart');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7503, 15489, ' Laura Brandston', ' Jean Smart');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7504, 15250, ' Quentin \\Junior\\ Whitfield', ' Idris Elba');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7505, 22345, ' Robin', ' Kim Cattrall');
@@ -3374,7 +3243,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7553, 621
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7554, 26688, ' Claire', ' Jamie Chung');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7555, 43867, ' Black Michael', ' Raymond Massey');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7556, 6615, ' Gus', ' Paul Schneider');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7557, 14574, ' Elsa Hoess', ' Vera Farmiga');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7558, 16, ' Bill Houston', ' David Morse');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7559, 39780, ' Reverend Dennis Hasset', ' Ciar\\u00e1n Hinds');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7560, 21612, ' Jean', ' Annabella Sciorra');
@@ -3382,7 +3250,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7561, 366
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7562, 23631, ' Sartana Rivera', ' Jessica Alba');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7563, 45324, ' Sarah Abramoff', ' Hannah Endicott-Douglas');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7564, 12144, ' Ducky', ' Judith Barsi');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7565, 11658, ' Kim Young-Shin', ' Lee Eun-ju');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7566, 56601, ' Mario', ' Mois\\u00e9s Arias');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7567, 9552, ' Chris MacNeil', ' Ellen Burstyn');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7568, 578, ' Matt Hooper', ' Richard Dreyfuss');
@@ -3397,7 +3264,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7576, 860
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7577, 9281, ' Chief Paul Schaeffer', ' Josef Sommer');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7578, 75674, ' Walter Ross', ' Nestor Serrano');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7579, 9762, ' Mac Carter', ' Damaine Radcliff');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7580, 3179, ' Dallas Grimes (voice)', ' Demi Moore');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7581, 184, ' Max Cherry', ' Robert Forster');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7582, 13335, ' Neil Patrick Harris', ' Neil Patrick Harris');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7583, 76726, ' Steve Montgomery', ' Michael B. Jordan');
@@ -3436,7 +3302,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7618, 363
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7619, 387, ' Der Leitende/Fritz Grade', ' Klaus Wennemann');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7620, 6020, ' Doofer / Roberta', ' Harland Williams');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7621, 122906, ' Dad', ' Bill Nighy');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7622, 9550, ' Xiao Mei', ' Zhang Ziyi');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7623, 60599, ' Det. Michael Bryer', ' Tim Roth');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7624, 227719, ' Jessie Pierce', ' Sofia Black-D''Elia');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7625, 14299, ' Etta James', ' Beyonc\\u00e9 Knowles');
@@ -3449,7 +3314,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7632, 617
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7633, 10944, ' Pauline', ' Jennifer Jason Leigh');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7634, 10362, ' Ruth', ' Isabella Rossellini');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7635, 14778, ' Lenny', ' David Hemmings');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7636, 1255, ' Park Nam-joo', ' Bae Doona');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7637, 45226, ' Hannah', ' Kathryn Harrold');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7638, 10212, ' Private Cleaves', ' David Arquette');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7639, 8669, ' Marilyn Bartlett', ' Hope Davis');
@@ -3466,11 +3330,9 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7649, 613
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7650, 13079, ' Maureen', ' Eva Amurri Martino');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7651, 89325, ' Sheriff Morris', ' Sam Shepard');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7652, 4170, ' Adriana', ' Paulina Gaita\\u0301n');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7653, 41508, ' Pretty boy', ' B\\u00e1lint P\\u00e9ntek');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7654, 12479, ' Harry Le Sabre', ' Nick Nolte');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7655, 44555, ' Wang''s wife', ' Yan Ni');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7656, 10133, ' Finster', ' Nigel Bennett');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7657, 21345, ' Kadokawa', ' Hideo Nakaizumi');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7658, 173931, ' Slash (voice)', ' Michael Clarke Duncan');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7659, 61984, ' Yuki Mori', ' Meisa Kuroki');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7660, 50601, ' President of Georgia', ' Andy Garc\\u00eda');
@@ -3479,7 +3341,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7662, 345
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7663, 236751, ' Colton', ' Connor Corum');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7664, 107, ' Bullet Tooth Tony', ' Vinnie Jones');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7665, 357837, ' Jerry August', ' Gary Daniels');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7667, 13889, ' Takayama', ' Hisashi Igawa');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7668, 18530, ' Nickie Grace', ' Caroline Dhavernas');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7669, 358451, ' Qiu', ' Qin Hailu');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7670, 927, ' Randall Peltzer', ' Hoyt Axton');
@@ -3529,7 +3390,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7716, 627
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7717, 11917, ' Agent Strahm', ' Scott Patterson');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7718, 45138, ' Charlie Adamo', ' Peter Falk');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7720, 4657, ' Jude', ' Deborra-Lee Furness');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7721, 14395, ' Riya Saran', ' Preity Zinta');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7722, 24137, ' Lord Arthur Goring', ' Rupert Everett');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7723, 190847, ' Charles Brunel', ' Elias Koteas');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7724, 11056, ' Mark', ' Iain Glen');
@@ -3617,14 +3477,12 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7818, 240
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7819, 14283, ' Cesca (Cremona)', ' Anita Laurenzi');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7821, 13201, ' Bobby', ' Brad Renfro');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7822, 209403, ' Chaitainya', ' Rohan Chand');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7823, 7942, ' Whit', ' Hank Azaria');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7824, 73247, ' Charlie', ' Randy Quaid');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7825, 253331, ' Carol', ' Jennifer Ehle');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7826, 34043, ' Abbey', ' Emmanuelle Chriqui');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7827, 9952, ' Admiral', ' Marshall Bell');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7828, 256924, ' Samantha Leigh Donnelly', ' Jennifer Garner');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7829, 82532, ' Sharon', ' Susan Sarandon');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7830, 41110, ' Antonio Biscaglia', ' Edoardo Gabbriellini');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7831, 134371, ' Francisco d''Anconia', ' Esai Morales');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7832, 2088, ' Natalie Grimaldi', ' Annabella Sciorra');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7833, 10388, ' Eduardo Roel', ' Luis Guzm\\u00e1n');
@@ -3641,7 +3499,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7844, 961
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7845, 29076, ' Fulvio Nesstra', ' Oliver Platt');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7846, 29339, ' Mr. Wackford Squeers', ' Jim Broadbent');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7847, 68812, ' Roy Demeo', ' Ray Liotta');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7848, 32740, ' Priya', ' Priyanka Chopra');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7849, 14195, ' Cherish', ' Alicia Witt');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7850, 73567, ' Ansel', ' Thomas Haden Church');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7851, 41479, ' Jenn Jones', ' Amber Heard');
@@ -3650,7 +3507,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7853, 100
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7854, 1989, ' Leslie', ' Natalie Portman');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7856, 12779, ' Anthony ''Tony'' Leighton', ' Bruce Greenwood');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7857, 13191, ' Natalie Hegalhuzen', ' Marisa Tomei');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7858, 11770, ' Hung', ' Patrick Tse Yin');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7859, 12703, ' Lilly', ' Cheryl Tiegs');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7860, 64559, ' Maurice', ' Fran\\u00e7ois Cluzet');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7861, 222649, ' Jason Jones', ' Jason Jones');
@@ -3682,10 +3538,8 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7886, 667
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7887, 17622, ' Sean', ' Kevin Zegers');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7888, 283671, ' Young Chuy (voice)', ' Brianne Siddall');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7890, 217708, ' Vernhardur', ' Steinn \\u00c1rmann Magn\\u00fasson');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7891, 42057, ' D S Raj Murthy', ' Sendhil Ramamurthy');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7892, 17577, ' Wesley', ' Ron Perlman');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7893, 14608, ' Margaret Stilwell', ' Neve Campbell');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7895, 15067, ' Park Do-won', ' 17120');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7896, 78383, ' Head Nurse Betty Watson', ' Kathleen Turner');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7897, 43090, ' Ben Cutler', ' Callum Keith Rennie');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7898, 16614, ' Joel', ' Martin Starr');
@@ -3712,7 +3566,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7919, 275
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7920, 14811, ' Motel', ' Leonard Frey');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7921, 660, ' Emilio Largo', ' Adolfo Celi');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7922, 68684, ' Ione Foster', ' Spencer Locke');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7923, 40794, ' Antonio', ' Alessandro Preziosi');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7924, 9400, ' Frankie', ' Vivica A. Fox');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7925, 16162, ' Julian Murch', ' Harold Perrineau');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7926, 10585, ' Andy Barclay', ' Alex Vincent');
@@ -3738,14 +3591,11 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7945, 140
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7947, 1808, ' Brian Slade', ' Jonathan Rhys Meyers');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7948, 293670, ' Moo Myeong', ' Chun Woo-hee');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7949, 67675, ' Holly Holliday', ' Gwyneth Paltrow');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7950, 27329, ' Lord Pirenthorathep', ' Chatchai Plengpanich');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7952, 250349, ' Olivia', ' Florence Foresti');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7953, 12454, ' Maureen', ' Ruth Sheen');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7954, 39806, ' Sanford B. Dole', ' Will Patton');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7955, 15699, ' Rex Williamson', ' Vince Colosimo');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7957, 17926, ' Josie', ' Shannyn Sossamon');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7958, 291081, ' Bill Hadley', ' John Henshaw');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7959, 41248, ' Jeanne', ' \\u00c9milie Dequenne');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7960, 25968, ' Edward', ' Jonathan Tucker');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7961, 9671, ' Richard Mason', ' Mark Blum');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7962, 52010, ' Proteus (voice)', ' Sean Pertwee');
@@ -3765,7 +3615,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7976, 167
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7977, 272693, ' Madison Morgan', ' Bella Thorne');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7978, 10696, ' Timothy Walker', ' Terrence Howard');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7979, 150202, ' ', ' Abigail Spencer');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7980, 19644, ' Commandant', ' Ahn Sung-Ki');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7981, 29963, ' Mr. Brown', ' Paul Schneider');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7982, 26022, ' Rizwan''s brother', ' Jimmy Shergill');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7983, 62676, ' Noelle De Angelo', ' Vanessa Martinez');
@@ -3774,7 +3623,6 @@ INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7985, 111
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7986, 185008, ' Aditi', ' Kalki Koechlin');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7987, 11620, ' Petronius', ' Leo Genn');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7988, 14353, ' Nathan Wallace / Repo Man', ' Anthony Stewart Head');
-INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7989, 11818, ' Abdurrahman Halis Karuki', ' Ghassan Massoud');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7990, 680, ' Mia Wallace', ' Uma Thurman');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7991, 11176, ' Floyd Pepper / Robin the Frog / Crazy Harry / Lew Zealand / Camilla / Dr. Bunsen Honeydew (assistant) (uncredited) (voice)', ' Jerry Nelson');
 INSERT INTO stockmovies.cast (id, movieid, `character`, actor) VALUES (7992, 242582, ' Rick', ' Riz Ahmed');
