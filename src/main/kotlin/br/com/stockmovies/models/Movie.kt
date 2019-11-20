@@ -25,10 +25,10 @@ data class Movie(
 
         val status: String,
 
-        @Column(name = "tag_line")
+        @Column(name = "tagline")
         val tagLine: String,
 
-        val voteAverage: Int,
+        val voteAverage: Double,
 
         val voteCount: Int,
 
@@ -42,9 +42,9 @@ data class Movie(
 
         val runtime: Int,
 
-        val stockPrice: BigDecimal,
+        var stockPrice: BigDecimal,
 
-        val quantityAvailable: Long,
+        var quantityAvailable: Long,
 
         @JsonManagedReference
         @OneToMany(mappedBy = "movie")

@@ -8,29 +8,14 @@ import org.springframework.data.domain.Pageable
 import org.springframework.stereotype.Service
 
 @Service
-class MovieService(private val movieRepository: MovieRepository, private val omdbService: OMDBService) {
+class MovieService(private val movieRepository: MovieRepository) {
 
     fun findAll(pageable: Pageable, title: String?): Page<Movie>{
-        val movies = if (title == null) {
+        return if (title == null) {
             movieRepository.findAll(pageable)
         } else {
             movieRepository.findAllByTitleContains(pageable, title)
         }
-
-        var count = 0
-        movies.forEach {
-            if (it.pictureUrl == null && count < 1000) {
-                val url = omdbService.getPoster(it.originalTitle)
-                count++
-                if (url.isEmpty() || url == "N/A") {
-                    movieRepository.delete(it)
-                } else {
-                    it.pictureUrl = url
-                    movieRepository.save(it)
-                }
-            }
-        }
-        return movies
     }
 
     fun findById(id: Long): Movie {
