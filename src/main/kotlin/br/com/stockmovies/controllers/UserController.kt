@@ -3,6 +3,7 @@ package br.com.stockmovies.controllers
 import br.com.stockmovies.models.User
 import br.com.stockmovies.models.dtos.UserAuthentication
 import br.com.stockmovies.models.dtos.UserRequest
+import br.com.stockmovies.models.dtos.UserResume
 import br.com.stockmovies.services.UserService
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -14,8 +15,8 @@ import javax.validation.Valid
 class UserController(val userService: UserService) {
 
     @GetMapping("/{id}")
-    fun getUser(@PathVariable id: Long): ResponseEntity<User> {
-        return ResponseEntity.ok(userService.findById(id))
+    fun getUser(@PathVariable id: Long): ResponseEntity<UserResume> {
+        return ResponseEntity.ok(UserResume(userService.findById(id)))
     }
 
     @PostMapping
